@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12322, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ball move
+  m_EditorClassIdentifier: 
+  m_Presets:
+  - m_Name: nuevo
+    m_Curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0.00029719446
+        tangentMode: 1
+      - time: 2
+        value: 0.089999996
+        inSlope: 0.007965606
+        outSlope: 0.0051785717
+        tangentMode: 17
+      - time: 30
+        value: 0.235
+        inSlope: 0.0051785717
+        outSlope: 0.0050000004
+        tangentMode: 21
+      - time: 45
+        value: 0.31
+        inSlope: 0.0050000004
+        outSlope: 0.0016666651
+        tangentMode: 21
+      - time: 60
+        value: 0.33499998
+        inSlope: 0.0016666651
+        outSlope: 0.000666668
+        tangentMode: 21
+      - time: 75
+        value: 0.345
+        inSlope: 0.000666668
+        outSlope: 0.000333333
+        tangentMode: 21
+      - time: 90
+        value: 0.35
+        inSlope: 0.000333333
+        outSlope: 0
+        tangentMode: 5
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - m_Name: viejo
+    m_Curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0.001698907
+        outSlope: 0.001698907
+        tangentMode: 0
+      - time: 7.615764
+        value: 0.060425952
+        inSlope: 0.014712716
+        outSlope: 0.012776407
+        tangentMode: 1
+      - time: 15.704928
+        value: 0.13537201
+        inSlope: 0.006279749
+        outSlope: 0.0057510408
+        tangentMode: 17
+      - time: 52.032013
+        value: 0.34429055
+        inSlope: 0.0057510408
+        outSlope: 0.006146889
+        tangentMode: 5
+      - time: 75.6926
+        value: 0.5279894
+        inSlope: 0.008785482
+        outSlope: 0.008785482
+        tangentMode: 9
+      - time: 106.34013
+        value: 0.8285512
+        inSlope: 0.009593468
+        outSlope: 0.009593468
+        tangentMode: 10
+      - time: 160.12231
+        value: 1.3330221
+        inSlope: 0.008630857
+        outSlope: 0.008630857
+        tangentMode: 10
+      - time: 206.37161
+        value: 1.6975509
+        inSlope: 0.007881823
+        outSlope: 0.007881823
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - m_Name: easy
+    m_Curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0.001698907
+        outSlope: 0.001698907
+        tangentMode: 0
+      - time: 20.200146
+        value: 0.0499316
+        inSlope: 0.006279749
+        outSlope: 0.004989897
+        tangentMode: 17
+      - time: 50.552948
+        value: 0.20138896
+        inSlope: 0.004989897
+        outSlope: 0.004989897
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
