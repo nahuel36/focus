@@ -148,8 +148,8 @@ public class ball : MonoBehaviour {
 	{
         direction.y = -1;
 
-        //if (direction.x == 0)
-          //  wind();
+        if (direction.x == 0)
+            wind();
             
         
         if (direction.x != 0)
