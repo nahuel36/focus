@@ -145,7 +145,7 @@ namespace Facebook.Unity.Example
         protected bool IsHorizontalLayout()
         {
             #if UNITY_IOS || UNITY_ANDROID || UNITY_WP8
-            return Screen.orientation == ScreenOrientation.Landscape;
+            return Screen.orientation == ScreenOrientation.LandscapeLeft;
             #else
             return true;
             #endif
