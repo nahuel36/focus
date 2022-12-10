@@ -226,7 +226,7 @@ public class ball : MonoBehaviour {
                 }
             }
 
-            actualTime += Time.deltaTime;
+            actualTime += 0.025f * 0.1f;
             velocity = velocityAument.Evaluate(actualTime);
 
             ifponged = 1;
