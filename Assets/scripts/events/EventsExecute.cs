@@ -8,17 +8,7 @@ public class EventsExecute : MonoBehaviour
 
     void Awake()
     {
-        data.OnApplicationStartEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < data.OnApplicationStart.Length; i++)
-        {
-            data.OnApplicationStartEvents.Add(data.OnApplicationStart[i].name, data.OnApplicationStart[i]);
-        }
-
-        data.OnStartPressedEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < data.OnStartPressed.Length; i++)
-        {
-            data.OnStartPressedEvents.Add(data.OnStartPressed[i].name, data.OnStartPressed[i]);
-        }
+        data.FillDictionaries();
     }
 
     public void PressStart()
