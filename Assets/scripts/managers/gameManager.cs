@@ -50,7 +50,7 @@ public class gameManager : MonoBehaviour {
 
     void Start()
     {
-        events.OnStartPressedEvents["gamemanager start"].OnEnter += PressStart;
+        events.data.OnStartPressedEvents["gamemanager start"].OnEnter += PressStart;
 
         first_time = true;
         actualState = appState.MENU;

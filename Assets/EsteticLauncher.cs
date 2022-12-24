@@ -10,9 +10,9 @@ public class EsteticLauncher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        events.OnApplicationStartEvents["Lab36 Logo"].OnEnter += ShowLogo;
-        events.OnApplicationStartEvents["Show Menu"].OnEnter += ShowMenu;
-        events.OnStartPressedEvents["gamemanager start"].OnEnter += ShowGame;
+        events.data.OnApplicationStartEvents["Lab36 Logo"].OnEnter += ShowLogo;
+        events.data.OnApplicationStartEvents["Show Menu"].OnEnter += ShowMenu;
+        events.data.OnStartPressedEvents["gamemanager start"].OnEnter += ShowGame;
     }
 
     private void ShowLogo()
@@ -35,11 +35,11 @@ public class EsteticLauncher : MonoBehaviour
     {
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Lab36 Logo") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.OnApplicationStartEvents["Lab36 Logo"].ended = true;
+            events.data.OnApplicationStartEvents["Lab36 Logo"].ended = true;
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Show Menu") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.OnApplicationStartEvents["Show Menu"].ended = true;
+            events.data.OnApplicationStartEvents["Show Menu"].ended = true;
         }
     }
 }

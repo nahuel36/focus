@@ -10828,41 +10828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8256b428d84292647b4b7dd12aa3d3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnApplicationStart:
-  - name: wait
-    duration: 0.1
-    waitToFinish: 1
-    customWait: 0
-  - name: Lab36 Logo
-    duration: 3
-    waitToFinish: 1
-    customWait: 1
-  - name: Show Menu
-    duration: 1
-    waitToFinish: 1
-    customWait: 1
-  - name: show time
-    duration: 3
-    waitToFinish: 1
-    customWait: 0
-  - name: show time 2
-    duration: 1
-    waitToFinish: 0
-    customWait: 0
-  OnStartPressed:
-  - name: wait
-    duration: 1
-    waitToFinish: 1
-    customWait: 0
-  - name: gamemanager start
-    duration: 1
-    waitToFinish: 0
-    customWait: 1
-  GameCycle: []
-  OnGameContinue: []
-  OnEnd: []
-  ResultsToMenu: []
-  Tutorial: []
+  data: {fileID: 11400000, guid: 0729e3665a4dfae49ac5694db8fff948, type: 2}
 --- !u!1 &1225326682
 GameObject:
   m_ObjectHideFlags: 0

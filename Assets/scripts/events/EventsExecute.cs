@@ -4,40 +4,31 @@ using UnityEngine;
 using System.Threading.Tasks;
 public class EventsExecute : MonoBehaviour
 {
-    [SerializeField] FocusEvent[] OnApplicationStart;
-    [SerializeField] FocusEvent[] OnStartPressed;
-    [SerializeField] FocusEvent[] GameCycle;
-    [SerializeField] FocusEvent[] OnGameContinue;
-    [SerializeField] FocusEvent[] OnEnd;
-    [SerializeField] FocusEvent[] ResultsToMenu;
-    [SerializeField] FocusEvent[] Tutorial;
-
-    public Dictionary<string, FocusEvent> OnApplicationStartEvents;
-    public Dictionary<string, FocusEvent> OnStartPressedEvents;
+    public FocusEventsScriptable data;
 
     void Awake()
     {
-        OnApplicationStartEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < OnApplicationStart.Length; i++)
+        data.OnApplicationStartEvents = new Dictionary<string, FocusEvent>();
+        for (int i = 0; i < data.OnApplicationStart.Length; i++)
         {
-            OnApplicationStartEvents.Add(OnApplicationStart[i].name, OnApplicationStart[i]);
+            data.OnApplicationStartEvents.Add(data.OnApplicationStart[i].name, data.OnApplicationStart[i]);
         }
 
-        OnStartPressedEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < OnStartPressed.Length; i++)
+        data.OnStartPressedEvents = new Dictionary<string, FocusEvent>();
+        for (int i = 0; i < data.OnStartPressed.Length; i++)
         {
-            OnStartPressedEvents.Add(OnStartPressed[i].name, OnStartPressed[i]);
+            data.OnStartPressedEvents.Add(data.OnStartPressed[i].name, data.OnStartPressed[i]);
         }
     }
 
     public void PressStart()
     {
-        ExecuteEvents(OnStartPressed);
+        ExecuteEvents(data.OnStartPressed);
     }
 
     async void Start()
     {
-        ExecuteEvents(OnApplicationStart);
+        ExecuteEvents(data.OnApplicationStart);
     }
 
     async Task WaitAndEndEvent(FocusEvent actual_event)

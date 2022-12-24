@@ -14,6 +14,7 @@ public class FocusEvent
     public event EventDelegate OnLeave;
     public bool waitToFinish = true;
     public bool customWait = false;
+    public bool onlyForTutorial = false;
     internal bool ended = false;
     public void ExecuteOnEnter()
     {
