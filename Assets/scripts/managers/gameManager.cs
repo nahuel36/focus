@@ -34,7 +34,7 @@ public class gameManager : MonoBehaviour {
     public int NextCoin = 0;
 
     public achievementsManager AchievementsMan;
-    
+    [SerializeField] EventsExecute events;
     public void showBanner() {
         if (PlayerPrefs.GetInt("no_ads", 0) == 0)
             Debug.Log("banner");
@@ -50,6 +50,8 @@ public class gameManager : MonoBehaviour {
 
     void Start()
     {
+        events.OnStartPressedEvents["gamemanager start"].OnEnter += PressStart;
+
         first_time = true;
         actualState = appState.MENU;
         LocalizationManager.Initialize();

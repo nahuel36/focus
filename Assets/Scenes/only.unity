@@ -3920,6 +3920,7 @@ MonoBehaviour:
   Coins: 0
   NextCoin: 0
   AchievementsMan: {fileID: 492833107}
+  events: {fileID: 1205984204}
 --- !u!1 &483330222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4791,21 +4792,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 458642609}
+      - m_Target: {fileID: 1482617079}
         m_TargetAssemblyTypeName: 
-        m_MethodName: DelayedStart
-        m_Mode: 4
+        m_MethodName: stopMusic
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1482617079}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: stopMusic
+      - m_Target: {fileID: 1205984204}
+        m_TargetAssemblyTypeName: EventsExecute, Assembly-CSharp
+        m_MethodName: PressStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10764,6 +10765,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1205984202}
   - component: {fileID: 1205984201}
+  - component: {fileID: 1205984204}
+  - component: {fileID: 1205984203}
   m_Layer: 0
   m_Name: EventsManager
   m_TagString: Untagged
@@ -10800,6 +10803,66 @@ Transform:
   m_Father: {fileID: 526191500}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205984203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205984200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bae74fb58d37740ab93a973385447b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventsContainer: {fileID: 1205984204}
+--- !u!114 &1205984204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205984200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8256b428d84292647b4b7dd12aa3d3c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnApplicationStart:
+  - name: wait
+    duration: 0.1
+    waitToFinish: 1
+    customWait: 0
+  - name: Lab36 Logo
+    duration: 3
+    waitToFinish: 1
+    customWait: 1
+  - name: Show Menu
+    duration: 1
+    waitToFinish: 1
+    customWait: 1
+  - name: show time
+    duration: 3
+    waitToFinish: 1
+    customWait: 0
+  - name: show time 2
+    duration: 1
+    waitToFinish: 0
+    customWait: 0
+  OnStartPressed:
+  - name: wait
+    duration: 1
+    waitToFinish: 1
+    customWait: 0
+  - name: gamemanager start
+    duration: 1
+    waitToFinish: 0
+    customWait: 1
+  GameCycle: []
+  OnGameContinue: []
+  OnEnd: []
+  ResultsToMenu: []
+  Tutorial: []
 --- !u!1 &1225326682
 GameObject:
   m_ObjectHideFlags: 0
@@ -20650,6 +20713,7 @@ GameObject:
   - component: {fileID: 1843545008}
   - component: {fileID: 1843545009}
   - component: {fileID: 1843545007}
+  - component: {fileID: 1843545010}
   m_Layer: 0
   m_Name: Estetic
   m_TagString: Untagged
@@ -20689,7 +20753,7 @@ Animator:
   m_GameObject: {fileID: 1843545005}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 537355e904969f3459dcc14a50e02eed, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4fccd5ea2ef5d4547a5f6114fe69c091, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -20725,6 +20789,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events: {fileID: 1205984201}
+--- !u!114 &1843545010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843545005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab67ced78ac87a548a45a4ddc7fee8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1843545007}
+  events: {fileID: 1205984204}
 --- !u!1 &1864430165
 GameObject:
   m_ObjectHideFlags: 0
