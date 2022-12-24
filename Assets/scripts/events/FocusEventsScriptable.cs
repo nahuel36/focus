@@ -10,6 +10,7 @@ public class FocusEventsScriptable : ScriptableObject
     public FocusEvent[] OnGameContinue;
     public FocusEvent[] OnEndGame;
     public FocusEvent[] ResultsToMenu;
+    public FocusEventConditional[] Conditions;
 
     public Dictionary<string, FocusEvent> OnApplicationStartEvents;
     public Dictionary<string, FocusEvent> OnStartPressedEvents;

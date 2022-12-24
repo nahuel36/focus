@@ -2,7 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class FocusEventConditional : FocusEvent
+{ 
+    public enum Conditions
+    {
+        ball_direction_x_is_zero,
+        ball_collide_with_top_border
+    }
 
+    public Conditions[] conditions;
+}
 
 [System.Serializable]
 public class FocusEvent 

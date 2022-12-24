@@ -51,5 +51,12 @@ MonoBehaviour:
     onlyForTutorial: 0
   GameCycle: []
   OnGameContinue: []
-  OnEnd: []
+  OnEndGame: []
   ResultsToMenu: []
+  Conditions:
+  - name: wind
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+    conditions: 0000000001000000
