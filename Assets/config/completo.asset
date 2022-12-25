@@ -54,9 +54,9 @@ MonoBehaviour:
   OnEndGame: []
   ResultsToMenu: []
   Conditions:
-  - name: wind
+  - name: ball start x dir
     duration: 0
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-    conditions: 0000000001000000
+    condition: 0

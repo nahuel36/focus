@@ -21,8 +21,27 @@ public class EventsExecute : MonoBehaviour
         ExecuteEvents(data.OnApplicationStart);
     }
 
-    async Task WaitAndEndEvent(FocusEvent actual_event)
+    public async void ExecuteConditional(FocusEventConditional.Condition condition)
     {
+        for (int i = 0; i < data.Conditions.Length; i++)
+        {
+            if(data.Conditions[i].condition == condition)
+            {
+                if(data.Conditions[i].waitToFinish)
+                {
+                    await ExecuteAndWait(data.Conditions[i]);
+                }
+                else
+                {
+                    ExecuteAndWait(data.Conditions[i]);
+                }
+            }
+        }
+    }
+
+    async Task ExecuteAndWait(FocusEvent actual_event)
+    {
+        actual_event.ExecuteOnEnter();
         if (!actual_event.customWait)
             await Task.Delay(System.TimeSpan.FromSeconds(actual_event.duration));
         else
@@ -37,14 +56,13 @@ public class EventsExecute : MonoBehaviour
     {
         for (int i = 0; i < eventsArray.Length; i++)
         {
-            eventsArray[i].ExecuteOnEnter();
             if (eventsArray[i].waitToFinish)
             {
-                await WaitAndEndEvent(eventsArray[i]);
+                await ExecuteAndWait(eventsArray[i]);
             }
             else
             {
-                WaitAndEndEvent(eventsArray[i]);
+                ExecuteAndWait(eventsArray[i]);
             }
         }
     }

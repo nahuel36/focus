@@ -17,6 +17,7 @@ public class ball : MonoBehaviour {
     
     public gameManager levelMan;
     public achievementsManager achievements;
+    [SerializeField] EventsExecute executeEvents;
 
     private const float deltaXPosForStart = 2f;
 
@@ -35,6 +36,8 @@ public class ball : MonoBehaviour {
 
     void Start()
     {
+        executeEvents.data.ConditionsEvents["ball start x dir"].OnEnter += wind;
+
 		gameManager.ballMoveStarted += StartGame;
 
         gameManager.startPressed += InitializeBall;
@@ -149,7 +152,7 @@ public class ball : MonoBehaviour {
         direction.y = -1;
 
         if (direction.x == 0)
-            wind();
+            executeEvents.ExecuteConditional( FocusEventConditional.Condition.ball_dirx_zero_and_collide_with_top);
             
         
         if (direction.x != 0)

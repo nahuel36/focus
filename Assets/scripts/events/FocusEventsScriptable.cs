@@ -14,6 +14,7 @@ public class FocusEventsScriptable : ScriptableObject
 
     public Dictionary<string, FocusEvent> OnApplicationStartEvents;
     public Dictionary<string, FocusEvent> OnStartPressedEvents;
+    public Dictionary<string, FocusEvent> ConditionsEvents;
 
     public void FillDictionaries()
     {
@@ -27,6 +28,12 @@ public class FocusEventsScriptable : ScriptableObject
         for (int i = 0; i < OnStartPressed.Length; i++)
         {
             OnStartPressedEvents.Add(OnStartPressed[i].name, OnStartPressed[i]);
+        }
+
+        ConditionsEvents = new Dictionary<string, FocusEvent>();
+        for (int i = 0; i < Conditions.Length; i++)
+        {
+            ConditionsEvents.Add(Conditions[i].name, Conditions[i]);
         }
     }
 }

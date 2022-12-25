@@ -5,13 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class FocusEventConditional : FocusEvent
 { 
-    public enum Conditions
+    public enum Condition
     {
-        ball_direction_x_is_zero,
-        ball_collide_with_top_border
+        ball_dirx_zero_and_collide_with_top
     }
 
-    public Conditions[] conditions;
+    public Condition condition;
 }
 
 [System.Serializable]
