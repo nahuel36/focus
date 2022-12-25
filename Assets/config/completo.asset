@@ -49,12 +49,23 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 1
     onlyForTutorial: 0
+  - name: Show Game UI
+    duration: 0
+    waitToFinish: 0
+    customWait: 1
+    onlyForTutorial: 0
   GameCycle: []
   OnGameContinue: []
   OnEndGame: []
   ResultsToMenu: []
   Conditions:
   - name: ball start x dir
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+    condition: 0
+  - name: ball start x dir message
     duration: 0
     waitToFinish: 0
     customWait: 0

@@ -12,7 +12,7 @@ public class EsteticLauncher : MonoBehaviour
     {
         events.data.OnApplicationStartEvents["Lab36 Logo"].OnEnter += ShowLogo;
         events.data.OnApplicationStartEvents["Show Menu"].OnEnter += ShowMenu;
-        events.data.OnStartPressedEvents["gamemanager start"].OnEnter += ShowGame;
+        events.data.OnStartPressedEvents["Show Game UI"].OnEnter += ShowGame;
     }
 
     private void ShowLogo()

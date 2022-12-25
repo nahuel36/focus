@@ -5219,6 +5219,7 @@ MonoBehaviour:
   confirmation_yes: {fileID: 1441759487}
   confirmation_no: {fileID: 382151070}
   Coins: {fileID: 1621241844}
+  eventsExecute: {fileID: 1205984204}
 --- !u!4 &567151155
 Transform:
   m_ObjectHideFlags: 0

@@ -62,12 +62,15 @@ public class MessagesManager : MonoBehaviour {
 
     public coins_counter Coins;
 
+    [SerializeField] EventsExecute eventsExecute;
+
     // Use this for initialization
     void Start()
     {
         gameManager.startPressed += startingGame;
         gameManager.ballMoveStarted += ballStartMoving;
-        gameEvents.ball_newDirection_message += ballChangeDirection;
+        eventsExecute.data.ConditionsEvents["ball start x dir message"].OnEnter += ballChangeDirection;
+        //gameEvents.ball_newDirection_message += ballChangeDirection;
         gameManager.continue_pressed += continue_pressed;
 
         timer.Hide();

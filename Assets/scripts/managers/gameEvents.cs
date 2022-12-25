@@ -4,7 +4,7 @@ using System.Collections;
 public class gameEvents : MonoBehaviour {
 
     public delegate void gameEvent();
-    public static event gameEvent ball_newDirection_message;
+    //public static event gameEvent ball_newDirection_message;
     public static event gameEvent ball_hide;
     public static event gameEvent ball_show;
     public static event gameEvent pong_show;
@@ -97,7 +97,7 @@ public class gameEvents : MonoBehaviour {
         moved_down = false;
 
         timeSinceMove = 0;
-        actual_event = 0;
+        actual_event = 1;
 
         if(pong_show != null)
             pong_show();
@@ -128,12 +128,12 @@ public class gameEvents : MonoBehaviour {
     {
         if (move_started)
         {
-            if (canDoEvent(0, 5.3f))
+/*          if (canDoEvent(0, 5.3f))
             {
                 if(ball_newDirection_message != null)
                    ball_newDirection_message();
             }
-            else if (canDoEvent(1, 20 + randomSecs))
+            else */if (canDoEvent(1, 20 + randomSecs))
             {
                 if(effects_showParticles != null)
                    effects_showParticles();
