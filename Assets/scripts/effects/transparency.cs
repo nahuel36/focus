@@ -11,9 +11,11 @@ public class transparency : MonoBehaviour {
     private float repeatRate = 0.025f;
     private Color colorWithAlpha;
     private Color colorWithoutAlpha;
+    private EventsExecute eventsEx;
 
     void Start () {
 
+        eventsEx = FindObjectOfType<EventsExecute>();
         transform.GetChild(0).gameObject.SetActive(true);
         transMaterial = transform.GetChild(0).GetComponent<SpriteRenderer>();
         colorWithAlpha = transMaterial.color;
@@ -41,7 +43,7 @@ public class transparency : MonoBehaviour {
         }
         else if (type == "ball")
         {
-            gameEvents.ball_show += Show;
+            eventsEx.data.OnStartPressedEvents["show ball"].OnEnter += Show;
             gameEvents.ball_hide += Hide;
         }
         else if (type == "pong")

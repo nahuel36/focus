@@ -47,5 +47,12 @@ public class EsteticLauncher : MonoBehaviour
         {
             events.data.OnApplicationStartEvents["Show Menu"].ended = true;
         }
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Show Game") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        {
+            events.data.OnStartPressedEvents["Show Game UI"].ended = true;
+            events.data.OnContinuePressedEvents["Show Game UI"].ended = true;
+
+        }
+
     }
 }

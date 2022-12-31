@@ -65,7 +65,7 @@ public class gameManager : MonoBehaviour {
 
     public void DelayedStart(float delay)
     {
-        Invoke("PressStart", delay);
+        events.PressStart();
     }
 
     private void PressStart()

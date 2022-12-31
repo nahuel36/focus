@@ -14,6 +14,7 @@ public class FocusEventsScriptable : ScriptableObject
 
     public Dictionary<string, FocusEvent> OnApplicationStartEvents;
     public Dictionary<string, FocusEvent> OnStartPressedEvents;
+    public Dictionary<string, FocusEvent> OnContinuePressedEvents;
     public Dictionary<string, FocusEvent> OnEndGameEvents;
     public Dictionary<string, FocusEvent> ConditionsEvents;
 
@@ -42,5 +43,12 @@ public class FocusEventsScriptable : ScriptableObject
         {
             ConditionsEvents.Add(Conditions[i].name, Conditions[i]);
         }
+
+        OnContinuePressedEvents = new Dictionary<string, FocusEvent>();
+        for (int i = 0; i < OnGameContinue.Length; i++)
+        {
+            OnContinuePressedEvents.Add(OnGameContinue[i].name, OnGameContinue[i]);
+        }
+        
     }
 }

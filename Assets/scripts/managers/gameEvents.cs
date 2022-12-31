@@ -6,7 +6,6 @@ public class gameEvents : MonoBehaviour {
     public delegate void gameEvent();
     //public static event gameEvent ball_newDirection_message;
     public static event gameEvent ball_hide;
-    public static event gameEvent ball_show;
     public static event gameEvent pong_show;
     public static event gameEvent effects_showSpin;
     public static event gameEvent effects_hideSpin;
@@ -35,7 +34,6 @@ public class gameEvents : MonoBehaviour {
     void Start()
     {
         gameManager.ballMoveStarted += ballStarted;
-        gameManager.startPressed += ballShow;
         gameManager.loose += loose;
         gameManager.continue_pressed += continue_game;
         counter_activated = false;
@@ -44,8 +42,6 @@ public class gameEvents : MonoBehaviour {
     void continue_game()
     {
         counter_activated = true;
-        if (ball_show != null)
-            ball_show();
         if (pong_show != null)
             pong_show();
     }
@@ -83,12 +79,6 @@ public class gameEvents : MonoBehaviour {
         if (effects_showParticles != null)
             effects_showParticles();
     }
-    public void showBall()
-    {
-        if (ball_show != null)
-            ball_show();
-    }
-
 
     void ballStarted()
     {
@@ -105,12 +95,6 @@ public class gameEvents : MonoBehaviour {
 
     }
 
-    void ballShow()
-    {
-       
-        if (ball_show != null)
-            ball_show();
-    }
 
     bool canDoEvent(int actualevent, float timeForThisEvent )
     {

@@ -47,12 +47,17 @@ MonoBehaviour:
   - name: gamemanager start
     duration: 0
     waitToFinish: 0
-    customWait: 1
+    customWait: 0
     onlyForTutorial: 0
   - name: Show Game UI
     duration: 0
-    waitToFinish: 0
+    waitToFinish: 1
     customWait: 1
+    onlyForTutorial: 0
+  - name: show ball
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
     onlyForTutorial: 0
   GameCycle: []
   OnGameContinue:
@@ -63,8 +68,13 @@ MonoBehaviour:
     onlyForTutorial: 0
   - name: Show Game UI
     duration: 0
-    waitToFinish: 0
+    waitToFinish: 1
     customWait: 1
+    onlyForTutorial: 0
+  - name: show ball
+    duration: 0
+    waitToFinish: 1
+    customWait: 0
     onlyForTutorial: 0
   OnEndGame:
   - name: wait
@@ -72,7 +82,7 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: show results
+  - name: Show Results
     duration: 0.1
     waitToFinish: 0
     customWait: 0

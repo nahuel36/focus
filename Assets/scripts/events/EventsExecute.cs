@@ -57,9 +57,9 @@ public class EventsExecute : MonoBehaviour
         actual_event.ExecuteOnLeave();
     }
 
-    async void ExecuteEvents(Dictionary<string, FocusEvent> eventsArray)
+    async void ExecuteEvents(Dictionary<string, FocusEvent> eventsDictionary)
     {
-        foreach (FocusEvent evento in eventsArray.Values)
+        foreach (FocusEvent evento in eventsDictionary.Values)
         {
             if (evento.waitToFinish)
             {
