@@ -168,6 +168,8 @@ public class gameManager : MonoBehaviour {
 
         if (loose != null)  
             loose();
+
+        events.EndGame();
     }
 
     public void RestartGame()

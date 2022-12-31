@@ -26,7 +26,7 @@ public class gameEvents : MonoBehaviour {
     public static event gameEvent borders_decline;
     */
     private float timeSinceMove;
-    private bool move_started;
+    private bool counter_activated;
     private int actual_event;
     private float randomSecs;
     private bool moved_down;
@@ -35,15 +35,15 @@ public class gameEvents : MonoBehaviour {
     void Start()
     {
         gameManager.ballMoveStarted += ballStarted;
-        gameManager.startPressed += startPressed;
+        gameManager.startPressed += ballShow;
         gameManager.loose += loose;
         gameManager.continue_pressed += continue_game;
-        move_started = false;
+        counter_activated = false;
     }
 
     void continue_game()
     {
-        move_started = true;
+        counter_activated = true;
         if (ball_show != null)
             ball_show();
         if (pong_show != null)
@@ -52,7 +52,7 @@ public class gameEvents : MonoBehaviour {
 
     void loose()
     {
-        move_started = false;
+        counter_activated = false;
         if (ball_hide != null)
             ball_hide();
 
@@ -92,7 +92,7 @@ public class gameEvents : MonoBehaviour {
 
     void ballStarted()
     {
-        move_started = true;
+        counter_activated = true;
 
         moved_down = false;
 
@@ -105,7 +105,7 @@ public class gameEvents : MonoBehaviour {
 
     }
 
-    void startPressed()
+    void ballShow()
     {
        
         if (ball_show != null)
@@ -126,7 +126,7 @@ public class gameEvents : MonoBehaviour {
 
     void Update()
     {
-        if (move_started)
+        if (counter_activated)
         {
 /*          if (canDoEvent(0, 5.3f))
             {

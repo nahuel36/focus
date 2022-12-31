@@ -11,29 +11,34 @@ public class EventsExecute : MonoBehaviour
         data.FillDictionaries();
     }
 
+    public void EndGame()
+    {
+        ExecuteEvents(data.OnEndGameEvents);
+    }
+
     public void PressStart()
     {
-        ExecuteEvents(data.OnStartPressed);
+        ExecuteEvents(data.OnStartPressedEvents);
     }
 
     async void Start()
     {
-        ExecuteEvents(data.OnApplicationStart);
+        ExecuteEvents(data.OnApplicationStartEvents);
     }
 
     public async void ExecuteConditional(FocusEventConditional.Condition condition)
     {
-        for (int i = 0; i < data.Conditions.Length; i++)
+        foreach (FocusEventConditional evento in data.ConditionsEvents.Values)
         {
-            if(data.Conditions[i].condition == condition)
+            if(evento.condition == condition)
             {
-                if(data.Conditions[i].waitToFinish)
+                if(evento.waitToFinish)
                 {
-                    await ExecuteAndWait(data.Conditions[i]);
+                    await ExecuteAndWait(evento);
                 }
                 else
                 {
-                    ExecuteAndWait(data.Conditions[i]);
+                    ExecuteAndWait(evento);
                 }
             }
         }
@@ -52,17 +57,17 @@ public class EventsExecute : MonoBehaviour
         actual_event.ExecuteOnLeave();
     }
 
-    async void ExecuteEvents(FocusEvent[] eventsArray)
+    async void ExecuteEvents(Dictionary<string, FocusEvent> eventsArray)
     {
-        for (int i = 0; i < eventsArray.Length; i++)
+        foreach (FocusEvent evento in eventsArray.Values)
         {
-            if (eventsArray[i].waitToFinish)
+            if (evento.waitToFinish)
             {
-                await ExecuteAndWait(eventsArray[i]);
+                await ExecuteAndWait(evento);
             }
             else
             {
-                ExecuteAndWait(eventsArray[i]);
+                ExecuteAndWait(evento);
             }
         }
     }

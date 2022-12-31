@@ -13,6 +13,7 @@ public class EsteticLauncher : MonoBehaviour
         events.data.OnApplicationStartEvents["Lab36 Logo"].OnEnter += ShowLogo;
         events.data.OnApplicationStartEvents["Show Menu"].OnEnter += ShowMenu;
         events.data.OnStartPressedEvents["Show Game UI"].OnEnter += ShowGame;
+        events.data.OnEndGameEvents["Show Results"].OnEnter += ShowResults;
     }
 
     private void ShowLogo()
@@ -28,6 +29,11 @@ public class EsteticLauncher : MonoBehaviour
     private void ShowGame()
     {
         animator.Play("Show Game");
+    }
+
+    public void ShowResults()
+    {
+        animator.Play("game-results", 0);
     }
 
     // Update is called once per frame

@@ -20678,8 +20678,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1843545006}
-  - component: {fileID: 1843545008}
-  - component: {fileID: 1843545009}
   - component: {fileID: 1843545007}
   - component: {fileID: 1843545010}
   m_Layer: 0
@@ -20731,32 +20729,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1843545008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843545005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36c1c782a158f24982e178af645869b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1843545007}
---- !u!114 &1843545009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843545005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49b14ea512e50de4c83110c89627528b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  events: {fileID: 1205984201}
 --- !u!114 &1843545010
 MonoBehaviour:
   m_ObjectHideFlags: 0
