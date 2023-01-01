@@ -1187,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImage: 0
   type: spin
 --- !u!1 &109134197
 GameObject:
@@ -3420,6 +3421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImage: 0
   type: particles
 --- !u!1 &396778608
 GameObject:
@@ -6438,6 +6440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImage: 0
   type: smoke
 --- !u!1 &682353930
 GameObject:
@@ -6794,6 +6797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImage: 0
   type: pong
 --- !u!1 &701431953
 GameObject:
@@ -8498,6 +8502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImage: 0
   type: ball
 --- !u!1 &856183008
 GameObject:
@@ -9535,6 +9540,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910686901}
   m_CullTransparentMesh: 1
+--- !u!1 &928526744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 928526745}
+  - component: {fileID: 928526746}
+  m_Layer: 5
+  m_Name: swipe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &928526745
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928526744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1566365429}
+  m_Father: {fileID: 2069318247}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &928526746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928526744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isImage: 1
+  type: swipe
 --- !u!1 &971573239
 GameObject:
   m_ObjectHideFlags: 0
@@ -9871,6 +9928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isImage: 0
   type: ball
 --- !u!1 &998163092
 GameObject:
@@ -18374,7 +18432,6 @@ GameObject:
   - component: {fileID: 1566365429}
   - component: {fileID: 1566365431}
   - component: {fileID: 1566365430}
-  - component: {fileID: 1566365432}
   m_Layer: 5
   m_Name: swipe zone
   m_TagString: Untagged
@@ -18389,18 +18446,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566365428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 94896718}
-  m_Father: {fileID: 2069318247}
-  m_RootOrder: 2
+  m_Father: {fileID: 928526745}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073486, y: -377}
+  m_AnchoredPosition: {x: 0, y: -377}
   m_SizeDelta: {x: 480.76, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1566365430
@@ -18416,7 +18473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.77205884, b: 0.77205884, a: 0.253}
+  m_Color: {r: 0.6745098, g: 0.4627451, b: 0.4627451, a: 0.253}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18441,26 +18498,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566365428}
   m_CullTransparentMesh: 1
---- !u!95 &1566365432
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566365428}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 704f04ac8f7aae046813b1599404c97c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1587352690
 GameObject:
   m_ObjectHideFlags: 0
@@ -22466,7 +22503,7 @@ RectTransform:
   m_Children:
   - {fileID: 179731661}
   - {fileID: 500769847}
-  - {fileID: 1566365429}
+  - {fileID: 928526745}
   - {fileID: 1278667889}
   m_Father: {fileID: 804621227}
   m_RootOrder: 9

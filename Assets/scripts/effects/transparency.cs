@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class transparency : MonoBehaviour {
 
-    SpriteRenderer transMaterial;
+    [SerializeField] bool isImage = false;
 
-    public string type;
+    SpriteRenderer transSpriteRenderer;
+    Image transImage;
+
+    [SerializeField]string type;
 
     private float speed = 0.05f;
     private float repeatRate = 0.025f;
@@ -17,10 +21,20 @@ public class transparency : MonoBehaviour {
 
         eventsEx = FindObjectOfType<EventsExecute>();
         transform.GetChild(0).gameObject.SetActive(true);
-        transMaterial = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        colorWithAlpha = transMaterial.color;
-        colorWithoutAlpha = transMaterial.color;
-        colorWithoutAlpha.a = 0;
+        if(!isImage)
+        { 
+            transSpriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            colorWithAlpha = transSpriteRenderer.color;
+            colorWithoutAlpha = transSpriteRenderer.color;
+            colorWithoutAlpha.a = 0;
+        }
+        else
+        {
+            transImage = transform.GetChild(0).GetComponent<Image>();
+            colorWithAlpha = transImage.color;
+            colorWithoutAlpha = transImage.color;
+            colorWithoutAlpha.a = 0;
+        }
         transform.GetChild(0).gameObject.SetActive(false);
         
         if (type == "particles")
@@ -51,6 +65,11 @@ public class transparency : MonoBehaviour {
             gameEvents.pong_show += Show;
             gameEvents.ball_hide += Hide;
         }
+        else if( type == "swipe")
+        {
+            eventsEx.data.OnStartPressedEvents["show swipe"].OnEnter += Show;
+            gameEvents.ball_hide += Hide;
+        }
 
     }
 
@@ -60,7 +79,10 @@ public class transparency : MonoBehaviour {
         CancelInvoke();
         InvokeRepeating("showing", 0,repeatRate);
         transform.GetChild(0).gameObject.SetActive(true);
-        transMaterial.color = colorWithoutAlpha;
+        if (!isImage)
+            transSpriteRenderer.color = colorWithoutAlpha;
+        else
+            transImage.color = colorWithoutAlpha;
     }
 
     void Hide()
@@ -68,25 +90,34 @@ public class transparency : MonoBehaviour {
         CancelInvoke();
         InvokeRepeating("hiding", 0, repeatRate);
         transform.GetChild(0).gameObject.SetActive(true);
-        transMaterial.color = colorWithAlpha;
+        if (!isImage)
+            transSpriteRenderer.color = colorWithAlpha;
+        else
+            transImage.color = colorWithAlpha;
     }
 
     void showing()
     {
-        if (transMaterial.color == colorWithAlpha)
+        if ((!isImage && transSpriteRenderer.color == colorWithAlpha) || (isImage && transImage.color == colorWithAlpha ))
         {
             CancelInvoke();
         }
-        transMaterial.color = Color.Lerp(transMaterial.color, colorWithAlpha, speed);
+        if(!isImage)
+            transSpriteRenderer.color = Color.Lerp(transSpriteRenderer.color, colorWithAlpha, speed);
+        else 
+            transImage.color = Color.Lerp(transImage.color, colorWithAlpha, speed);
     }
 
     void hiding()
     {
-        if (transMaterial.color == colorWithoutAlpha)
+        if ((!isImage && transSpriteRenderer.color == colorWithoutAlpha) || (isImage && transImage.color == colorWithoutAlpha))
         {
           transform.GetChild(0).gameObject.SetActive(false);
           CancelInvoke();
         }
-        transMaterial.color = Color.Lerp(transMaterial.color, colorWithoutAlpha, speed);
+        if(!isImage)
+            transSpriteRenderer.color = Color.Lerp(transSpriteRenderer.color, colorWithoutAlpha, speed);
+        else
+            transImage.color = Color.Lerp(transImage.color, colorWithoutAlpha, speed);
     }
 }

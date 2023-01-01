@@ -59,6 +59,16 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: wait 4 secs
+    duration: 4
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show swipe
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   GameCycle: []
   OnGameContinue:
   - name: wait
