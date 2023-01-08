@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 
 public enum appState
 {
@@ -28,7 +29,7 @@ public class gameManager : MonoBehaviour {
     public UnityAdsExample Ad;
 
     public int startPresedTimes;
-    public bool first_time = true;
+    public bool showedSwipe = false;
 
     public int Coins;
     public int NextCoin = 0;
@@ -51,8 +52,10 @@ public class gameManager : MonoBehaviour {
     void Start()
     {
         events.data.OnStartPressedEvents["gamemanager start"].OnEnter += PressStart;
+        events.data.OnStartPressedEvents["show swipe"].OnEnter += OnShowSwipe;
+        events.data.ConditionsEvents["start ball move"].OnEnter += StartingShowedSwipeAndClick;
 
-        first_time = true;
+        showedSwipe = false;
         actualState = appState.MENU;
         LocalizationManager.Initialize();
         Invoke("showBanner", 5);
@@ -62,6 +65,10 @@ public class gameManager : MonoBehaviour {
         Coins = PlayerPrefs.GetInt("Coins");
     }
 
+    private void OnShowSwipe()
+    {
+        showedSwipe = true;
+    }
 
     public void DelayedStart(float delay)
     {
@@ -73,6 +80,7 @@ public class gameManager : MonoBehaviour {
         if (actualState == appState.MENU || actualState == appState.RESULTS)
         {
             actualState = appState.STARTING;
+            showedSwipe = false;
             startingTime = 0;
 
             if (startPressed != null)
@@ -136,25 +144,21 @@ public class gameManager : MonoBehaviour {
                     AddCoin(4);
             }
         }
-        else if (actualState == appState.STARTING) 
+        else if (actualState == appState.STARTING && showedSwipe && Input.GetMouseButtonDown(0)) 
 		{
-            if (first_time && startingTime < 4)
-            {
-                startingTime += Time.deltaTime;
-            }
-            else if (Input.GetMouseButtonDown(0))
-            {
-                first_time = false;
-                actualState = appState.PLAYING;
-                actualTime = 0;
-                NextCoin = 30;
-                if (ballMoveStarted != null)
-                    ballMoveStarted();
-            }
+            events.ExecuteConditional(FocusEventConditional.Condition.starting_showedswipe_and_clicked);
+            
         }
     }
 
-	
+	public void StartingShowedSwipeAndClick()
+    {
+        actualState = appState.PLAYING;
+        actualTime = 0;
+        NextCoin = 30;
+        if (ballMoveStarted != null)
+            ballMoveStarted();
+    }
 
     public void Loose()
     {

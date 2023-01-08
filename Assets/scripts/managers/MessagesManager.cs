@@ -70,6 +70,7 @@ public class MessagesManager : MonoBehaviour {
         gameManager.startPressed += startingGame;
         gameManager.ballMoveStarted += ballStartMoving;
         eventsExecute.data.ConditionsEvents["ball start x dir message"].OnEnter += ballChangeDirection;
+        eventsExecute.data.OnStartPressedEvents["show swipe text"].OnEnter += showHold;
         //gameEvents.ball_newDirection_message += ballChangeDirection;
         gameManager.continue_pressed += continue_pressed;
 
@@ -147,7 +148,6 @@ public class MessagesManager : MonoBehaviour {
 
     void startingGame()
     {
-        Invoke("showHold", 4);
         game_TopText.text = LocalizationManager.GetWord(LocalizationManager.words.game_focus_on_ball);
         timer.Hide();
         Coins.Hide();

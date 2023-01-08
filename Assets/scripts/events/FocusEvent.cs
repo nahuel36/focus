@@ -7,7 +7,8 @@ public class FocusEventConditional : FocusEvent
 { 
     public enum Condition
     {
-        ball_dirx_zero_and_collide_with_top
+        ball_dirx_zero_and_collide_with_top,
+        starting_showedswipe_and_clicked
     }
 
     public Condition condition;
