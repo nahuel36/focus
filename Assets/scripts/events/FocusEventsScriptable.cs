@@ -13,24 +13,15 @@ public class FocusEventsScriptable : ScriptableObject
     public FocusEventConditional[] Conditions;
        
 
-    List<FocusEvent> FindOnArray(FocusEvent[] eventarray, string eventname)
+    void SetEnterOnArray(FocusEvent[] eventarray, string eventname, FocusEvent.EventDelegate delegateFunc)
     {
-        List<FocusEvent> list = new List<FocusEvent>();
-
         for (int i = 0; i < eventarray.Length; i++)
         {
             if (eventarray[i].name == eventname)
-                list.Add(eventarray[i]);
+                eventarray[i].OnEnter += delegateFunc;
         }
-        return list;
     }
-
-    void SetEnterOnArray(FocusEvent[] array, string eventname, FocusEvent.EventDelegate delegateFunc)
-    {
-        foreach(FocusEvent focusevent in FindOnArray(array, eventname))
-            focusevent.OnEnter += delegateFunc;
-    }
-
+        
     public void SetEnter(string eventname, FocusEvent.EventDelegate delegateFunc)
     {
         SetEnterOnArray(OnApplicationStart, eventname, delegateFunc);
@@ -48,11 +39,17 @@ public class FocusEventsScriptable : ScriptableObject
         SetEnterOnArray(Conditions, eventname, delegateFunc);
     }
 
-    void EndEventOnArray(FocusEvent[] array, string eventname)
+    void EndEventOnArray(FocusEvent[] eventarray, string eventname)
     {
-        foreach (FocusEvent focusevent in FindOnArray(array, eventname))
-            focusevent.ended = true;
+        List<FocusEvent> list = new List<FocusEvent>();
+
+        for (int i = 0; i < eventarray.Length; i++)
+        {
+            if (eventarray[i].name == eventname)
+                eventarray[i].ended = true;
+        }
     }
+        
 
     public void EndEvent(string eventname)
     {
