@@ -10,10 +10,10 @@ public class EsteticLauncher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        events.data.OnApplicationStartEvents["Lab36 Logo"].OnEnter += ShowLogo;
-        events.data.OnApplicationStartEvents["Show Menu"].OnEnter += ShowMenu;
-        events.data.OnStartPressedEvents["Show Game UI"].OnEnter += ShowGame;
-        events.data.OnEndGameEvents["Show Results"].OnEnter += ShowResults;
+        events.data.SetEnter("Lab36 Logo",ShowLogo);
+        events.data.SetEnter("Show Menu",ShowMenu);
+        events.data.SetEnter("Show Game UI",ShowGame);
+        events.data.SetEnter("Show Results",ShowResults);
     }
 
     private void ShowLogo()
@@ -41,17 +41,15 @@ public class EsteticLauncher : MonoBehaviour
     {
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Lab36 Logo") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.data.OnApplicationStartEvents["Lab36 Logo"].ended = true;
+            events.data.EndEvent("Lab36 Logo");
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Show Menu") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.data.OnApplicationStartEvents["Show Menu"].ended = true;
+            events.data.EndEvent("Show Menu");
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Show Game") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.data.OnStartPressedEvents["Show Game UI"].ended = true;
-            events.data.OnContinuePressedEvents["Show Game UI"].ended = true;
-
+            events.data.EndEvent("Show Game UI");
         }
 
     }

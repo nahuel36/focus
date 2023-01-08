@@ -36,7 +36,7 @@ public class ball : MonoBehaviour {
 
     void Start()
     {
-        executeEvents.data.ConditionsEvents["ball start x dir"].OnEnter += wind;
+        executeEvents.data.SetEnter("ball start x dir", wind);
 
 		gameManager.ballMoveStarted += StartGame;
 

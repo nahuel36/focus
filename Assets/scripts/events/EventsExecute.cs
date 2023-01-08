@@ -8,27 +8,27 @@ public class EventsExecute : MonoBehaviour
 
     void Awake()
     {
-        data.FillDictionaries();
+        //data.FillDictionaries();
     }
 
     public void EndGame()
     {
-        ExecuteEvents(data.OnEndGameEvents);
+        ExecuteEvents(data.OnEndGame);
     }
 
     public void PressStart()
     {
-        ExecuteEvents(data.OnStartPressedEvents);
+        ExecuteEvents(data.OnStartPressed);
     }
 
     async void Start()
     {
-        ExecuteEvents(data.OnApplicationStartEvents);
+        ExecuteEvents(data.OnApplicationStart);
     }
 
     public async void ExecuteConditional(FocusEventConditional.Condition condition)
     {
-        foreach (FocusEventConditional evento in data.ConditionsEvents.Values)
+        foreach (FocusEventConditional evento in data.Conditions)
         {
             if(evento.condition == condition)
             {
@@ -57,9 +57,9 @@ public class EventsExecute : MonoBehaviour
         actual_event.ExecuteOnLeave();
     }
 
-    async void ExecuteEvents(Dictionary<string, FocusEvent> eventsDictionary)
+    async void ExecuteEvents(FocusEvent[] eventsArray)
     {
-        foreach (FocusEvent evento in eventsDictionary.Values)
+        foreach (FocusEvent evento in eventsArray)
         {
             if (evento.waitToFinish)
             {

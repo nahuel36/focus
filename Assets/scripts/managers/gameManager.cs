@@ -51,9 +51,9 @@ public class gameManager : MonoBehaviour {
 
     void Start()
     {
-        events.data.OnStartPressedEvents["gamemanager start"].OnEnter += PressStart;
-        events.data.OnStartPressedEvents["show swipe"].OnEnter += OnShowSwipe;
-        events.data.ConditionsEvents["start ball move"].OnEnter += StartingShowedSwipeAndClick;
+        events.data.SetEnter("gamemanager start",PressStart);
+        events.data.SetEnter("show swipe",OnShowSwipe);
+        events.data.SetEnter("start ball move",StartingShowedSwipeAndClick);
 
         showedSwipe = false;
         actualState = appState.MENU;

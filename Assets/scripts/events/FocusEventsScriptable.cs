@@ -4,51 +4,71 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EventsData", menuName = "ScriptableObjects/Events Data", order = 1)]
 public class FocusEventsScriptable : ScriptableObject
 {
-    [SerializeField]FocusEvent[] OnApplicationStart;
-    [SerializeField]FocusEvent[] OnStartPressed;
-    [SerializeField]FocusEvent[] GameCycle;
-    [SerializeField]FocusEvent[] OnGameContinue;
-    [SerializeField]FocusEvent[] OnEndGame;
-    [SerializeField]FocusEvent[] ResultsToMenu;
-    [SerializeField]FocusEventConditional[] Conditions;
+    public FocusEvent[] OnApplicationStart;
+    public FocusEvent[] OnStartPressed;
+    public FocusEvent[] GameCycle;
+    public FocusEvent[] OnGameContinue;
+    public FocusEvent[] OnEndGame;
+    public FocusEvent[] ResultsToMenu;
+    public FocusEventConditional[] Conditions;
+       
 
-    public Dictionary<string, FocusEvent> OnApplicationStartEvents;
-    public Dictionary<string, FocusEvent> OnStartPressedEvents;
-    public Dictionary<string, FocusEvent> OnContinuePressedEvents;
-    public Dictionary<string, FocusEvent> OnEndGameEvents;
-    public Dictionary<string, FocusEvent> ConditionsEvents;
-
-    public void FillDictionaries()
+    List<FocusEvent> FindOnArray(FocusEvent[] eventarray, string eventname)
     {
-        OnApplicationStartEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < OnApplicationStart.Length; i++)
-        {
-            OnApplicationStartEvents.Add(OnApplicationStart[i].name, OnApplicationStart[i]);
-        }
+        List<FocusEvent> list = new List<FocusEvent>();
 
-        OnStartPressedEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < OnStartPressed.Length; i++)
+        for (int i = 0; i < eventarray.Length; i++)
         {
-            OnStartPressedEvents.Add(OnStartPressed[i].name, OnStartPressed[i]);
+            if (eventarray[i].name == eventname)
+                list.Add(eventarray[i]);
         }
-
-        OnEndGameEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < OnEndGame.Length; i++)
-        {
-            OnEndGameEvents.Add(OnEndGame[i].name, OnEndGame[i]);
-        }
-
-        ConditionsEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < Conditions.Length; i++)
-        {
-            ConditionsEvents.Add(Conditions[i].name, Conditions[i]);
-        }
-
-        OnContinuePressedEvents = new Dictionary<string, FocusEvent>();
-        for (int i = 0; i < OnGameContinue.Length; i++)
-        {
-            OnContinuePressedEvents.Add(OnGameContinue[i].name, OnGameContinue[i]);
-        }
-        
+        return list;
     }
+
+    void SetEnterOnArray(FocusEvent[] array, string eventname, FocusEvent.EventDelegate delegateFunc)
+    {
+        foreach(FocusEvent focusevent in FindOnArray(array, eventname))
+            focusevent.OnEnter += delegateFunc;
+    }
+
+    public void SetEnter(string eventname, FocusEvent.EventDelegate delegateFunc)
+    {
+        SetEnterOnArray(OnApplicationStart, eventname, delegateFunc);
+
+        SetEnterOnArray(OnStartPressed, eventname, delegateFunc);
+
+        SetEnterOnArray(GameCycle, eventname, delegateFunc);
+
+        SetEnterOnArray(OnGameContinue, eventname, delegateFunc);
+        
+        SetEnterOnArray(OnEndGame, eventname, delegateFunc);
+
+        SetEnterOnArray(ResultsToMenu, eventname, delegateFunc);
+
+        SetEnterOnArray(Conditions, eventname, delegateFunc);
+    }
+
+    void EndEventOnArray(FocusEvent[] array, string eventname)
+    {
+        foreach (FocusEvent focusevent in FindOnArray(array, eventname))
+            focusevent.ended = true;
+    }
+
+    public void EndEvent(string eventname)
+    {
+        EndEventOnArray(OnApplicationStart, eventname);
+
+        EndEventOnArray(OnStartPressed, eventname);
+        
+        EndEventOnArray(GameCycle, eventname);
+
+        EndEventOnArray(OnGameContinue, eventname);
+
+        EndEventOnArray(OnEndGame, eventname);
+
+        EndEventOnArray(ResultsToMenu, eventname);
+
+        EndEventOnArray(Conditions, eventname);
+    }
+
 }

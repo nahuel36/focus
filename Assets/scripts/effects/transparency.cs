@@ -57,7 +57,7 @@ public class transparency : MonoBehaviour {
         }
         else if (type == "ball")
         {
-            eventsEx.data.OnStartPressedEvents["show ball"].OnEnter += Show;
+            eventsEx.data.SetEnter("show ball",Show);
             gameEvents.ball_hide += Hide;
         }
         else if (type == "pong")
@@ -67,7 +67,7 @@ public class transparency : MonoBehaviour {
         }
         else if( type == "swipe")
         {
-            eventsEx.data.OnStartPressedEvents["show swipe"].OnEnter += Show;
+            eventsEx.data.SetEnter("show swipe",Show);
             gameEvents.ball_hide += Hide;
         }
 

@@ -69,8 +69,8 @@ public class MessagesManager : MonoBehaviour {
     {
         gameManager.startPressed += startingGame;
         gameManager.ballMoveStarted += ballStartMoving;
-        eventsExecute.data.ConditionsEvents["ball start x dir message"].OnEnter += ballChangeDirection;
-        eventsExecute.data.OnStartPressedEvents["show swipe text"].OnEnter += showHold;
+        eventsExecute.data.SetEnter("ball start x dir message",ballChangeDirection);
+        eventsExecute.data.SetEnter("show swipe text",showHold);
         //gameEvents.ball_newDirection_message += ballChangeDirection;
         gameManager.continue_pressed += continue_pressed;
 

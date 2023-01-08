@@ -9,10 +9,10 @@ public class EventsLogger : MonoBehaviour
 
     private void Start()
     {
-        eventsContainer.data.OnApplicationStartEvents["show time"].OnEnter += LogEnter;
-        eventsContainer.data.OnApplicationStartEvents["show time"].OnLeave += LogEnd;
-        eventsContainer.data.OnApplicationStartEvents["show time 2"].OnEnter += LogEnter;
-        eventsContainer.data.OnApplicationStartEvents["show time 2"].OnLeave += LogEnd;
+        eventsContainer.data.SetEnter("show time",LogEnter);
+        eventsContainer.data.SetEnter("show time",LogEnd);
+        eventsContainer.data.SetEnter("show time 2",LogEnter);
+        eventsContainer.data.SetEnter("show time 2",LogEnd);
     }
 
     private void LogEnter()
