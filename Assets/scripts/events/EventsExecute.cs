@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 public class EventsExecute : MonoBehaviour
 {
     public FocusEventsScriptable data;
+    bool isPaused = false;
 
     void Awake()
     {
@@ -23,7 +24,18 @@ public class EventsExecute : MonoBehaviour
 
     async void Start()
     {
+        isPaused = false;
         ExecuteEvents(data.OnApplicationStart);
+    }
+
+    public void Pause()
+    {
+        isPaused = true;
+    }
+
+    public void Resume() 
+    {
+        isPaused = false;
     }
 
     public async void ExecuteConditional(FocusEventConditional.Condition condition)
@@ -47,8 +59,16 @@ public class EventsExecute : MonoBehaviour
     async Task ExecuteAndWait(FocusEvent actual_event)
     {
         actual_event.ExecuteOnEnter();
+        float counter = 0;
         if (!actual_event.customWait)
-            await Task.Delay(System.TimeSpan.FromSeconds(actual_event.duration));
+        {
+            while (counter < actual_event.duration)
+            {
+                if(!isPaused)
+                    counter += Time.deltaTime;
+                await Task.Yield();
+            }
+        }
         else
         {
             while (!actual_event.ended)
