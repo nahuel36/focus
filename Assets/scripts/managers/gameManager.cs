@@ -35,7 +35,6 @@ public class gameManager : MonoBehaviour {
     public int NextCoin = 0;
 
     public achievementsManager AchievementsMan;
-    [SerializeField] EventsExecute events;
     public void showBanner() {
         if (PlayerPrefs.GetInt("no_ads", 0) == 0)
             Debug.Log("banner");
@@ -51,9 +50,9 @@ public class gameManager : MonoBehaviour {
 
     void Start()
     {
-        events.data.SetEnter("gamemanager start",PressStart);
-        events.data.SetEnter("show swipe",OnShowSwipe);
-        events.data.SetEnter("start ball move",StartingShowedSwipeAndClick);
+        EventsExecute.Instance.data.SetEnter("gamemanager start",PressStart);
+        EventsExecute.Instance.data.SetEnter("show swipe",OnShowSwipe);
+        EventsExecute.Instance.data.SetEnter("start ball move",StartingShowedSwipeAndClick);
 
         showedSwipe = false;
         actualState = appState.MENU;
@@ -72,7 +71,7 @@ public class gameManager : MonoBehaviour {
 
     public void DelayedStart(float delay)
     {
-        events.PressStart();
+        EventsExecute.Instance.PressStart();
     }
 
     private void PressStart()
@@ -146,7 +145,7 @@ public class gameManager : MonoBehaviour {
         }
         else if (actualState == appState.STARTING && showedSwipe && Input.GetMouseButtonDown(0)) 
 		{
-            events.ExecuteConditional(FocusEventConditional.Condition.starting_showedswipe_and_clicked);
+            EventsExecute.Instance.ExecuteConditional(FocusEventConditional.Condition.starting_showedswipe_and_clicked);
             
         }
     }
@@ -156,6 +155,7 @@ public class gameManager : MonoBehaviour {
         actualState = appState.PLAYING;
         actualTime = 0;
         NextCoin = 30;
+        EventsExecute.Instance.BeginCycle();
         if (ballMoveStarted != null)
             ballMoveStarted();
     }
@@ -173,7 +173,7 @@ public class gameManager : MonoBehaviour {
         if (loose != null)  
             loose();
 
-        events.EndGame();
+        EventsExecute.Instance.EndGame();
     }
 
     public void RestartGame()

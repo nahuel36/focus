@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class EventsLogger : MonoBehaviour
 {
-    [SerializeField]EventsExecute eventsContainer;
 
     private void Start()
     {
-        eventsContainer.data.SetEnter("show time",LogEnter);
-        eventsContainer.data.SetEnter("show time",LogEnd);
-        eventsContainer.data.SetEnter("show time 2",LogEnter);
-        eventsContainer.data.SetEnter("show time 2",LogEnd);
+        EventsExecute.Instance.data.SetEnter("show time",LogEnter);
+        EventsExecute.Instance.data.SetEnter("show time",LogEnd);
+        EventsExecute.Instance.data.SetEnter("show time 2",LogEnter);
+        EventsExecute.Instance.data.SetEnter("show time 2",LogEnd);
     }
 
     private void LogEnter()

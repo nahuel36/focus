@@ -6,14 +6,13 @@ using UnityEngine;
 public class EsteticLauncher : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    [SerializeField] EventsExecute events;
     // Start is called before the first frame update
     void Start()
     {
-        events.data.SetEnter("Lab36 Logo",ShowLogo);
-        events.data.SetEnter("Show Menu",ShowMenu);
-        events.data.SetEnter("Show Game UI",ShowGame);
-        events.data.SetEnter("Show Results",ShowResults);
+        EventsExecute.Instance.data.SetEnter("Lab36 Logo",ShowLogo);
+        EventsExecute.Instance.data.SetEnter("Show Menu",ShowMenu);
+        EventsExecute.Instance.data.SetEnter("Show Game UI",ShowGame);
+        EventsExecute.Instance.data.SetEnter("Show Results",ShowResults);
     }
 
     private void ShowLogo()
@@ -41,15 +40,15 @@ public class EsteticLauncher : MonoBehaviour
     {
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Lab36 Logo") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.data.EndEvent("Lab36 Logo");
+            EventsExecute.Instance.data.EndEvent("Lab36 Logo");
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Show Menu") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.data.EndEvent("Show Menu");
+            EventsExecute.Instance.data.EndEvent("Show Menu");
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Show Game") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            events.data.EndEvent("Show Game UI");
+            EventsExecute.Instance.data.EndEvent("Show Game UI");
         }
 
     }

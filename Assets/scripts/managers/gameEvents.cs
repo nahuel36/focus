@@ -87,7 +87,7 @@ public class gameEvents : MonoBehaviour {
         moved_down = false;
 
         timeSinceMove = 0;
-        actual_event = 1;
+        actual_event = 3;
 
         if(pong_show != null)
             pong_show();
@@ -117,7 +117,7 @@ public class gameEvents : MonoBehaviour {
                 if(ball_newDirection_message != null)
                    ball_newDirection_message();
             }
-            else */if (canDoEvent(1, 20 + randomSecs))
+            else *//*if (canDoEvent(1, 20 + randomSecs))
             {
                 if(effects_showParticles != null)
                    effects_showParticles();
@@ -130,7 +130,7 @@ public class gameEvents : MonoBehaviour {
                 if (timeSinceMove - lastEventTime > 5)
                     achievements.setAchievement(achievementsManager.achievement.galaxy);
             }
-            else if(canDoEvent(3, 37 + randomSecs))
+            else */if(canDoEvent(3, 37 + randomSecs))
             {
                 if(effects_showSmoke != null)
                    effects_showSmoke();

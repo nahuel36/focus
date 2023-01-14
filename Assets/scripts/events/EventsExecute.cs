@@ -6,9 +6,16 @@ public class EventsExecute : MonoBehaviour
 {
     public FocusEventsScriptable data;
     bool isPaused = false;
+    static EventsExecute instance;
+    public static EventsExecute Instance
+    {
+        get {return instance; }
+    }
+
 
     void Awake()
     {
+        instance = this;
         //data.FillDictionaries();
     }
 
@@ -36,6 +43,15 @@ public class EventsExecute : MonoBehaviour
     public void Resume() 
     {
         isPaused = false;
+    }
+
+    public async void BeginCycle()
+    {
+        while(true)
+        {
+            await ExecuteEvents(data.GameCycle);
+            await Task.Yield();
+        }
     }
 
     public async void ExecuteConditional(FocusEventConditional.Condition condition)
@@ -77,7 +93,7 @@ public class EventsExecute : MonoBehaviour
         actual_event.ExecuteOnLeave();
     }
 
-    async void ExecuteEvents(FocusEvent[] eventsArray)
+    async Task ExecuteEvents(FocusEvent[] eventsArray)
     {
         foreach (FocusEvent evento in eventsArray)
         {

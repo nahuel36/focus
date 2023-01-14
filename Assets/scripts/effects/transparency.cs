@@ -15,11 +15,9 @@ public class transparency : MonoBehaviour {
     private float repeatRate = 0.025f;
     private Color colorWithAlpha;
     private Color colorWithoutAlpha;
-    private EventsExecute eventsEx;
 
     void Start () {
 
-        eventsEx = FindObjectOfType<EventsExecute>();
         transform.GetChild(0).gameObject.SetActive(true);
         if(!isImage)
         { 
@@ -57,7 +55,7 @@ public class transparency : MonoBehaviour {
         }
         else if (type == "ball")
         {
-            eventsEx.data.SetEnter("show ball",Show);
+            EventsExecute.Instance.data.SetEnter("show ball",Show);
             gameEvents.ball_hide += Hide;
         }
         else if (type == "pong")
@@ -67,7 +65,7 @@ public class transparency : MonoBehaviour {
         }
         else if( type == "swipe")
         {
-            eventsEx.data.SetEnter("show swipe",Show);
+            EventsExecute.Instance.data.SetEnter("show swipe",Show);
             gameEvents.ball_hide += Hide;
         }
 

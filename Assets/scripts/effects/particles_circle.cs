@@ -4,9 +4,10 @@ using System.Collections;
 public class particles_circle : MonoBehaviour {
 
     public ParticleSystem particles;
-
+    
 	void Start ()
     {
+        
         gameEvents.effects_showParticles += Show;
         gameEvents.effects_hideParticles += Hide;
         this.transform.GetChild(0).gameObject.SetActive(false);
