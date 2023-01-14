@@ -79,7 +79,17 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  GameCycle: []
+  GameCycle:
+  - name: show particles
+    duration: 30
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait
+    duration: 20
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
   OnGameContinue:
   - name: wait
     duration: 1
@@ -93,7 +103,12 @@ MonoBehaviour:
     onlyForTutorial: 0
   - name: show ball
     duration: 0
-    waitToFinish: 1
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: resume gamecycle
+    duration: 0
+    waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
   OnEndGame:
@@ -103,7 +118,12 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: Show Results
-    duration: 0.1
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: stop gamecycle
+    duration: 0
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0

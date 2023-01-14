@@ -4,21 +4,36 @@ using System.Collections;
 public class particles_circle : MonoBehaviour {
 
     public ParticleSystem particles;
-    
+    public bool showing;
+
 	void Start ()
     {
-        
-        gameEvents.effects_showParticles += Show;
-        gameEvents.effects_hideParticles += Hide;
+        showing = false;
+        EventsExecute.Instance.data.SetEnter("show particles", Show);
+        EventsExecute.Instance.data.SetLeave("show particles", Hide);
+        EventsExecute.Instance.data.SetEnter("stop gamecycle", Stop);
+        EventsExecute.Instance.data.SetEnter("resume gamecycle", Resume);
+        //gameEvents.effects_showParticles += Show;
+        //gameEvents.effects_hideParticles += Hide;
         this.transform.GetChild(0).gameObject.SetActive(false);
     }
-    
+
+    void Resume()
+    {
+        if (showing)
+            Show();
+    }
+
+    void Stop()
+    {
+            particles.Pause();
+    }
     void Hide()
     {
         if(particles != null)
-        { 
+        {
+            showing = false;
             particles.Stop();
-            this.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 
@@ -26,6 +41,7 @@ public class particles_circle : MonoBehaviour {
     {
         if (particles != null)
         {
+            showing = true;
             this.transform.GetChild(0).gameObject.SetActive(true);
             particles.Play();
         }

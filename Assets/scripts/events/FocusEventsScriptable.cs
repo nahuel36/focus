@@ -38,6 +38,32 @@ public class FocusEventsScriptable : ScriptableObject
         SetEnterOnArray(Conditions, eventname, delegateFunc);
     }
 
+    void SetLeaveOnArray(FocusEvent[] eventarray, string eventname, FocusEvent.EventDelegate delegateFunc)
+    {
+        for (int i = 0; i < eventarray.Length; i++)
+        {
+            if (eventarray[i].name == eventname)
+                eventarray[i].OnLeave += delegateFunc;
+        }
+    }
+
+    public void SetLeave(string eventname, FocusEvent.EventDelegate delegateFunc)
+    {
+        SetLeaveOnArray(OnApplicationStart, eventname, delegateFunc);
+
+        SetLeaveOnArray(OnStartPressed, eventname, delegateFunc);
+
+        SetLeaveOnArray(GameCycle, eventname, delegateFunc);
+
+        SetLeaveOnArray(OnGameContinue, eventname, delegateFunc);
+
+        SetLeaveOnArray(OnEndGame, eventname, delegateFunc);
+
+        SetLeaveOnArray(ResultsToMenu, eventname, delegateFunc);
+
+        SetLeaveOnArray(Conditions, eventname, delegateFunc);
+    }
+
     void EndEventOnArray(FocusEvent[] eventarray, string eventname)
     {
         List<FocusEvent> list = new List<FocusEvent>();
