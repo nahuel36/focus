@@ -155,7 +155,6 @@ public class gameManager : MonoBehaviour {
         actualState = appState.PLAYING;
         actualTime = 0;
         NextCoin = 30;
-        EventsExecute.Instance.BeginCycle();
         if (ballMoveStarted != null)
             ballMoveStarted();
     }

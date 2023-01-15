@@ -157,3 +157,9 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
     condition: 1
+  - name: start gamecycle
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+    condition: 1
