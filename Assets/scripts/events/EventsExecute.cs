@@ -17,6 +17,8 @@ public class EventsExecute : MonoBehaviour
     {
         instance = this;
         //data.FillDictionaries();
+        data.SetEnter("resume gamecycle", Resume);
+        data.SetEnter("pause gamecycle", Pause);
     }
 
     public void EndGame()

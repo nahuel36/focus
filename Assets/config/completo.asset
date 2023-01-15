@@ -111,6 +111,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: resume actual fx
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   OnEndGame:
   - name: wait
     duration: 0.1
@@ -122,7 +127,12 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: stop gamecycle
+  - name: pause gamecycle
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: pause actual fx
     duration: 0
     waitToFinish: 0
     customWait: 0

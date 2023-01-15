@@ -11,8 +11,8 @@ public class particles_circle : MonoBehaviour {
         showing = false;
         EventsExecute.Instance.data.SetEnter("show particles", Show);
         EventsExecute.Instance.data.SetLeave("show particles", Hide);
-        EventsExecute.Instance.data.SetEnter("stop gamecycle", Stop);
-        EventsExecute.Instance.data.SetEnter("resume gamecycle", Resume);
+        EventsExecute.Instance.data.SetEnter("pause actual fx", Stop);
+        EventsExecute.Instance.data.SetEnter("resume actual fx", Resume);
         //gameEvents.effects_showParticles += Show;
         //gameEvents.effects_hideParticles += Hide;
         this.transform.GetChild(0).gameObject.SetActive(false);
@@ -26,6 +26,7 @@ public class particles_circle : MonoBehaviour {
 
     void Stop()
     {
+        if(showing && particles != null)
             particles.Pause();
     }
     void Hide()
