@@ -37,9 +37,9 @@ public class ball : MonoBehaviour {
     {
         EventsExecute.Instance.data.SetEnter("ball start x dir", wind);
 
-		gameManager.ballMoveStarted += StartGame;
+        EventsExecute.Instance.data.SetEnter("start ball move", StartGame);
 
-        gameManager.startPressed += InitializeBall;
+        EventsExecute.Instance.data.SetEnter("initialize ball", InitializeBall);
 
         gameManager.continue_pressed += Continue;
 
