@@ -52,7 +52,7 @@ public class EventsExecute : MonoBehaviour
     {
         while(true)
         {
-            await ExecuteEvents(data.GameCycle);
+            await ExecuteEvents(data.GameCycle, true);
             await Task.Yield();
         }
     }
@@ -75,7 +75,7 @@ public class EventsExecute : MonoBehaviour
         }
     }
 
-    async Task ExecuteAndWait(FocusEvent actual_event)
+    async Task ExecuteAndWait(FocusEvent actual_event, bool canPause = false)
     {
         actual_event.ExecuteOnEnter();
         float counter = 0;
@@ -83,7 +83,7 @@ public class EventsExecute : MonoBehaviour
         {
             while (counter < actual_event.duration)
             {
-                if(!isPaused)
+                if(!isPaused || !canPause)
                     counter += Time.deltaTime;
                 await Task.Yield();
             }
@@ -96,17 +96,17 @@ public class EventsExecute : MonoBehaviour
         actual_event.ExecuteOnLeave();
     }
 
-    async Task ExecuteEvents(FocusEvent[] eventsArray)
+    async Task ExecuteEvents(FocusEvent[] eventsArray, bool canPause = false)
     {
         foreach (FocusEvent evento in eventsArray)
         {
             if (evento.waitToFinish)
             {
-                await ExecuteAndWait(evento);
+                await ExecuteAndWait(evento, canPause);
             }
             else
             {
-                ExecuteAndWait(evento);
+                ExecuteAndWait(evento, canPause);
             }
         }
     }

@@ -54,6 +54,11 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 1
     onlyForTutorial: 0
+  - name: initialize ball
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: show ball
     duration: 0
     waitToFinish: 0
@@ -127,12 +132,12 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: pause gamecycle
+  - name: pause actual fx
     duration: 0
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: pause actual fx
+  - name: pause gamecycle
     duration: 0
     waitToFinish: 0
     customWait: 0
