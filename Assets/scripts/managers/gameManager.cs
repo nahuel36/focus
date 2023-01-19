@@ -69,11 +69,6 @@ public class gameManager : MonoBehaviour {
         showedSwipe = true;
     }
 
-    public void DelayedStart(float delay)
-    {
-        EventsExecute.Instance.PressStart();
-    }
-
     private void PressStart()
     {
         if (actualState == appState.MENU || actualState == appState.RESULTS)
@@ -175,10 +170,7 @@ public class gameManager : MonoBehaviour {
         EventsExecute.Instance.EndGame();
     }
 
-    public void RestartGame()
-    {
-        DelayedStart(0.5f);
-    }
+
 
 
     public void GoToMenu()

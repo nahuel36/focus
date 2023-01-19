@@ -7311,9 +7311,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 458642609}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: RestartGame
+      - m_Target: {fileID: 1205984204}
+        m_TargetAssemblyTypeName: EventsExecute, Assembly-CSharp
+        m_MethodName: PressStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10104,6 +10104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 1405309910}
+  showing: 0
 --- !u!1 &1073451534
 GameObject:
   m_ObjectHideFlags: 0
