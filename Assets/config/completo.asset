@@ -86,11 +86,6 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   OnGameContinue:
-  - name: wait
-    duration: 1
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
   - name: Show Game UI
     duration: 0
     waitToFinish: 1
