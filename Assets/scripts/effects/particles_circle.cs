@@ -9,27 +9,26 @@ public class particles_circle : MonoBehaviour {
 	void Start ()
     {
         showing = false;
-        EventsExecute.Instance.data.SetEnter("show particles", Show);
-        EventsExecute.Instance.data.SetLeave("show particles", Hide);
-        EventsExecute.Instance.data.SetEnter("pause actual fx", Stop);
+        EventsExecute.Instance.data.SetEnter("show particles", Play);
+        EventsExecute.Instance.data.SetLeave("show particles", Stop);
+        EventsExecute.Instance.data.SetEnter("pause actual fx", Pause);
         EventsExecute.Instance.data.SetEnter("resume actual fx", Resume);
-        //gameEvents.effects_showParticles += Show;
-        //gameEvents.effects_hideParticles += Hide;
-        this.transform.GetChild(0).gameObject.SetActive(false);
+        EventsExecute.Instance.data.SetEnter("hide actual fx", Hide);
+        Hide();
     }
 
     void Resume()
     {
         if (showing)
-            Show();
+            Play();
     }
 
-    void Stop()
+    void Pause()
     {
         if(showing && particles != null)
             particles.Pause();
     }
-    void Hide()
+    void Stop()
     {
         if(particles != null)
         {
@@ -38,7 +37,7 @@ public class particles_circle : MonoBehaviour {
         }
     }
 
-    void Show()
+    void Play()
     {
         if (particles != null)
         {
@@ -48,6 +47,14 @@ public class particles_circle : MonoBehaviour {
         }
     }
 
-    
+    void Hide()
+    {
+        if (particles != null)
+        {
+            showing = false;
+            this.transform.GetChild(0).gameObject.SetActive(false);
+            particles.Stop();
+        }
+    }
 
 }
