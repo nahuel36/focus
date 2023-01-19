@@ -86,6 +86,11 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   OnGameContinue:
+  - name: resume actual fx
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: Show Game UI
     duration: 0
     waitToFinish: 1
@@ -101,7 +106,7 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: resume actual fx
+  - name: ball continue move
     duration: 0
     waitToFinish: 0
     customWait: 0

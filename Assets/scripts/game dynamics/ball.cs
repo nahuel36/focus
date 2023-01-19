@@ -41,7 +41,7 @@ public class ball : MonoBehaviour {
 
         EventsExecute.Instance.data.SetEnter("initialize ball", InitializeBall);
 
-        gameManager.continue_pressed += Continue;
+        EventsExecute.Instance.data.SetEnter("ball continue move", Continue);
 
         initPos = transform.position;
     }
