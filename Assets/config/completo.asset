@@ -28,16 +28,6 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 1
     onlyForTutorial: 0
-  - name: show time
-    duration: 3
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: show time 2
-    duration: 1
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
   OnStartPressed:
   - name: gamemanager start
     duration: 0
