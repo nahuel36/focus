@@ -34,6 +34,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: hide all texts
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: gamemanager start
     duration: 0
     waitToFinish: 0

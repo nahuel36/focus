@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-
 
 public class MessagesManager : MonoBehaviour {
 
@@ -69,6 +67,7 @@ public class MessagesManager : MonoBehaviour {
         gameManager.ballMoveStarted += ballStartMoving;
         EventsExecute.Instance.data.SetEnter("ball start x dir message",ballChangeDirection);
         EventsExecute.Instance.data.SetEnter("show swipe text",showHold);
+        EventsExecute.Instance.data.SetEnter("hide all texts", hideAll);
         //gameEvents.ball_newDirection_message += ballChangeDirection;
         gameManager.continue_pressed += continue_pressed;
 
@@ -124,6 +123,15 @@ public class MessagesManager : MonoBehaviour {
         confirmation_yes.text = LocalizationManager.GetWord(LocalizationManager.words.confirmation_yes);
         confirmation_no.text = LocalizationManager.GetWord(LocalizationManager.words.confirmation_no);
 
+    }
+
+    private void hideAll()
+    {
+        game_achivUnlocked.text = "";
+        game_TopText.text = "";
+        game_BottomText.text = "";
+        timer.Hide();
+        Coins.Hide();
     }
 
     public void continue_pressed()
