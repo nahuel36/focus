@@ -29,6 +29,11 @@ MonoBehaviour:
     customWait: 1
     onlyForTutorial: 0
   OnStartPressed:
+  - name: move border to init
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: hide actual fx
     duration: 0
     waitToFinish: 0
@@ -116,6 +121,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: move_border_resume
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: show pong
     duration: 0
     waitToFinish: 0
@@ -143,6 +153,11 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: pause gamecycle
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: move_border_pause
     duration: 0
     waitToFinish: 0
     customWait: 0

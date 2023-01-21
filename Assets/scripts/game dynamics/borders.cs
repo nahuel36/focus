@@ -11,18 +11,27 @@ public class borders : MonoBehaviour {
     private Vector3 initPos;
 
     private bool moving;
+    private bool paused;
 
     void Start()
     {
-        gameManager.startPressed += setInitPos;
+        EventsExecute.Instance.data.SetEnter("move border to init", setInitPos);
 
         EventsExecute.Instance.data.SetEnter("move_border_down", StartMove);
         EventsExecute.Instance.data.SetLeave("move_border_down", StopMove);
-        
-        gameManager.loose += loose;
-        gameManager.continue_pressed += continue_pressed;
+
+        EventsExecute.Instance.data.SetEnter("move_border_pause", pause);
+        EventsExecute.Instance.data.SetEnter("move_border_resume", continue_pressed);
 
         initPos = UpTransform.position;
+    }
+
+    private void Update()
+    {
+        if(moving && !paused)
+        {
+            UpTransform.Translate(Vector3.down * 0.05f * Time.deltaTime);
+        }
     }
 
     void setInitPos()
@@ -34,32 +43,26 @@ public class borders : MonoBehaviour {
     void StartMove()
     {
         moving = true;
-        InvokeRepeating("move", 0, 2f);
+        paused = false;
     }
 
 
     void StopMove()
     {
         moving = false;
-        CancelInvoke();
     }
 
     void continue_pressed()
     {
-        if (moving)
-            StartMove();
+        paused = false;
 
     }
-    void loose()
+    void pause()
     {
-        CancelInvoke();
+        paused = true;
     }
 
-    void move()
-    {
-        UpTransform.Translate(Vector3.down * 0.05f);
-            
-    }
+
 
 
 
