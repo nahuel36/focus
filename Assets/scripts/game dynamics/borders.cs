@@ -16,9 +16,9 @@ public class borders : MonoBehaviour {
     {
         gameManager.startPressed += setInitPos;
 
-        gameEvents.border_moveDown += StartMove;
-        gameEvents.border_stopMoveDown += StopMove;
-
+        EventsExecute.Instance.data.SetEnter("move_border_down", StartMove);
+        EventsExecute.Instance.data.SetLeave("move_border_down", StopMove);
+        
         gameManager.loose += loose;
         gameManager.continue_pressed += continue_pressed;
 

@@ -13,8 +13,8 @@ public class gameEvents : MonoBehaviour {
     public static event gameEvent effects_showParticles;
     public static event gameEvent effects_hideSmoke;
     public static event gameEvent effects_showSmoke;
-    public static event gameEvent border_moveDown;
-    public static event gameEvent border_stopMoveDown;
+    //public static event gameEvent border_moveDown;
+   // public static event gameEvent border_stopMoveDown;
 
     public achievementsManager achievements;
     /*
@@ -140,11 +140,7 @@ public class gameEvents : MonoBehaviour {
             {
                 if(effects_showSpin != null)
                    effects_showSpin();
-                if (moved_down)
-                {
-                    if (border_stopMoveDown != null)
-                        border_stopMoveDown();
-                }
+
             }
             else if (canDoEvent(6, 59 + randomSecs))
             {
@@ -157,12 +153,7 @@ public class gameEvents : MonoBehaviour {
                 timeSinceMove = 15;
                 actual_event = 1;
 
-                if (!moved_down)
-                { 
-                    if (border_moveDown != null)
-                        border_moveDown();
-                    moved_down = true;
-                }
+
 
             }
             timeSinceMove += Time.deltaTime;

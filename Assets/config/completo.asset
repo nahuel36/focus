@@ -80,6 +80,11 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   GameCycle:
+  - name: move_border_down
+    duration: 5
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
   - name: show particles
     duration: 30
     waitToFinish: 1
