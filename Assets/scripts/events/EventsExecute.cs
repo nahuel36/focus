@@ -108,8 +108,6 @@ public class EventsExecute : MonoBehaviour
 
     async Task ExecuteEvents(FocusEvent[] eventsArray, bool canPause = false, bool isGameCycle = false, int gamecycle = 0)
     {
-        if (isGameCycle && actualGameCycle != gamecycle) return;
-
         foreach (FocusEvent evento in eventsArray)
         {
             if (isGameCycle && actualGameCycle != gamecycle) return;
