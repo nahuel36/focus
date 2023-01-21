@@ -7,7 +7,7 @@ public class EventsExecute : MonoBehaviour
     public FocusEventsScriptable data;
     bool isPaused = false;
     static EventsExecute instance;
-    int cycleCounter = 0;
+    int actualGameCycle = 0;
     public static EventsExecute Instance
     {
         get {return instance; }
@@ -17,7 +17,7 @@ public class EventsExecute : MonoBehaviour
     void Awake()
     {
         instance = this;
-        cycleCounter = 0;
+        actualGameCycle = 0;
         //data.FillDictionaries();
         data.SetEnter("start gamecycle", BeginCycle);
         data.SetEnter("resume gamecycle", Resume);
@@ -53,10 +53,10 @@ public class EventsExecute : MonoBehaviour
     public async void BeginCycle()
     {
         isPaused = false;
-        cycleCounter++;
+        actualGameCycle++;
         while(true)
         {
-            await ExecuteEvents(data.GameCycle, true, true, cycleCounter);
+            await ExecuteEvents(data.GameCycle, true, true, actualGameCycle);
             await Task.Yield();
         }
     }
@@ -79,7 +79,7 @@ public class EventsExecute : MonoBehaviour
         }
     }
 
-    async Task ExecuteAndWait(FocusEvent actual_event, bool canPause = false)
+    async Task ExecuteAndWait(FocusEvent actual_event, bool canPause = false, bool isGameCycle = false, int gamecycle = 0)
     {
         actual_event.ExecuteOnEnter();
         float counter = 0;
@@ -89,26 +89,32 @@ public class EventsExecute : MonoBehaviour
             {
                 if(!isPaused || !canPause)
                     counter += Time.deltaTime;
+                if (isGameCycle && actualGameCycle != gamecycle) 
+                    return;
                 await Task.Yield();
             }
         }
         else
         {
             while (!actual_event.ended)
+            { 
                 await Task.Yield();
+                if (isGameCycle && actualGameCycle != gamecycle)
+                    return;
+            }
         }
         actual_event.ExecuteOnLeave();
     }
 
-    async Task ExecuteEvents(FocusEvent[] eventsArray, bool canPause = false, bool isGameCycle = false, int ActualCycleCounter = 0)
+    async Task ExecuteEvents(FocusEvent[] eventsArray, bool canPause = false, bool isGameCycle = false, int gamecycle = 0)
     {
-        if (isGameCycle && cycleCounter != ActualCycleCounter) return;
+        if (isGameCycle && actualGameCycle != gamecycle) return;
 
         foreach (FocusEvent evento in eventsArray)
         {
             if (evento.waitToFinish)
             {
-                await ExecuteAndWait(evento, canPause);
+                await ExecuteAndWait(evento, canPause, isGameCycle, gamecycle);
             }
             else
             {
