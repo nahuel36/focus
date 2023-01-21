@@ -49,6 +49,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: focus on ball message
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: Show Game UI
     duration: 0
     waitToFinish: 1
@@ -72,11 +77,6 @@ MonoBehaviour:
   - name: show swipe
     duration: 0
     waitToFinish: 0
-    customWait: 0
-    onlyForTutorial: 0
-  - name: wait 0.5
-    duration: 0.5
-    waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
   - name: show swipe text
@@ -164,23 +164,17 @@ MonoBehaviour:
     onlyForTutorial: 0
   ResultsToMenu: []
   Conditions:
-  - name: ball start x dir
-    duration: 0
-    waitToFinish: 0
-    customWait: 0
-    onlyForTutorial: 0
-    condition: 0
-  - name: ball start x dir message
-    duration: 0
-    waitToFinish: 0
-    customWait: 0
-    onlyForTutorial: 1
-    condition: 0
   - name: start ball move
     duration: 0
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+    condition: 1
+  - name: dont let it fall message
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 1
     condition: 1
   - name: start gamecycle
     duration: 0
@@ -194,3 +188,33 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
     condition: 1
+  - name: ball start x dir
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+    condition: 0
+  - name: ball start x dir message
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 1
+    condition: 0
+  - name: hide swipe message
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 1
+    condition: 0
+  - name: wait 6 secs
+    duration: 6
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 1
+    condition: 0
+  - name: make best score message
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 1
+    condition: 0

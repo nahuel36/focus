@@ -63,9 +63,11 @@ public class MessagesManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        gameManager.startPressed += startingGame;
-        gameManager.ballMoveStarted += ballStartMoving;
+        EventsExecute.Instance.data.SetEnter("focus on ball message", startingGame);
+        EventsExecute.Instance.data.SetEnter("dont let it fall message", ballStartMoving);
         EventsExecute.Instance.data.SetEnter("ball start x dir message",ballChangeDirection);
+        EventsExecute.Instance.data.SetEnter("hide swipe message", hideSwipeMessage);
+        EventsExecute.Instance.data.SetEnter("make best score message", makeBestTime);
         EventsExecute.Instance.data.SetEnter("show swipe text",showHold);
         EventsExecute.Instance.data.SetEnter("hide all texts", hideAll);
         //gameEvents.ball_newDirection_message += ballChangeDirection;
@@ -175,11 +177,14 @@ public class MessagesManager : MonoBehaviour {
         Coins.Hide();
     }
 
+    void hideSwipeMessage()
+    {
+        gameBottomTextAnim.SetTrigger("hide");
+    }
+
     void ballChangeDirection()
     {
         game_TopText.text = LocalizationManager.GetWord(LocalizationManager.words.game_move_finger);
-        gameBottomTextAnim.SetTrigger("hide");
-        Invoke("makeBestTime", 6);
         timer.Hide();
         Coins.Hide();
     }
