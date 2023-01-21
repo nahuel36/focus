@@ -39,6 +39,7 @@ public class transparency : MonoBehaviour {
         {
             EventsExecute.Instance.data.SetEnter("show particles", Show);
             EventsExecute.Instance.data.SetLeave("show particles", Hide);
+            EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
 
         }
         else if (type == "spin")
@@ -71,6 +72,11 @@ public class transparency : MonoBehaviour {
 
     }
 
+
+    void HideFast()
+    {
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
 
     void Show()
     {
