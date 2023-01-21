@@ -60,7 +60,7 @@ public class transparency : MonoBehaviour {
         }
         else if (type == "pong")
         {
-            gameEvents.pong_show += Show;
+            EventsExecute.Instance.data.SetEnter("show pong", Show);
             gameEvents.ball_hide += Hide;
         }
         else if( type == "swipe")

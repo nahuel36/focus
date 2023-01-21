@@ -42,8 +42,6 @@ public class gameEvents : MonoBehaviour {
     void continue_game()
     {
         counter_activated = true;
-        if (pong_show != null)
-            pong_show();
     }
 
     void loose()
@@ -88,11 +86,6 @@ public class gameEvents : MonoBehaviour {
 
         timeSinceMove = 0;
         actual_event = 3;
-
-        if(pong_show != null)
-            pong_show();
-
-
     }
 
 
