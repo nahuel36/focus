@@ -112,6 +112,8 @@ public class EventsExecute : MonoBehaviour
 
         foreach (FocusEvent evento in eventsArray)
         {
+            if (isGameCycle && actualGameCycle != gamecycle) return;
+
             if (evento.waitToFinish)
             {
                 await ExecuteAndWait(evento, canPause, isGameCycle, gamecycle);
