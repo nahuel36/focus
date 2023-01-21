@@ -29,6 +29,11 @@ MonoBehaviour:
     customWait: 1
     onlyForTutorial: 0
   OnStartPressed:
+  - name: reset continue button
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: move border to init
     duration: 0
     waitToFinish: 0
@@ -101,6 +106,11 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   OnGameContinue:
+  - name: continue button hide
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: resume actual fx
     duration: 0
     waitToFinish: 0
@@ -137,8 +147,8 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   OnEndGame:
-  - name: wait
-    duration: 0.1
+  - name: show continue button if can
+    duration: 0
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0

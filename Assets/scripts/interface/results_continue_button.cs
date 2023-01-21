@@ -16,9 +16,9 @@ public class results_continue_button : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        gameManager.continue_pressed += continuePresed;
-        gameManager.startPressed += startPresed;
-        gameManager.loose += loose;
+        EventsExecute.Instance.data.SetEnter("show continue button if can", loose);
+        EventsExecute.Instance.data.SetEnter("reset continue button", startPresed);
+        EventsExecute.Instance.data.SetEnter("continue button hide", continuePresed);
     }
 
     void startPresed()
@@ -40,7 +40,7 @@ public class results_continue_button : MonoBehaviour {
         else
             passed30 = false;
         
-        if (presedTimes >= presedMax && passed30 && !continue_pressed)
+        if (/*presedTimes >= presedMax && passed30 && */!continue_pressed)
         {
             button.SetActive(true);
         }
