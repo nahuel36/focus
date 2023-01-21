@@ -37,8 +37,8 @@ public class transparency : MonoBehaviour {
         
         if (type == "particles")
         {
-            gameEvents.effects_hideParticles += Hide;
-            gameEvents.effects_showParticles += Show;
+            EventsExecute.Instance.data.SetEnter("show particles", Show);
+            EventsExecute.Instance.data.SetLeave("show particles", Hide);
 
         }
         else if (type == "spin")
