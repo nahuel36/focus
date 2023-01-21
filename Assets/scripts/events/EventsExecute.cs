@@ -7,6 +7,7 @@ public class EventsExecute : MonoBehaviour
     public FocusEventsScriptable data;
     bool isPaused = false;
     static EventsExecute instance;
+    int cycleCounter = 0;
     public static EventsExecute Instance
     {
         get {return instance; }
@@ -16,6 +17,7 @@ public class EventsExecute : MonoBehaviour
     void Awake()
     {
         instance = this;
+        cycleCounter = 0;
         //data.FillDictionaries();
         data.SetEnter("start gamecycle", BeginCycle);
         data.SetEnter("resume gamecycle", Resume);
@@ -50,9 +52,11 @@ public class EventsExecute : MonoBehaviour
 
     public async void BeginCycle()
     {
+        isPaused = false;
+        cycleCounter++;
         while(true)
         {
-            await ExecuteEvents(data.GameCycle, true);
+            await ExecuteEvents(data.GameCycle, true, true, cycleCounter);
             await Task.Yield();
         }
     }
@@ -96,8 +100,10 @@ public class EventsExecute : MonoBehaviour
         actual_event.ExecuteOnLeave();
     }
 
-    async Task ExecuteEvents(FocusEvent[] eventsArray, bool canPause = false)
+    async Task ExecuteEvents(FocusEvent[] eventsArray, bool canPause = false, bool isGameCycle = false, int ActualCycleCounter = 0)
     {
+        if (isGameCycle && cycleCounter != ActualCycleCounter) return;
+
         foreach (FocusEvent evento in eventsArray)
         {
             if (evento.waitToFinish)
