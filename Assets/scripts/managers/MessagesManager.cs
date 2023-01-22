@@ -13,7 +13,6 @@ public class MessagesManager : MonoBehaviour {
 
     public Text extras_style;
     public Text extras_achievements;
-    public Text extras_coins;
     public Text extras_back;
 
     public Text style_changeBackground;
@@ -77,7 +76,6 @@ public class MessagesManager : MonoBehaviour {
 
         extras_achievements.text = LocalizationManager.GetWord(LocalizationManager.words.extras_achievements);
         extras_back.text = LocalizationManager.GetWord(LocalizationManager.words.extras_back);
-        extras_coins.text = LocalizationManager.GetWord(LocalizationManager.words.extras_getcoins);
         extras_style.text = LocalizationManager.GetWord(LocalizationManager.words.extras_style);
 
         style_changeBackground.text = LocalizationManager.GetWord(LocalizationManager.words.style_changebackground);
