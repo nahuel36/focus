@@ -46,28 +46,30 @@ public class transparency : MonoBehaviour {
         {
             gameEvents.effects_hideSpin += Hide;
             gameEvents.effects_showSpin += Show;
+            EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
 
         }
         else if (type == "smoke")
         {
             gameEvents.effects_hideSmoke += Hide;
             gameEvents.effects_showSmoke += Show;
+            EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
 
         }
         else if (type == "ball")
         {
             EventsExecute.Instance.data.SetEnter("show ball",Show);
-            gameEvents.ball_hide += Hide;
+            EventsExecute.Instance.data.SetEnter("hide ball", Hide);
         }
         else if (type == "pong")
         {
             EventsExecute.Instance.data.SetEnter("show pong", Show);
-            gameEvents.ball_hide += Hide;
+            EventsExecute.Instance.data.SetEnter("hide pong", Hide);
         }
         else if( type == "swipe")
         {
             EventsExecute.Instance.data.SetEnter("show swipe",Show);
-            gameEvents.ball_hide += Hide;
+            EventsExecute.Instance.data.SetEnter("hide swipe", Hide);
         }
 
     }
