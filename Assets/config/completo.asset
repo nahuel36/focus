@@ -89,6 +89,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: start pong move
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   GameCycle:
   - name: move_border_down
     duration: 5
@@ -146,6 +151,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: start pong move
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   OnEndGame:
   - name: show continue button if can
     duration: 0
@@ -172,8 +182,19 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: stop pong move
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   ResultsToMenu: []
   Conditions:
+  - name: ---clicked swipe---
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 1
+    condition: 0
   - name: start ball move
     duration: 0
     waitToFinish: 0
@@ -198,6 +219,12 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
     condition: 1
+  - name: ---ball x dir started---
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 1
+    condition: 0
   - name: ball start x dir
     duration: 0
     waitToFinish: 0

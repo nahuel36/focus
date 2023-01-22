@@ -30,21 +30,21 @@ public class pong : MonoBehaviour {
 
     public void Start()
     {
-        gameManager.ballMoveStarted += startMoving;
         initPos = transform.position;
-        gameManager.loose += loose;
-        gameManager.continue_pressed += Continue;
+        EventsExecute.Instance.data.SetEnter("start pong move", startMoving);
+        EventsExecute.Instance.data.SetEnter("stop pong move", loose);
     }
 
     private float speed = 0.5f;
     private float repeatRate = 0.025f;
 
-
+    /*
     public void Continue()
     {
         InvokeRepeating("Move", 0, repeatRate);
         haveNewPos = false;
     }
+    */
 
     public void startMoving()
     {
