@@ -40,7 +40,6 @@ public class MessagesManager : MonoBehaviour {
     public Text coins_back;
 
     public Text coinsAdvice_toget;
-    public Text coinsAdvice_buy;
     public Text coinsAdvice_ok;
 
 
@@ -99,15 +98,8 @@ public class MessagesManager : MonoBehaviour {
         achiv_back.text       = LocalizationManager.GetWord(LocalizationManager.words.extras_back);
         achiv_share.text      = LocalizationManager.GetWord(LocalizationManager.words.results_share);
 
-        coins_pack1.text = LocalizationManager.GetWord(LocalizationManager.words.coinsmenu_pack1);
-        coins_pack2.text = LocalizationManager.GetWord(LocalizationManager.words.coinsmenu_pack2);
-        coins_pack3.text = LocalizationManager.GetWord(LocalizationManager.words.coinsmenu_pack3);
-        coins_back.text  = LocalizationManager.GetWord(LocalizationManager.words.extras_back);
-
         coinsAdvice_toget.text = LocalizationManager.GetWord(LocalizationManager.words.coinsadvice_toget);
         coinsAdvice_ok.text = LocalizationManager.GetWord(LocalizationManager.words.coinsadvice_ok);
-        coinsAdvice_buy.text = LocalizationManager.GetWord(LocalizationManager.words.coinsadvice_buy);
-
 
         results_restart_Text.text = LocalizationManager.GetWord(LocalizationManager.words.results_restart);
         results_you_loose.text = LocalizationManager.GetWord(LocalizationManager.words.results_you_loose);

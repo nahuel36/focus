@@ -149,7 +149,7 @@ public static class LocalizationManager {
             language.Add(words.stop_tokeep, "To keep playing watch a video or wait");
             language.Add(words.stop_watch, "watch");
 
-            language.Add(words.coinsadvice_toget, "get coins ingame, or buy it for low costs");
+            language.Add(words.coinsadvice_toget, "get coins ingame, they are rewards of differents achievements");
             language.Add(words.coinsadvice_buy, "buy");
             language.Add(words.coinsadvice_ok, "ok");
 
@@ -217,7 +217,7 @@ public static class LocalizationManager {
             language.Add(words.stop_tokeep, "Para seguir jugando mira un video o espera");
             language.Add(words.stop_watch, "mirar");
 
-            language.Add(words.coinsadvice_toget, "obten monedas mientras juegas, o compralas a bajo costo");
+            language.Add(words.coinsadvice_toget, "obten monedas mientras juegas, son recompensas de distintos logros");
             language.Add(words.coinsadvice_buy, "comprar");
             language.Add(words.coinsadvice_ok, "ok");
 
@@ -290,7 +290,7 @@ public static class LocalizationManager {
             language.Add(words.stop_tokeep, "Para seguir jogando olha um video ou espera");
             language.Add(words.stop_watch, "ver");
 
-            language.Add(words.coinsadvice_toget, "obten moedas enquanto jogas, ou compralas a baixo custo");
+            language.Add(words.coinsadvice_toget, "obten moedas enquanto jogas, são recompensas de diferentes conquistas");
             language.Add(words.coinsadvice_buy, "comprar");
             language.Add(words.coinsadvice_ok, "ok");
 
