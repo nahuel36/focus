@@ -54,9 +54,10 @@ public class EventsExecute : MonoBehaviour
     {
         isPaused = false;
         actualGameCycle++;
-        while(true)
+        int internalGameCycle = actualGameCycle;
+        while(internalGameCycle == actualGameCycle)
         {
-            await ExecuteEvents(data.GameCycle, true, true, actualGameCycle);
+            await ExecuteEvents(data.GameCycle, true, true, internalGameCycle);
             await Task.Yield();
         }
     }
