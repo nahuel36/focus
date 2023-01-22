@@ -100,12 +100,12 @@ public class gameManager : MonoBehaviour {
                 if (NextCoin == 30)
                 { 
                     AchievementsMan.setAchievement(achievementsManager.achievement.seconds1);
-                    AddCoin(1);
+                    AddCoin(2);
                 }
                 else if (NextCoin == 60)
                 {
                     AchievementsMan.setAchievement(achievementsManager.achievement.seconds2);
-                    AddCoin(2);
+                    AddCoin(3);
                 }
                 else if (NextCoin == 120)
                 { 
@@ -115,7 +115,7 @@ public class gameManager : MonoBehaviour {
                 else if(NextCoin == 300)
                 { 
                     AchievementsMan.setAchievement(achievementsManager.achievement.seconds4);
-                    AddCoin(4);
+                    AddCoin(5);
                 }
                 else
                     AddCoin(4);
