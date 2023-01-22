@@ -6,7 +6,7 @@ public class pong : MonoBehaviour {
 
     public borders borders;
 
-    private float XScale = 1.07f;
+    private float XScale = 0.9f;
     private float YScale = 1f;
  
 	private Vector3 newPos;
