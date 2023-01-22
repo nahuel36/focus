@@ -15,7 +15,6 @@ public class gameManager : MonoBehaviour {
 
     public delegate void appEvent();
     public static event appEvent ballMoveStarted;
-    public static event appEvent startPressed;
     public static event appEvent loose;
     public static event appEvent continue_pressed;
     public static event appEvent addedCoin;
@@ -76,9 +75,6 @@ public class gameManager : MonoBehaviour {
             actualState = appState.STARTING;
             showedSwipe = false;
             startingTime = 0;
-
-            if (startPressed != null)
-                startPressed();
 
             startPresedTimes++;
             PlayerPrefs.SetInt("PresedStartTimes", startPresedTimes);
