@@ -67,7 +67,6 @@ public class MessagesManager : MonoBehaviour {
         EventsExecute.Instance.data.SetEnter("show swipe text",showHold);
         EventsExecute.Instance.data.SetEnter("hide all texts", hideAll);
         //gameEvents.ball_newDirection_message += ballChangeDirection;
-        gameManager.continue_pressed += continue_pressed;
 
         timer.Hide();
         Coins.Hide();
@@ -121,11 +120,7 @@ public class MessagesManager : MonoBehaviour {
         Coins.Hide();
     }
 
-    public void continue_pressed()
-    {
-        Coins.Show();
-    }
-
+    
     public void achivUnlocked()
     {
         game_achivUnlocked.text = LocalizationManager.GetWord(LocalizationManager.words.game_achievement_unlocked);
