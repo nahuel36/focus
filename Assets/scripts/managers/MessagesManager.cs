@@ -51,9 +51,6 @@ public class MessagesManager : MonoBehaviour {
 	public Text results_share;
     public Text results_continue;
 
-    public Text stop_tokeep;
-    public Text stop_watch;
-
     public Text confirmation_message;
     public Text confirmation_yes;
     public Text confirmation_no;
@@ -117,9 +114,6 @@ public class MessagesManager : MonoBehaviour {
         results_you_loose.text = LocalizationManager.GetWord(LocalizationManager.words.results_you_loose);
 		results_share.text = LocalizationManager.GetWord (LocalizationManager.words.results_share);
         results_continue.text = LocalizationManager.GetWord(LocalizationManager.words.results_continue);
-
-        stop_tokeep.text = LocalizationManager.GetWord(LocalizationManager.words.stop_tokeep);
-        stop_watch.text = LocalizationManager.GetWord(LocalizationManager.words.stop_watch);
 
         confirmation_message.text = LocalizationManager.GetWord(LocalizationManager.words.confirmation_tocontinue);
         confirmation_yes.text = LocalizationManager.GetWord(LocalizationManager.words.confirmation_yes);
