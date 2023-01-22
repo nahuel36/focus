@@ -84,7 +84,6 @@ public class MessagesManager : MonoBehaviour {
 
         style_changeBackground.text = LocalizationManager.GetWord(LocalizationManager.words.style_changebackground);
         style_changeBall.text = LocalizationManager.GetWord(LocalizationManager.words.style_changeball);
-        style_removeBanner.text = LocalizationManager.GetWord(LocalizationManager.words.style_removebanner);
         style_back.text = LocalizationManager.GetWord(LocalizationManager.words.extras_back);
 
         achiv_30seconds.text  = LocalizationManager.GetWord(LocalizationManager.words.achiv_30seconds);

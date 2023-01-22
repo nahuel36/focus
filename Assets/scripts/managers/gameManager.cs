@@ -25,8 +25,6 @@ public class gameManager : MonoBehaviour {
     public float bestTime;
     public float startingTime;
 
-    public UnityAdsExample Ad;
-
     public int startPresedTimes;
     public bool showedSwipe = false;
 
@@ -34,17 +32,7 @@ public class gameManager : MonoBehaviour {
     public int NextCoin = 0;
 
     public achievementsManager AchievementsMan;
-    public void showBanner() {
-        if (PlayerPrefs.GetInt("no_ads", 0) == 0)
-            Debug.Log("banner");
-                }
-
-    public void showAd() {
-        Debug.Log("Ad");
-    }
-   
-
-    
+  
 
 
     void Start()
@@ -56,7 +44,6 @@ public class gameManager : MonoBehaviour {
         showedSwipe = false;
         actualState = appState.MENU;
         LocalizationManager.Initialize();
-        Invoke("showBanner", 5);
 
         bestTime = PlayerPrefs.GetFloat("best");
         startPresedTimes = PlayerPrefs.GetInt("PresedStartTimes");
