@@ -95,18 +95,43 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   GameCycle:
+  - name: show particles
+    duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait
+    duration: 3
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show spin
+    duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait
+    duration: 3
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show smoke
+    duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait
+    duration: 3
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
   - name: move_border_down
     duration: 5
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
-  - name: show particles
-    duration: 30
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
   - name: wait
-    duration: 20
+    duration: 3
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0

@@ -44,15 +44,16 @@ public class transparency : MonoBehaviour {
         }
         else if (type == "spin")
         {
-            gameEvents.effects_hideSpin += Hide;
-            gameEvents.effects_showSpin += Show;
+          
+            EventsExecute.Instance.data.SetEnter("show spin", Show);
+            EventsExecute.Instance.data.SetLeave("show spin", Hide);
             EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
 
         }
         else if (type == "smoke")
         {
-            gameEvents.effects_hideSmoke += Hide;
-            gameEvents.effects_showSmoke += Show;
+            EventsExecute.Instance.data.SetLeave("show smoke", Hide);
+            EventsExecute.Instance.data.SetEnter("show smoke", Show);
             EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
 
         }

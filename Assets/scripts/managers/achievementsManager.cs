@@ -30,6 +30,10 @@ public class achievementsManager : MonoBehaviour
         { 
             achievements[i] = PlayerPrefs.GetInt(Enum.GetName(typeof(achievement),i)) == 1;
         }
+
+        EventsExecute.Instance.data.SetLeave("show particles", setGalaxyAchievement);
+        EventsExecute.Instance.data.SetLeave("show spin", setSpinAchievement);
+        EventsExecute.Instance.data.SetLeave("show smoke", setSmokeAchievement);
     }
 
     public void setAchievement(achievement achiv)
@@ -47,4 +51,17 @@ public class achievementsManager : MonoBehaviour
         return achievements[(int)achiv];
     }
 
+    void setGalaxyAchievement() { 
+        setAchievement(achievementsManager.achievement.galaxy);
+    }
+
+    void setSpinAchievement()
+    {
+        setAchievement(achievementsManager.achievement.spin);
+    }
+
+    void setSmokeAchievement()
+    {
+        setAchievement(achievementsManager.achievement.smoke);
+    }
 }

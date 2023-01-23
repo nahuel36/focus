@@ -127,9 +127,9 @@ public static class LocalizationManager {
             language.Add(words.achiv_1ponged_description, "your first slow ball");
             language.Add(words.achiv_2ponged_description, "do two slow balls in a row");
             language.Add(words.achiv_3ponged_description, "do three slow balls in a row");
-            language.Add(words.achiv_galaxy_description, "survive 5 seconds in the galaxy");
-            language.Add(words.achiv_smoke_description, "survive 5 seconds with smoke");
-            language.Add(words.achiv_spin_description, "survive 5 seconds in spin");
+            language.Add(words.achiv_galaxy_description, "survive at the galaxy");
+            language.Add(words.achiv_smoke_description, "survive with smoke");
+            language.Add(words.achiv_spin_description, "survive in spin");
 
             language.Add(words.game_focus_on_ball, "look at the ball");
             language.Add(words.game_dont_let_it_fall, "dont let it fall");
@@ -196,9 +196,9 @@ public static class LocalizationManager {
             language.Add(words.achiv_1ponged_description, "tu primer bola lenta");
             language.Add(words.achiv_2ponged_description, "dos bolas lentas seguidas");
             language.Add(words.achiv_3ponged_description, "tres bolas lentas seguidas");
-            language.Add(words.achiv_galaxy_description, "sobrevive 5 segundos a la galaxia");
-            language.Add(words.achiv_smoke_description, "sobrevive 5 segundos al humo");
-            language.Add(words.achiv_spin_description, "sobrevive 5 segundos al remolino");
+            language.Add(words.achiv_galaxy_description, "sobrevive a la galaxia");
+            language.Add(words.achiv_smoke_description, "sobrevive al humo");
+            language.Add(words.achiv_spin_description, "sobrevive al remolino");
 
             language.Add(words.game_focus_on_ball, "mira la pelota");
             language.Add(words.game_dont_let_it_fall, "no dejes que caiga");
@@ -266,9 +266,9 @@ public static class LocalizationManager {
             language.Add(words.achiv_1ponged_description, "primeiro bola lenta");
             language.Add(words.achiv_2ponged_description, "duas bolas lentas seguidas");
             language.Add(words.achiv_3ponged_description, "três bolas lentas seguidas");
-            language.Add(words.achiv_galaxy_description, "sobreviveste 5 segundos à galaxia");
-            language.Add(words.achiv_smoke_description, "sobreviveste 5 segundos à fumaça");
-            language.Add(words.achiv_spin_description, "sobreviveste 5 segundos ao redemoinho");
+            language.Add(words.achiv_galaxy_description, "sobreviveste à galaxia");
+            language.Add(words.achiv_smoke_description, "sobreviveste à fumaça");
+            language.Add(words.achiv_spin_description, "sobreviveste ao redemoinho");
             ////////////////////////////////////////////////////////////////////////
 
 
