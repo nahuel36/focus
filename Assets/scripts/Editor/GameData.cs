@@ -12,5 +12,20 @@ public class GameData : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
+    static void AddCoins(int amount)
+    {
+        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + amount);
+    }
 
+    [MenuItem("PlayerPrefs/Get 5 coins")]
+    static void Add5Coins()
+    {
+        AddCoins(5);
+    }
+
+    [MenuItem("PlayerPrefs/Get 10 coins")]
+    static void Add10Coins()
+    {
+        AddCoins(10);
+    }
 }
