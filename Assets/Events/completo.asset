@@ -151,12 +151,22 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 1
     onlyForTutorial: 0
-  - name: show ball
+  - name: gamemanager continue
     duration: 0
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
   - name: resume gamecycle
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show ball
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: ball continue move
     duration: 0
     waitToFinish: 0
     customWait: 0
@@ -167,11 +177,6 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: show pong
-    duration: 0
-    waitToFinish: 0
-    customWait: 0
-    onlyForTutorial: 0
-  - name: ball continue move
     duration: 0
     waitToFinish: 0
     customWait: 0

@@ -59,12 +59,15 @@ public class ball : MonoBehaviour {
         
         changeDirPong();
 
-        actualTime -= 5;
+        if (actualTime > 5)
+            actualTime -= 5;
+        else
+            actualTime = 0;
         velocity = velocityAument.Evaluate(actualTime);
         this.transform.Translate(direction * velocity);
 
         transform.GetChild(0).gameObject.SetActive(true);
-
+        CancelInvoke("move");
         InvokeRepeating("move", 0.5f, 0.025f);
     }
 

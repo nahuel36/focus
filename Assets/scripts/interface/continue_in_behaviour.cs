@@ -6,7 +6,7 @@ public class continue_in_behaviour : MonoBehaviour {
 
     public Text text;
     public float time;
-    public gameManager man;
+    public EventsExecute events;
 
 	// Use this for initialization
 	void Start ()
@@ -22,7 +22,7 @@ public class continue_in_behaviour : MonoBehaviour {
         time -= Time.deltaTime;
         if (time < 0)
         {
-            man.Continue();
+            events.PressContinue();
             this.gameObject.SetActive(false);
         }
     }

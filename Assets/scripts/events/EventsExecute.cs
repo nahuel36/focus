@@ -34,6 +34,11 @@ public class EventsExecute : MonoBehaviour
         ExecuteEvents(data.OnStartPressed);
     }
 
+    public void PressContinue()
+    {
+        ExecuteEvents(data.OnGameContinue);
+    }
+
     async void Start()
     {
         isPaused = false;

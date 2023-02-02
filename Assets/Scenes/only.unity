@@ -6705,7 +6705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 861626915}
   time: 0
-  man: {fileID: 458642609}
+  events: {fileID: 1205984204}
 --- !u!225 &726783182
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -16,7 +16,6 @@ public class gameManager : MonoBehaviour {
     public delegate void appEvent();
     public static event appEvent ballMoveStarted;
     public static event appEvent loose;
-    public static event appEvent continue_pressed;
     public static event appEvent addedCoin;
 
     public appState actualState;
@@ -40,6 +39,8 @@ public class gameManager : MonoBehaviour {
         EventsExecute.Instance.data.SetEnter("gamemanager start",PressStart);
         EventsExecute.Instance.data.SetEnter("show swipe",OnShowSwipe);
         EventsExecute.Instance.data.SetEnter("start ball move",StartingShowedSwipeAndClick);
+        EventsExecute.Instance.data.SetEnter("gamemanager continue", Continue);
+
 
         showedSwipe = false;
         actualState = appState.MENU;
@@ -71,9 +72,6 @@ public class gameManager : MonoBehaviour {
     public void Continue()
     {
         actualState = appState.PLAYING;
-
-        if (continue_pressed != null)
-            continue_pressed();
     }
 
     public void AddCoin(int quantity)
