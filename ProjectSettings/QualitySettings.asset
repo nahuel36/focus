@@ -266,7 +266,7 @@ QualitySettings:
       type: 2}
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 2
+    Android: 0
     BlackBerry: 2
     GLES Emulation: 5
     Nintendo 3DS: 5
@@ -276,7 +276,7 @@ QualitySettings:
     PSP2: 2
     Samsung TV: 2
     Server: 0
-    Standalone: 5
+    Standalone: 0
     Tizen: 2
     WP8: 5
     Web: 5
