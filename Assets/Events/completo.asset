@@ -96,7 +96,7 @@ MonoBehaviour:
     onlyForTutorial: 0
   GameCycle:
   - name: wait
-    duration: 12
+    duration: 20
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: wait
-    duration: 3
+    duration: 10
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: wait
-    duration: 3
+    duration: 10
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: wait
-    duration: 3
+    duration: 10
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
