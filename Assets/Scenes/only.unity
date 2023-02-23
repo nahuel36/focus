@@ -2149,18 +2149,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c744323fd54529c46a6ff829de83a450, type: 3}
-    m_FontSize: 91
+    m_FontSize: 50
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 91
-    m_Alignment: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 109
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 0
 --- !u!222 &179731660
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2186,8 +2186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.9, y: 278.1}
-  m_SizeDelta: {x: 75.2, y: 77.2}
+  m_AnchoredPosition: {x: -107.9, y: 286.5}
+  m_SizeDelta: {x: 75.2, y: 54.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &206717462
 GameObject:
@@ -3877,8 +3877,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.8, y: 320.4}
-  m_SizeDelta: {x: 75.2, y: 77.2}
+  m_AnchoredPosition: {x: -107.8, y: 331.88}
+  m_SizeDelta: {x: 75.2, y: 53.355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490220401
 MonoBehaviour:
@@ -3902,18 +3902,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: c744323fd54529c46a6ff829de83a450, type: 3}
-    m_FontSize: 91
+    m_FontSize: 50
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 91
-    m_Alignment: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 109
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 0
 --- !u!222 &490220402
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20394,6 +20394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelMan: {fileID: 458642609}
   text: {fileID: 179731659}
+  best_text: {fileID: 490220401}
 --- !u!1 &2069318246
 GameObject:
   m_ObjectHideFlags: 0
