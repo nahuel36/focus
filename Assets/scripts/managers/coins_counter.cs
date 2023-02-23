@@ -24,8 +24,8 @@ public class coins_counter : MonoBehaviour {
     // Update is called once per frame
     public void Hide ()
     {
-        spriteObj.SetActive(false);
-        text.text = "";
+       // spriteObj.SetActive(false);
+       // text.text = "";
 
     }
 

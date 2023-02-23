@@ -139,8 +139,10 @@ public class MessagesManager : MonoBehaviour {
     void startingGame()
     {
         game_TopText2.text = LocalizationManager.GetWord(LocalizationManager.words.game_focus_on_ball);
-        timer.Hide();
-        Coins.Hide();
+        timer.Show();
+        Coins.Show();
+        //timer.Hide();
+        //Coins.Hide();
     }
 
     void showHold()
@@ -183,8 +185,7 @@ public class MessagesManager : MonoBehaviour {
     void hideMakeBestTime()
     {
         game_TopText2.text = "";
-        timer.Show();
-        Coins.Show();
+
     }
 
  
