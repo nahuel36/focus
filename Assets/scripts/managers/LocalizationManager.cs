@@ -202,9 +202,9 @@ public static class LocalizationManager {
 
             language.Add(words.game_focus_on_ball, "mira la pelota");
             language.Add(words.game_dont_let_it_fall, "no dejes que caiga");
-            language.Add(words.game_move_finger, "muevete!");
+            language.Add(words.game_move_finger, "deslizate hacia los costados!");
             language.Add(words.game_make_best_time, "haz tu mejor tiempo");
-            language.Add(words.game_hold_here, "presiona");
+            language.Add(words.game_hold_here, "presiona aquí");
             language.Add(words.game_achievement_unlocked, "trofeo conseguido");
             
             language.Add(words.results_you_loose, "fin");
