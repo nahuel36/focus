@@ -97,7 +97,7 @@ public static class LocalizationManager {
         if (lang == "en")
         {
             language.Add(words.menu_start, "Start");
-            language.Add(words.menu_best_time, "best time");
+            language.Add(words.menu_best_time, "best score");
             language.Add(words.menu_extras, "Extras");
 
             language.Add(words.extras_achievements, "thropies");///////////////
@@ -166,7 +166,7 @@ public static class LocalizationManager {
         else if (lang == "es")
         {
             language.Add(words.menu_start, "Jugar");
-            language.Add(words.menu_best_time, "mejor tiempo");
+            language.Add(words.menu_best_time, "mejor puntaje");
             language.Add(words.menu_extras, "Extras");
 
             language.Add(words.extras_achievements, "trofeos");
@@ -203,12 +203,12 @@ public static class LocalizationManager {
             language.Add(words.game_focus_on_ball, "mira la pelota");
             language.Add(words.game_dont_let_it_fall, "no dejes que caiga");
             language.Add(words.game_move_finger, "deslizate hacia los costados!");
-            language.Add(words.game_make_best_time, "haz tu mejor tiempo");
+            language.Add(words.game_make_best_time, "haz tu mejor puntaje");
             language.Add(words.game_hold_here, "presiona aquí");
             language.Add(words.game_achievement_unlocked, "trofeo conseguido");
             
             language.Add(words.results_you_loose, "fin");
-            language.Add(words.results_your_time, "tu tiempo");
+            language.Add(words.results_your_time, "tu puntaje");
             language.Add(words.results_best_time, "el mejor");
             language.Add(words.results_continue, "Continuar");
 			language.Add(words.results_share, "Compartir");

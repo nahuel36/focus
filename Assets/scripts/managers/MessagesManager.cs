@@ -9,7 +9,6 @@ public class MessagesManager : MonoBehaviour {
     public Text game_BottomText;
     public TextMeshProUGUI game_BottomText2;
     public Animator gameBottomTextAnim;
-    public timeCounter timer;
 
     public Text menu_start;
     public Text menu_extras;
@@ -70,7 +69,6 @@ public class MessagesManager : MonoBehaviour {
         EventsExecute.Instance.data.SetEnter("hide all texts", hideAll);
         //gameEvents.ball_newDirection_message += ballChangeDirection;
 
-        timer.Hide();
         Coins.Hide();
         hideAchiv();
 
@@ -118,7 +116,6 @@ public class MessagesManager : MonoBehaviour {
         game_TopText2.text = "";
       //  game_BottomText.text = "";
         game_BottomText2.text = "";
-        timer.Hide();
         Coins.Hide();
     }
 
@@ -139,7 +136,6 @@ public class MessagesManager : MonoBehaviour {
     void startingGame()
     {
         game_TopText2.text = LocalizationManager.GetWord(LocalizationManager.words.game_focus_on_ball);
-        timer.Show();
         Coins.Show();
         //timer.Hide();
         //Coins.Hide();
@@ -151,14 +147,12 @@ public class MessagesManager : MonoBehaviour {
         gameBottomTextAnim.SetTrigger("show");
        // game_BottomText.text = LocalizationManager.GetWord(LocalizationManager.words.game_hold_here);
         game_BottomText2.text = LocalizationManager.GetWord(LocalizationManager.words.game_hold_here);
-        timer.Hide();
         Coins.Hide();
     }
 
     void ballStartMoving()
     {
         game_TopText2.text = LocalizationManager.GetWord(LocalizationManager.words.game_dont_let_it_fall);
-        timer.Hide();
         Coins.Hide();
     }
 
@@ -170,7 +164,6 @@ public class MessagesManager : MonoBehaviour {
     void ballChangeDirection()
     {
         game_TopText2.text = LocalizationManager.GetWord(LocalizationManager.words.game_move_finger);
-        timer.Hide();
         Coins.Hide();
     }
 
@@ -178,7 +171,6 @@ public class MessagesManager : MonoBehaviour {
     {
         game_TopText2.text = LocalizationManager.GetWord(LocalizationManager.words.game_make_best_time);
         Invoke("hideMakeBestTime", 4);
-        timer.Hide();
         Coins.Hide();
     }
 

@@ -4,6 +4,13 @@ using System;
 
 public class ball : MonoBehaviour {
 
+    public enum mode { 
+    normal,
+    blue, 
+    red, 
+    green
+    }
+
     public AnimationCurve velocityAument;
 
     public pong pong;
@@ -32,6 +39,8 @@ public class ball : MonoBehaviour {
     public bool ponged;
     public bool ponged2times;
     private float ifponged;
+
+    [SerializeField] PointsCounter points;
 
     void Start()
     {
@@ -151,6 +160,8 @@ public class ball : MonoBehaviour {
 
 	void changeDirVert()
 	{
+        points.AddPoint(2);
+
         direction.y = -1;
 
         if (direction.x == 0)

@@ -29,6 +29,11 @@ MonoBehaviour:
     customWait: 1
     onlyForTutorial: 0
   OnStartPressed:
+  - name: reset points
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: reset continue button
     duration: 0
     waitToFinish: 0

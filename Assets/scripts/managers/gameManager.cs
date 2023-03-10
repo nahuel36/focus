@@ -21,7 +21,6 @@ public class gameManager : MonoBehaviour {
     public appState actualState;
 
     public float actualTime;
-    public float bestTime;
     public float startingTime;
 
     public int startPresedTimes;
@@ -46,7 +45,6 @@ public class gameManager : MonoBehaviour {
         actualState = appState.MENU;
         LocalizationManager.Initialize();
 
-        bestTime = PlayerPrefs.GetFloat("best");
         startPresedTimes = PlayerPrefs.GetInt("PresedStartTimes");
         Coins = PlayerPrefs.GetInt("Coins");
     }
@@ -137,12 +135,6 @@ public class gameManager : MonoBehaviour {
 
     public void Loose()
     {
-        if (bestTime < actualTime)
-        { 
-            bestTime = actualTime;
-            PlayerPrefs.SetFloat("best", actualTime);
-        }
-
         actualState = appState.RESULTS;
 
         if (loose != null)  

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class timeInResults : MonoBehaviour {
         
-    public gameManager levelMan;
+    public PointsCounter points;
     private Text text;
 
     void Start()
@@ -18,9 +18,9 @@ public class timeInResults : MonoBehaviour {
     void Show()
     {
         text.text = LocalizationManager.GetWord(LocalizationManager.words.results_your_time) + "\n " + 
-            levelMan.actualTime.ToString("F3") + "\n" + 
+            points.actualPoints.ToString() + "\n" + 
             LocalizationManager.GetWord(LocalizationManager.words.results_best_time) + "\n " + 
-            levelMan.bestTime.ToString("F3");
+            points.bestPoints.ToString();
          
     }
 
