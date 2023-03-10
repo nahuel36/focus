@@ -11,7 +11,7 @@ public enum appState
     RESULTS,
 }
 
-public class gameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour {
 
     public delegate void appEvent();
     public static event appEvent ballMoveStarted;
@@ -29,7 +29,7 @@ public class gameManager : MonoBehaviour {
     public int Coins;
     public int NextCoin = 0;
 
-    public achievementsManager AchievementsMan;
+    public AchievementsManager AchievementsMan;
   
 
 
@@ -95,22 +95,22 @@ public class gameManager : MonoBehaviour {
             {
                 if (NextCoin == 30)
                 { 
-                    AchievementsMan.setAchievement(achievementsManager.achievement.seconds1);
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds1);
                     AddCoin(2);
                 }
                 else if (NextCoin == 60)
                 {
-                    AchievementsMan.setAchievement(achievementsManager.achievement.seconds2);
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds2);
                     AddCoin(3);
                 }
                 else if (NextCoin == 120)
                 { 
-                    AchievementsMan.setAchievement(achievementsManager.achievement.seconds3);
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds3);
                     AddCoin(4);
                 }
                 else if(NextCoin == 300)
                 { 
-                    AchievementsMan.setAchievement(achievementsManager.achievement.seconds4);
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds4);
                     AddCoin(5);
                 }
                 else

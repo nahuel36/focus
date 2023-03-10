@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class PointsCounter : MonoBehaviour {
-    public gameManager levelMan;
+    public GameManager levelMan;
     public Text text;
     public Text best_text;
 

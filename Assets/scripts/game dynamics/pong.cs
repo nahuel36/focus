@@ -2,9 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class pong : MonoBehaviour {
+public class Pong : MonoBehaviour {
 
-    public borders borders;
+    public Borders borders;
 
     private float XScale = 0.9f;
     private float YScale = 1f;

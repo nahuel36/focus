@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class coins_advice_behaviour : MonoBehaviour {
+public class Coins_advice_behaviour : MonoBehaviour {
 
-    public confirmation_behaviour confirmation;
+    public Confirmation_behaviour confirmation;
     public GameObject content;
     public GameObject coins_packs;
 

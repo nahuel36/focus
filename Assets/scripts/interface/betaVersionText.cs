@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class betaVersionText : MonoBehaviour {
+public class BetaVersionText : MonoBehaviour {
     Text betaText;
 	// Use this for initialization
 	void Start () {

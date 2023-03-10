@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class borders : MonoBehaviour {
+public class Borders : MonoBehaviour {
 
    public Transform LeftTransform;
    public Transform RightTransform;

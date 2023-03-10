@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class ball : MonoBehaviour {
+public class Ball : MonoBehaviour {
 
     public enum mode { 
     normal,
@@ -13,8 +13,8 @@ public class ball : MonoBehaviour {
 
     public AnimationCurve velocityAument;
 
-    public pong pong;
-    public borders borders;
+    public Pong pong;
+    public Borders borders;
 
     private Vector3 direction;
 
@@ -22,8 +22,8 @@ public class ball : MonoBehaviour {
     public AudioSource pongSound;
     public AudioSource looseSound;
     
-    public gameManager levelMan;
-    public achievementsManager achievements;
+    public GameManager levelMan;
+    public AchievementsManager achievements;
 
     private const float deltaXPosForStart = 2f;
 
@@ -34,7 +34,7 @@ public class ball : MonoBehaviour {
     private float actualTime;
 
     private Vector3 initPos;
-	public spin ball_spin;
+	public Spin ball_spin;
 
     public bool ponged;
     public bool ponged2times;
@@ -190,11 +190,11 @@ public class ball : MonoBehaviour {
             playSound("pong2");
 
             if(ponged2times)
-                achievements.setAchievement(achievementsManager.achievement.ponged3);
+                achievements.setAchievement(AchievementsManager.achievement.ponged3);
             else if(ponged)
-                achievements.setAchievement(achievementsManager.achievement.ponged2);
+                achievements.setAchievement(AchievementsManager.achievement.ponged2);
             else
-                achievements.setAchievement(achievementsManager.achievement.ponged1);
+                achievements.setAchievement(AchievementsManager.achievement.ponged1);
             
             if (ponged)
                ponged2times = true;

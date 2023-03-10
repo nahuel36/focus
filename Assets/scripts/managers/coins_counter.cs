@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class coins_counter : MonoBehaviour {
-    public gameManager levelMan;
+public class Coins_counter : MonoBehaviour {
+    public GameManager levelMan;
     public Text text;
     public GameObject spriteObj;
     public AudioSource coinSound;
@@ -11,7 +11,7 @@ public class coins_counter : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        gameManager.addedCoin += AddedCoin;
+        GameManager.addedCoin += AddedCoin;
     }
 
     public void AddedCoin()

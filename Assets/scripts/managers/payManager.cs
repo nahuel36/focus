@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class payManager : MonoBehaviour {
+public class PayManager : MonoBehaviour {
 
     
-    public gameManager gameMan;
-    public confirmation_behaviour confirmation;
-    public coins_counter coins_counter;
-    public coins_advice_behaviour coins_advice;
+    public GameManager gameMan;
+    public Confirmation_behaviour confirmation;
+    public Coins_counter coins_counter;
+    public Coins_advice_behaviour coins_advice;
     public GameObject continue_counterGUI;
 
     private void not_enough_money()

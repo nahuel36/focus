@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class musicinmenu : MonoBehaviour {
+public class MusicInMenu : MonoBehaviour {
     public AudioSource music;
 	// Use this for initialization
 	void Start () {

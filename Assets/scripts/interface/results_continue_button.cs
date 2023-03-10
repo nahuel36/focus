@@ -4,11 +4,11 @@ using GoogleMobileAds.Api;
 using GoogleMobileAds;
 
 
-public class results_continue_button : MonoBehaviour {
+public class Results_continue_button : MonoBehaviour {
 
     public int presedTimes;
     private int presedMax = 3;
-    public gameManager man;
+    public GameManager man;
     public bool passed30 = false;
     public bool continue_pressed = false;
     public GameObject button;

@@ -2,11 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class confirmation_behaviour : MonoBehaviour {
+public class Confirmation_behaviour : MonoBehaviour {
 
     public GameObject GUI;
     public Text text;
-    public payManager payMan;
+    public PayManager payMan;
     public string action;
 
 	// Use this for initialization

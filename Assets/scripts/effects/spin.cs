@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class spin : MonoBehaviour {
+public class Spin : MonoBehaviour {
 
 
     [Range(-30,30)]public float velocity = 1;

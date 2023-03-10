@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class particles_circle : MonoBehaviour {
+public class Particles_circle : MonoBehaviour {
 
     public ParticleSystem particles;
     public bool showing;

@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class continue_in_behaviour : MonoBehaviour {
+public class Continue_in_behaviour : MonoBehaviour {
 
     public Text text;
     public float time;

@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class timeinmenu : MonoBehaviour {
+public class TimeInMenu : MonoBehaviour {
     public PointsCounter points;
     private Text text;
 

@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class achievementsManager : MonoBehaviour
+public class AchievementsManager : MonoBehaviour
 {
     public enum achievement
     { 
@@ -52,16 +52,16 @@ public class achievementsManager : MonoBehaviour
     }
 
     void setGalaxyAchievement() { 
-        setAchievement(achievementsManager.achievement.galaxy);
+        setAchievement(AchievementsManager.achievement.galaxy);
     }
 
     void setSpinAchievement()
     {
-        setAchievement(achievementsManager.achievement.spin);
+        setAchievement(AchievementsManager.achievement.spin);
     }
 
     void setSmokeAchievement()
     {
-        setAchievement(achievementsManager.achievement.smoke);
+        setAchievement(AchievementsManager.achievement.smoke);
     }
 }

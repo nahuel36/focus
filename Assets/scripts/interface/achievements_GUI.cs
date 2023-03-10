@@ -2,10 +2,10 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class achievements_GUI : MonoBehaviour {
+public class Achievements_GUI : MonoBehaviour {
 
     public Text Description;
-    public achievementsManager AchievMan;
+    public AchievementsManager AchievMan;
     public Button[] achivButtons;
     
     // Use this for initialization

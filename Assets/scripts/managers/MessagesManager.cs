@@ -55,7 +55,7 @@ public class MessagesManager : MonoBehaviour {
     public Text confirmation_yes;
     public Text confirmation_no;
 
-    public coins_counter Coins;
+    public Coins_counter Coins;
 
     // Use this for initialization
     void Start()

@@ -2,14 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class timeInResults : MonoBehaviour {
+public class TimeInResults : MonoBehaviour {
         
     public PointsCounter points;
     private Text text;
 
     void Start()
     {
-        gameManager.loose += Show;
+        GameManager.loose += Show;
         text = GetComponent<Text>();
         Show();
 

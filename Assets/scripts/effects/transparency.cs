@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class transparency : MonoBehaviour {
+public class Transparency : MonoBehaviour {
 
     [SerializeField] bool isImage = false;
 
