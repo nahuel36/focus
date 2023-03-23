@@ -4,40 +4,42 @@ using System;
 
 public class Ball : MonoBehaviour {
 
-    public enum mode { 
-    normal,
-    blue, 
-    red, 
-    green
+    public enum Mode { 
+        normal,
+        blue, 
+        red, 
+        green
     }
 
-    public AnimationCurve velocityAument;
+    private Mode mode;
 
-    public Pong pong;
-    public Borders borders;
+    [SerializeField] AnimationCurve velocityAument;
+
+    [SerializeField] Pong pong;
+    [SerializeField] Borders borders;
 
     private Vector3 direction;
 
-    public AudioSource wallSound;
-    public AudioSource pongSound;
-    public AudioSource looseSound;
+    [SerializeField] AudioSource wallSound;
+    [SerializeField] AudioSource pongSound;
+    [SerializeField] AudioSource looseSound;
     
-    public GameManager levelMan;
-    public AchievementsManager achievements;
+    [SerializeField] GameManager levelMan;
+    [SerializeField] AchievementsManager achievements;
 
     private const float deltaXPosForStart = 2f;
 
-	public bool canMove = false;
-    public bool canRebote = false;
+	private bool canMove = false;
+    private bool canRebote = false;
 
     private float velocity;
     private float actualTime;
 
     private Vector3 initPos;
-	public Spin ball_spin;
+	[SerializeField] Spin ball_spin;
 
-    public bool ponged;
-    public bool ponged2times;
+    private bool ponged;
+    private bool ponged2times;
     private float ifponged;
 
     [SerializeField] PointsCounter points;
