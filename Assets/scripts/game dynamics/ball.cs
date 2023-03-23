@@ -57,6 +57,11 @@ public class Ball : MonoBehaviour {
         initPos = transform.position;
     }
 
+    public void changeMode(Mode mode)
+    {
+        this.mode = mode;
+    }
+
     void Continue()
     {
         canMove = true;

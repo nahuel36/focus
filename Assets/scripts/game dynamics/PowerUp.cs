@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public Ball.mode mode;
+    public Ball.Mode type;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,9 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collided");
+        if (collision.CompareTag("ball"))
+        {
+            collision.gameObject.GetComponent<Ball>().changeMode(type);
+        }
     }
 }
