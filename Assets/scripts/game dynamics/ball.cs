@@ -194,7 +194,12 @@ public class Ball : MonoBehaviour {
 
 	void changeDirVert()
 	{
-        points.AddPoint(2);
+        if (mode == Mode.blue)
+            points.AddPoint(1);
+        else if (mode == Mode.red)
+            points.AddPoint(3);
+        else if (mode == Mode.normal)
+            points.AddPoint(2);
 
         direction.y = -1;
 
