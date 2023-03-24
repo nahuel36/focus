@@ -9122,6 +9122,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2966e255125af49adba6394251467a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalModeColor: {r: 1, g: 1, b: 1, a: 1}
+  redModeColor: {r: 1, g: 0, b: 0, a: 1}
+  blueModeColor: {r: 0, g: 0, b: 1, a: 1}
+  greenModeColor: {r: 0, g: 1, b: 0, a: 1}
   velocityAument:
     serializedVersion: 2
     m_Curve:
@@ -9198,11 +9202,7 @@ MonoBehaviour:
   looseSound: {fileID: 159769197}
   levelMan: {fileID: 458642609}
   achievements: {fileID: 492833107}
-  canMove: 0
-  canRebote: 0
   ball_spin: {fileID: 649444263}
-  ponged: 0
-  ponged2times: 0
   points: {fileID: 2062616216}
 --- !u!114 &990619228
 MonoBehaviour:

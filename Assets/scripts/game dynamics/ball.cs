@@ -13,6 +13,12 @@ public class Ball : MonoBehaviour {
 
     private Mode mode;
 
+    [SerializeField] Color normalModeColor;
+    [SerializeField] Color redModeColor;
+    [SerializeField] Color blueModeColor;
+    [SerializeField] Color greenModeColor;
+    SpriteRenderer spriteRenderer;
+
     [SerializeField] AnimationCurve velocityAument;
 
     [SerializeField] Pong pong;
@@ -40,7 +46,7 @@ public class Ball : MonoBehaviour {
 
     private bool ponged;
     private bool ponged2times;
-    private float ifponged;
+    private float pongedVelocityMultiplier;
 
     [SerializeField] PointsCounter points;
 
@@ -55,10 +61,31 @@ public class Ball : MonoBehaviour {
         EventsExecute.Instance.data.SetEnter("ball continue move", Continue);
 
         initPos = transform.position;
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void changeMode(Mode mode)
     {
+        switch (mode)
+        {
+            case Mode.normal:
+                spriteRenderer.color = normalModeColor;
+                break;
+            case Mode.blue:
+                spriteRenderer.color = blueModeColor;
+                break;
+            case Mode.red:
+                spriteRenderer.color = redModeColor;
+                break;
+            case Mode.green:
+                spriteRenderer.color = greenModeColor;
+                break;
+            default:
+                spriteRenderer.color = normalModeColor;
+                break;
+        }
+
         this.mode = mode;
     }
 
@@ -252,10 +279,10 @@ public class Ball : MonoBehaviour {
             actualTime += 0.025f * 0.1f;
             velocity = velocityAument.Evaluate(actualTime);
 
-            ifponged = 1;
-            if (ponged) ifponged = 0.7f;
+            pongedVelocityMultiplier = 1;
+            if (ponged) pongedVelocityMultiplier = 0.7f;
 
-            this.transform.Translate(direction * velocity * ifponged);
+            this.transform.Translate(direction * velocity * pongedVelocityMultiplier);
         }
     }
 
@@ -269,3 +296,4 @@ public class Ball : MonoBehaviour {
         CancelInvoke();
     }
 }
+
