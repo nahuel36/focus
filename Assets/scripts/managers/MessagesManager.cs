@@ -10,6 +10,7 @@ public class MessagesManager : MonoBehaviour {
     public TextMeshProUGUI game_BottomText2;
     public Animator gameBottomTextAnim;
 
+    public Text menu_debug;
     public Text menu_start;
     public Text menu_extras;
 
@@ -72,6 +73,7 @@ public class MessagesManager : MonoBehaviour {
         Coins.Hide();
         hideAchiv();
 
+        menu_debug.text = "Debug";
         menu_start.text = LocalizationManager.GetWord(LocalizationManager.words.menu_start);
         menu_extras.text = LocalizationManager.GetWord(LocalizationManager.words.menu_extras);
 

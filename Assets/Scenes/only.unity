@@ -1114,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &106011402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3423,7 +3423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &394142543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4187,7 +4187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &521158323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4266,7 +4266,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1205984204}
         m_TargetAssemblyTypeName: EventsExecute, Assembly-CSharp
-        m_MethodName: PressStart
+        m_MethodName: PressDebug
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4622,7 +4622,8 @@ MonoBehaviour:
   game_BottomText: {fileID: 0}
   game_BottomText2: {fileID: 1898655586}
   gameBottomTextAnim: {fileID: 1898655583}
-  menu_start: {fileID: 135240508}
+  menu_debug: {fileID: 135240508}
+  menu_start: {fileID: 836521449}
   menu_extras: {fileID: 525191037}
   extras_style: {fileID: 715992999}
   extras_achievements: {fileID: 1089094634}
@@ -5830,7 +5831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &637324326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9939,7 +9940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1128313725
 RectTransform:
   m_ObjectHideFlags: 0

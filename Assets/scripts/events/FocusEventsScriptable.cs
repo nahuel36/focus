@@ -36,6 +36,8 @@ public class FocusEventsScriptable : ScriptableObject
         SetEnterOnArray(ResultsToMenu, eventname, delegateFunc);
 
         SetEnterOnArray(Conditions, eventname, delegateFunc);
+
+        SetEnterOnArray (StartDebugMode, eventname, delegateFunc);
     }
 
     void SetLeaveOnArray(FocusEvent[] eventarray, string eventname, FocusEvent.EventDelegate delegateFunc)
@@ -62,6 +64,9 @@ public class FocusEventsScriptable : ScriptableObject
         SetLeaveOnArray(ResultsToMenu, eventname, delegateFunc);
 
         SetLeaveOnArray(Conditions, eventname, delegateFunc);
+
+        SetLeaveOnArray(StartDebugMode, eventname, delegateFunc);
+
     }
 
     void EndEventOnArray(FocusEvent[] eventarray, string eventname)
@@ -91,6 +96,9 @@ public class FocusEventsScriptable : ScriptableObject
         EndEventOnArray(ResultsToMenu, eventname);
 
         EndEventOnArray(Conditions, eventname);
+
+        EndEventOnArray(StartDebugMode, eventname);
+
     }
 
 }

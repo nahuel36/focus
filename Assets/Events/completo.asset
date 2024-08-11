@@ -306,6 +306,11 @@ MonoBehaviour:
     onlyForTutorial: 1
     condition: 0
   StartDebugMode:
+  - name: reset points
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: reset continue button
     duration: 0
     waitToFinish: 0
@@ -326,6 +331,21 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: gamemanager start
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: focus on ball message
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: Show Game UI
+    duration: 0
+    waitToFinish: 1
+    customWait: 1
+    onlyForTutorial: 0
   - name: initialize ball
     duration: 0
     waitToFinish: 0
@@ -339,5 +359,25 @@ MonoBehaviour:
   - name: show particles
     duration: 7
     waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait 4 secs
+    duration: 4
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show swipe
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show swipe text
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: start pong move
+    duration: 0
+    waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
