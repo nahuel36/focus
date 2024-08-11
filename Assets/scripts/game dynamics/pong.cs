@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class Pong : MonoBehaviour {
 
@@ -33,6 +34,12 @@ public class Pong : MonoBehaviour {
         initPos = transform.position;
         EventsExecute.Instance.data.SetEnter("start pong move", startMoving);
         EventsExecute.Instance.data.SetEnter("stop pong move", loose);
+        EventsExecute.Instance.data.SetEnter("invencible pong", invencible);
+    }
+
+    private void invencible()
+    {
+        XScale = 50;
     }
 
     private float speed = 0.5f;
