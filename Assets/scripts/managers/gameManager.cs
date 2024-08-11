@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.Rendering.Universal;
 
 public enum appState
 {
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour {
 
     public AchievementsManager AchievementsMan;
   
-
+    public bool debugMode = false;
 
     void Start()
     {
@@ -39,14 +40,20 @@ public class GameManager : MonoBehaviour {
         EventsExecute.Instance.data.SetEnter("show swipe",OnShowSwipe);
         EventsExecute.Instance.data.SetEnter("start ball move",StartingShowedSwipeAndClick);
         EventsExecute.Instance.data.SetEnter("gamemanager continue", Continue);
+        EventsExecute.Instance.data.SetEnter("enable debug buttons", EnableDebugButtons);
 
-
+        debugMode = false;
         showedSwipe = false;
         actualState = appState.MENU;
         LocalizationManager.Initialize();
 
         startPresedTimes = PlayerPrefs.GetInt("PresedStartTimes");
         Coins = PlayerPrefs.GetInt("Coins");
+    }
+
+    private void EnableDebugButtons()
+    {
+        throw new NotImplementedException();
     }
 
     private void OnShowSwipe()
@@ -60,6 +67,7 @@ public class GameManager : MonoBehaviour {
         {
             actualState = appState.STARTING;
             showedSwipe = false;
+            debugMode = false;
             startingTime = 0;
 
             startPresedTimes++;
@@ -145,6 +153,17 @@ public class GameManager : MonoBehaviour {
 
 
 
+    public void NextDebug()
+    {
+        if (debugMode)
+        { }
+    }
+
+    public void PreviousDebug() 
+    {
+        if (debugMode)
+        { }
+    }
 
     public void GoToMenu()
     {

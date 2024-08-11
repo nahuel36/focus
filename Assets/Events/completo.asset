@@ -366,8 +366,38 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: enable debug buttons
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: show particles
     duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait
+    duration: 2
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show spin
+    duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait
+    duration: 2
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show smoke
+    duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: wait
+    duration: 2
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
