@@ -59,6 +59,7 @@ public class Transparency : MonoBehaviour {
         }
         else if (type == "ball")
         {
+            Debug.Log("activating show " + gameObject.name);
             EventsExecute.Instance.data.SetEnter("show ball",Show);
             EventsExecute.Instance.data.SetEnter("hide ball", Hide);
         }

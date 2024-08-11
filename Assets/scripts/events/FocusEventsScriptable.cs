@@ -11,7 +11,7 @@ public class FocusEventsScriptable : ScriptableObject
     public FocusEvent[] OnEndGame;
     public FocusEvent[] ResultsToMenu;
     public FocusEventConditional[] Conditions;
-
+    public FocusEvent[] StartDebugMode;
     void SetEnterOnArray(FocusEvent[] eventarray, string eventname, FocusEvent.EventDelegate delegateFunc)
     {
         for (int i = 0; i < eventarray.Length; i++)

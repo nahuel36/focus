@@ -34,6 +34,10 @@ public class EventsExecute : MonoBehaviour
         ExecuteEvents(data.OnStartPressed);
     }
 
+    public void PressDebug()
+    {
+        ExecuteEvents(data.StartDebugMode);
+    }
     public void PressContinue()
     {
         ExecuteEvents(data.OnGameContinue);

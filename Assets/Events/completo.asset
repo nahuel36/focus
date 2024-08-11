@@ -305,3 +305,39 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 1
     condition: 0
+  StartDebugMode:
+  - name: reset continue button
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: move border to init
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: hide actual fx
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: hide all texts
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: initialize ball
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show ball
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show particles
+    duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
