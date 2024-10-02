@@ -1,4 +1,7 @@
 1. agregar texto "aparecerán cosas para distraerte"
 2. ajustar mejor el alto de la pantalla
+4. logo de lab36 por build settings
+
+DONE
 3. quitar remolino
 
