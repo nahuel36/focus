@@ -1,1 +1,4 @@
-agregar texto "aparecerán cosas para distraerte"
+1. agregar texto "aparecerán cosas para distraerte"
+2. ajustar mejor el alto de la pantalla
+3. quitar remolino
+
