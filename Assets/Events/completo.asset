@@ -18,11 +18,6 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
-  - name: Lab36 Logo
-    duration: 0
-    waitToFinish: 1
-    customWait: 1
-    onlyForTutorial: 0
   - name: Show Menu
     duration: 0.1
     waitToFinish: 1
