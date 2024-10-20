@@ -1,7 +1,23 @@
 1. agregar texto "aparecerán cosas para distraerte"
 2. ajustar mejor el alto de la pantalla
-4. logo de lab36 por build settings
+3. experimentar con valores del remolino
+4. remolino background en el inicio del juego
+5. disminuir tiempo de aparicion de las distracciones
+6. que el golpe sea direccionado segun la posicion en el pong
+7. efecto de golpe en la bola (shader onda)
+8. que el particle system tire powerups
+9. powerup bola lenta
+10. powerup bola rapida
+11. bolas duplicadas?
+12. cambiar physics del pong y la bola por algo mas amistoso
+13. musica
+14. efecto de sonido aparicion de los efectos
+15. que sume puntos arriba
+16. efecto de iluminacion en pasa dedo
+17. la transparencia de la bola y los bordes no funca
+18. poner mas efectos
+19. marcador de velocidad
 
 DONE
 3. quitar remolino
-
+4. logo de lab36 por build settings
