@@ -23,6 +23,7 @@
 23. efecto de onda en el remolino
 24. modo cheat
 25. efecto de viento en la bola 
+26. efecto de transparencia en la bola
 
 DONE
 3. quitar remolino
