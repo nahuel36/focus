@@ -1,5 +1,5 @@
 1. agregar texto "aparecerán cosas para distraerte"
-2. ajustar mejor el alto de la pantalla
+2. ajustar mejor el alto y ancho de la pantalla
 3. experimentar con valores del remolino
 4. remolino background en el inicio del juego
 5. disminuir tiempo de aparicion de las distracciones
@@ -18,6 +18,11 @@
 18. poner mas efectos
 19. marcador de velocidad
 20. joysticks
+21. mejorar efecto de huella digital
+22. que el pongo no se mueva hacia los costados hasta que la bola lo haga
+23. efecto de onda en el remolino
+
+
 DONE
 3. quitar remolino
 4. logo de lab36 por build settings
