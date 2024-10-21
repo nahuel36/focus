@@ -21,7 +21,8 @@
 21. mejorar efecto de huella digital
 22. que el pongo no se mueva hacia los costados hasta que la bola lo haga
 23. efecto de onda en el remolino
-
+24. modo cheat
+25. efecto de viento en la bola 
 
 DONE
 3. quitar remolino
