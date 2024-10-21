@@ -4882,7 +4882,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -285, y: -786.87, z: 0}
-  m_LocalScale: {x: 2.66875, y: 2.66875, z: 2.66875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 665028130}
@@ -6107,7 +6107,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 567151155}
@@ -6169,12 +6169,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -6231044458718751821, guid: bca0641d9521d284a81d5681e998940b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 64, y: 64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9530,7 +9530,7 @@ MonoBehaviour:
   looseSound: {fileID: 159769197}
   levelMan: {fileID: 458642609}
   achievements: {fileID: 492833107}
-  ball_spin: {fileID: 0}
+  ball_spin: {fileID: 665028131}
   points: {fileID: 2062616216}
 --- !u!114 &990619228
 MonoBehaviour:

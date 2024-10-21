@@ -1194,8 +1194,8 @@
     "m_ObjectId": "0e080692f1084607a4d088337a7ceea2",
     "m_Title": "Tunnel",
     "m_Position": {
-        "x": 10.0,
-        "y": 10.0
+        "x": 906.0,
+        "y": -59.0
     }
 }
 
@@ -1536,8 +1536,8 @@
     "m_ObjectId": "1b9a710aead34a3db6b8d7d7dde1182e",
     "m_Title": "UV",
     "m_Position": {
-        "x": 10.0,
-        "y": 10.0
+        "x": -1199.0,
+        "y": 349.0
     }
 }
 
@@ -1940,8 +1940,8 @@
     "m_ObjectId": "39e1eb4888af47feaa96a1e8fedd7911",
     "m_Title": "stickIndex",
     "m_Position": {
-        "x": 10.0,
-        "y": 10.0
+        "x": -373.0,
+        "y": 1334.0
     }
 }
 
@@ -2395,8 +2395,8 @@
     "m_ObjectId": "4826c1e549734323a585d0b374220a7f",
     "m_Title": "Radius",
     "m_Position": {
-        "x": -1007.2000732421875,
-        "y": -116.79998779296875
+        "x": -1003.0,
+        "y": -116.0
     }
 }
 
@@ -2890,8 +2890,8 @@
     "m_ObjectId": "5d5eb48728474c58915177a4248074c4",
     "m_Title": "Angle",
     "m_Position": {
-        "x": 10.0,
-        "y": 10.0
+        "x": -251.0,
+        "y": 572.0
     }
 }
 
@@ -5496,8 +5496,8 @@
     "m_ObjectId": "dd9c519d2c9e443fb9f134900cba0a7f",
     "m_Title": "Stripe",
     "m_Position": {
-        "x": 10.0,
-        "y": 10.0
+        "x": 612.0,
+        "y": -929.0
     }
 }
 
@@ -6014,7 +6014,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "isMainTexture": false,
