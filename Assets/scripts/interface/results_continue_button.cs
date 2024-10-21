@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using GoogleMobileAds.Api;
-using GoogleMobileAds;
 
 
 public class Results_continue_button : MonoBehaviour {

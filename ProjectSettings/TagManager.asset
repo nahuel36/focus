@@ -2,9 +2,8 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 3
-  tags:
-  - ball
+  serializedVersion: 2
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -42,33 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
-    uniqueID: 2294161125
-    locked: 0
-  - name: blackHole
-    uniqueID: 3950682929
-    locked: 0
-  - name: spin
-    uniqueID: 3895032781
-    locked: 0
-  - name: ball
-    uniqueID: 771868425
-    locked: 0
-  - name: smoke
-    uniqueID: 938210843
-    locked: 0
-  - name: particles
-    uniqueID: 1574244969
-    locked: 0
-  - name: GUI
-    uniqueID: 3745458841
-    locked: 0
-  m_RenderingLayers:
-  - Default
-  - Light Layer 1
-  - Light Layer 2
-  - Light Layer 3
-  - Light Layer 4
-  - Light Layer 5
-  - Light Layer 6
-  - Light Layer 7

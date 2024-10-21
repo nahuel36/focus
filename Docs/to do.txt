@@ -17,7 +17,7 @@
 17. la transparencia de la bola y los bordes no funca
 18. poner mas efectos
 19. marcador de velocidad
-
+20. joysticks
 DONE
 3. quitar remolino
 4. logo de lab36 por build settings
