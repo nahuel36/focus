@@ -24,11 +24,12 @@
 24. modo cheat
 25. efecto de viento en la bola 
 26. efecto de transparencia en la bola
-27. arreglar letra
 28. volver a agregar logo lab36
 29. arreglar giro pelota
 30. arreglar pong
+31. acomodar stats
 
 DONE
-3. quitar remolino
+27. arreglar letra
 4. logo de lab36 por build settings
+3. quitar remolino
