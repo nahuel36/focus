@@ -14,7 +14,6 @@
 14. efecto de sonido aparicion de los efectos
 15. que sume puntos arriba
 16. efecto de iluminacion en pasa dedo
-17. la transparencia de la bola y los bordes no funca
 18. poner mas efectos
 19. marcador de velocidad
 20. joysticks
@@ -24,12 +23,15 @@
 24. modo cheat
 25. efecto de viento en la bola 
 26. efecto de transparencia en la bola
-28. volver a agregar logo lab36
 29. arreglar giro pelota
-30. arreglar pong
 31. acomodar stats
 
+ANTES DE PONER PUBLICO
+28. volver a agregar logo lab36
+
 DONE
+30. arreglar pong
 27. arreglar letra
+17. la transparencia de la bola y los bordes no funca
 4. logo de lab36 por build settings
 3. quitar remolino
