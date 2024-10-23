@@ -34,6 +34,7 @@
 44. cambiar texto "extras" por "mas"
 45. agregar servicio de soporte 
 46. Application.isMobilePlatform (cambiar resolucion)
+47. poner texto en rojo cuando supera el record
 
 PRIORIDAD
 1. agregar texto "aparecerán cosas para distraerte"

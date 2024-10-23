@@ -55,6 +55,46 @@ MonoBehaviour:
     m_Key: achiv_spin
     m_Metadata:
       m_Items: []
+  - m_Id: 152798669770752
+    m_Key: achiv_30seconds_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152819725176832
+    m_Key: achiv_60seconds_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152837228007424
+    m_Key: achiv_120seconds_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152861676605440
+    m_Key: achiv_300seconds_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152885663830016
+    m_Key: achiv_1ponged_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152908141105152
+    m_Key: achiv_2ponged_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152977540059136
+    m_Key: achiv_3ponged_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152998008262656
+    m_Key: achiv_galaxy_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153017109123072
+    m_Key: achiv_smoke_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153034247049216
+    m_Key: achiv_spin_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

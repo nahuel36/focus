@@ -17,7 +17,87 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: d412079dcabdfa34aaf1c240712c9621, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 43078586368
+    m_Localized: 30 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65773965312
+    m_Localized: 60 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82999971840
+    m_Localized: 120 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116034310144
+    m_Localized: 300 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134413750272
+    m_Localized: first slow ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152164044800
+    m_Localized: second slow ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169616543744
+    m_Localized: third slow ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 185886248960
+    m_Localized: galaxy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200968966144
+    m_Localized: smoke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 216286564352
+    m_Localized: spin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152798669770752
+    m_Localized: survive 30 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152819725176832
+    m_Localized: survive 60 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152837228007424
+    m_Localized: survive 120 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152861676605440
+    m_Localized: survive 300 seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152885663830016
+    m_Localized: your first slow ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152908141105152
+    m_Localized: do two slow balls in a row
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152977540059136
+    m_Localized: do three slow balls in a row
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152998008262656
+    m_Localized: survive at the galaxy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153017109123072
+    m_Localized: survive with smoke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153034247049216
+    m_Localized: survive in spin
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

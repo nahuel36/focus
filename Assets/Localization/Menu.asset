@@ -14,16 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SharedTableData: {fileID: 11400000, guid: 7eadd76bab081f14b8df9c98e31edc63, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: 9e97f514fbb7e0d489b01d4418d70e8a, type: 2}
   - {fileID: 11400000, guid: e4fc20acecb5a6a4ab19a461ed990989, type: 2}
   - {fileID: 11400000, guid: 789ae6e74f4cc014d946daab83942031, type: 2}
   - {fileID: 11400000, guid: 654572392950ebe4cac2fdccab56f205, type: 2}
   - {fileID: 11400000, guid: 7ce081f746979074d910ce8f499792c4, type: 2}
-  - {fileID: 11400000, guid: dac4c87f1f71c8a4b832343d450c2188, type: 2}
-  - {fileID: 11400000, guid: 4e913d6a0ef0ab040a202f959a93a581, type: 2}
-  - {fileID: 11400000, guid: bcd456d0a96ea094d81a81632ab4fa24, type: 2}
   - {fileID: 11400000, guid: e16c6ead8296e044098993161f116e62, type: 2}
-  - {fileID: 11400000, guid: c0be24a4f6bbf974aae2e51b0e6a4ad2, type: 2}
   - {fileID: 11400000, guid: a968146a52355fc4facf773772515c96, type: 2}
   m_Extensions: []
   m_Group: String Table
