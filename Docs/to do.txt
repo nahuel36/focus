@@ -1,3 +1,4 @@
+2. ajustar mejor el alto y ancho de la pantalla
 3. experimentar con valores del remolino
 4. remolino background en el inicio del juego
 5. disminuir tiempo de aparicion de las distracciones
@@ -25,10 +26,10 @@
 34. efecto lens distortion
 38. mas efectos con volume (post procesing)
 39. suavizar movimiento del pong
+40. color de letra en celular es distinto
 
 PRIORIDAD
 1. agregar texto "aparecerán cosas para distraerte"
-2. ajustar mejor el alto y ancho de la pantalla
 31. acomodar stats
 32. pasar textos a localization
 37. stats sacar "best" del ingame
