@@ -15,6 +15,18 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Polish (pl)
   m_GUID: cb529af7dc83b474980c053753b4b230
   m_SerializeEntries:
+  - m_GUID: 274f2f5ef6810ca47886b0a361ebd788
+    m_Address: Monetization_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93a21577a495af74191a1462ed47a6aa
+    m_Address: Achievements_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: adfad0d3d6f99bb4584c4d02c87ee6e7
     m_Address: Game_pl
     m_ReadOnly: 1
@@ -23,6 +35,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bcd456d0a96ea094d81a81632ab4fa24
     m_Address: Menu_pl
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc09b1b80fb0fc24f998850bc50e7fb3
+    m_Address: Results_pl
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pl

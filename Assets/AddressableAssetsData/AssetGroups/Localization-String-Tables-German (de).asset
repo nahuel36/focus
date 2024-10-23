@@ -15,6 +15,18 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-German (de)
   m_GUID: bc4172657fa1de942a4037853047a4c8
   m_SerializeEntries:
+  - m_GUID: 12c7a54eec846ab4aab5758366e4f8b5
+    m_Address: Achievements_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 224ece21fead31e4a8a2cc13be066fbe
+    m_Address: Results_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 30ddbda227a1de844bff3ccccb177aac
     m_Address: Game_de
     m_ReadOnly: 1
@@ -23,6 +35,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 654572392950ebe4cac2fdccab56f205
     m_Address: Menu_de
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9cb80111d250694da16d5bf8bddfa7c
+    m_Address: Monetization_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de

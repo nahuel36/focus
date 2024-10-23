@@ -15,8 +15,26 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Portuguese (pt)
   m_GUID: 924fb28f53f723e40ad0ecde1914ae28
   m_SerializeEntries:
+  - m_GUID: 220311b49c890264f92214d4d216388c
+    m_Address: Achievements_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ab6699e7961a9f4e8b267b01a71455e
+    m_Address: Monetization_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81fba900d4718e343be32da91eb4484a
     m_Address: Game_pt
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf070e24d800dee498d659ad8f4545db
+    m_Address: Results_pt
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-pt

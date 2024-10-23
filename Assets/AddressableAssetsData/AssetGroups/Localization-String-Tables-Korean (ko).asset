@@ -21,6 +21,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ko
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63fdc621614cd9f4099ea3a74ffbb232
+    m_Address: Achievements_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a612066be7d9ccc4f89130a3c5ece615
+    m_Address: Results_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: accff0bc911a9e146b02141e9c1383f7
+    m_Address: Monetization_ko
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ko
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e1e8cb1417630f54b98349c72fea637b
     m_Address: Game_ko
     m_ReadOnly: 1

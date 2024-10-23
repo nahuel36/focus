@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Achievements Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Achievements
+  m_TableCollectionNameGuidString: d412079dcabdfa34aaf1c240712c9621
+  m_Entries:
+  - m_Id: 43078586368
+    m_Key: achiv_30seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65773965312
+    m_Key: achiv_60seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82999971840
+    m_Key: achiv_120seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116034310144
+    m_Key: achiv_300seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134413750272
+    m_Key: achiv_1ponged
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152164044800
+    m_Key: achiv_2ponged
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169616543744
+    m_Key: achiv_3ponged
+    m_Metadata:
+      m_Items: []
+  - m_Id: 185886248960
+    m_Key: achiv_galaxy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200968966144
+    m_Key: achiv_smoke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 216286564352
+    m_Key: achiv_spin
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6613104475493630255
+  references:
+    version: 2
+    RefIds:
+    - rid: 6613104475493630255
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1729683409581

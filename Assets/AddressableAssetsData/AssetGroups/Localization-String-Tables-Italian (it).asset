@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Italian (it)
   m_GUID: 0388436fad4b2764bba135e4877c4772
   m_SerializeEntries:
+  - m_GUID: 3648e5db9184feb44854ca83af8d3b3f
+    m_Address: Results_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 752d0ae4add95e64099100bc048f89dd
     m_Address: Game_it
     m_ReadOnly: 1
@@ -23,6 +29,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7ce081f746979074d910ce8f499792c4
     m_Address: Menu_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8169f6cfd36f63c4e90d3a1039ab0577
+    m_Address: Monetization_it
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-it
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96d965c5b13554a499dc0a7c398d818b
+    m_Address: Achievements_it
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-it

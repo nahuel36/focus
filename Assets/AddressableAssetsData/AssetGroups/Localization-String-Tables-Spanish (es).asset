@@ -15,14 +15,32 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Spanish (es)
   m_GUID: a8e0168ae6ee6b14db38f9b1131f62f7
   m_SerializeEntries:
+  - m_GUID: 97bce3921953613459ead8971f8b0e34
+    m_Address: Achievements_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a968146a52355fc4facf773772515c96
     m_Address: Menu_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c75ed186412ccce458ce94af3310f03e
+    m_Address: Monetization_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dae1dbe098fc9e141b8c31d1f5d65add
     m_Address: Game_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9c0c3f6f9c62e7458f2382383fb7560
+    m_Address: Results_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

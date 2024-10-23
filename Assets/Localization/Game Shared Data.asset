@@ -14,7 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: Game
   m_TableCollectionNameGuidString: 2d35ae9f272d13f4da98e3f4ea1f135a
-  m_Entries: []
+  m_Entries:
+  - m_Id: 10590457106432
+    m_Key: game_focus_on_ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10607628587008
+    m_Key: game_dont_let_it_fall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10624825233408
+    m_Key: game_move_finger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644123226112
+    m_Key: game_make_best_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10664293634048
+    m_Key: game_hold_here
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10680760471552
+    m_Key: game_achievement_unlocked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11272207667200
+    m_Key: continuein_continue_in
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

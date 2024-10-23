@@ -15,6 +15,24 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Chinese (Simplified) (zh)
   m_GUID: 9788e35e63eb53b499da730bb98bcab5
   m_SerializeEntries:
+  - m_GUID: 22919c4e73714404a89e534a59320afc
+    m_Address: Monetization_zh
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 552a81de89da768478bf7abc013cdd07
+    m_Address: Results_zh
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87fef8752bf2c7244b5d42e3e4e4f51d
+    m_Address: Achievements_zh
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9e97f514fbb7e0d489b01d4418d70e8a
     m_Address: Menu_zh
     m_ReadOnly: 1

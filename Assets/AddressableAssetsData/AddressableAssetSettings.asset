@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 6fa89f656ed3b8649a7b9ca6780bf1a8
   m_currentHash:
     serializedVersion: 2
-    Hash: 479b8e7e6e2d182ab7b6ef027fec8f8a
+    Hash: 1f2442fd2003de4aadbfc01c91f1e421
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: ab66e3a5e10ab394789e444bc6ddfce5
   m_RemoteCatalogLoadPath:
     m_Id: 
   m_ContentStateBuildPathProfileVariableName: 
@@ -124,6 +124,7 @@ MonoBehaviour:
     - Locale-pt
     - Locale-ru
     - Locale-es
+    - Preload
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 4829f6357fca5b546b114256926cd70f, type: 2}
