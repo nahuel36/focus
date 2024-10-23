@@ -17,7 +17,87 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: d412079dcabdfa34aaf1c240712c9621, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 43078586368
+    m_Localized: 30 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65773965312
+    m_Localized: 60 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82999971840
+    m_Localized: 120 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116034310144
+    m_Localized: 300 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134413750272
+    m_Localized: primer bola lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152164044800
+    m_Localized: segunda bola lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169616543744
+    m_Localized: tercer bola lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 185886248960
+    m_Localized: "galaxi\ta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200968966144
+    m_Localized: humo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 216286564352
+    m_Localized: remolino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152798669770752
+    m_Localized: sobrevive 30 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152819725176832
+    m_Localized: sobrevive 60 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152837228007424
+    m_Localized: sobrevive 120 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152861676605440
+    m_Localized: sobrevive 300 segundos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152885663830016
+    m_Localized: tu primer bola lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152908141105152
+    m_Localized: dos bolas lentas seguidas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152977540059136
+    m_Localized: tres bolas lentas seguidas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152998008262656
+    m_Localized: sobrevive a la galaxia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153017109123072
+    m_Localized: sobrevive al humo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153034247049216
+    m_Localized: sobrevive al remolino
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

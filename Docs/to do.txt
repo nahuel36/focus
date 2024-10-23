@@ -35,6 +35,7 @@
 45. agregar servicio de soporte 
 46. Application.isMobilePlatform (cambiar resolucion)
 47. poner texto en rojo cuando supera el record
+48. back to menu
 
 PRIORIDAD
 1. agregar texto "aparecerán cosas para distraerte"
