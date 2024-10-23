@@ -29,6 +29,10 @@
 39. suavizar movimiento del pong
 40. color de letra en celular es distinto
 41. que se pueda cambiar resolucion en opciones 
+42. mas idiomas
+43. idioma se puede elegir desde menu
+44. cambiar texto "extras" por "mas"
+45. agregar servicio de soporte 
 
 PRIORIDAD
 1. agregar texto "aparecerán cosas para distraerte"
