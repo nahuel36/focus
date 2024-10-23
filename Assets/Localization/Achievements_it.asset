@@ -17,7 +17,87 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: d412079dcabdfa34aaf1c240712c9621, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 43078586368
+    m_Localized: 30 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65773965312
+    m_Localized: 60 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82999971840
+    m_Localized: 120 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 116034310144
+    m_Localized: 300 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134413750272
+    m_Localized: prima palla lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152164044800
+    m_Localized: seconda palla lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 169616543744
+    m_Localized: terza palla lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 185886248960
+    m_Localized: galassia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 200968966144
+    m_Localized: fumo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 216286564352
+    m_Localized: rotazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152798669770752
+    m_Localized: sopravvivere 30 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152819725176832
+    m_Localized: sopravvivere 60 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152837228007424
+    m_Localized: sopravvivere 120 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152861676605440
+    m_Localized: sopravvivere 300 secondi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152885663830016
+    m_Localized: la tua prima palla lenta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152908141105152
+    m_Localized: fare due palle lente di fila
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152977540059136
+    m_Localized: fare tre palle lente di fila
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152998008262656
+    m_Localized: sopravvivere nella galassia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153017109123072
+    m_Localized: sopravvivere con il fumo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153034247049216
+    m_Localized: sopravvivere nella rotazione
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

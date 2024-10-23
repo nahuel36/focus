@@ -17,7 +17,47 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 7eadd76bab081f14b8df9c98e31edc63, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 8605481766912
+    m_Localized: "D\xE9marrer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8637316534272
+    m_Localized: meilleur score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8661823852544
+    m_Localized: Extras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8681205731328
+    m_Localized: "troph\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8704752553984
+    m_Localized: style
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8731713540096
+    m_Localized: "acheter des pi\xE8ces"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8752953495552
+    m_Localized: retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8771936915456
+    m_Localized: "changer l\u2019arri\xE8re-plan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8792195403776
+    m_Localized: changer la balle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8810549678080
+    m_Localized: "retirer la banni\xE8re"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -17,7 +17,52 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 9d1e86a5a36e10e40abdd822c135547c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 20341264384
+    m_Localized: Um weiterzuspielen, sieh dir ein Video an oder warte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54361264128
+    m_Localized: ansehen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83943690240
+    m_Localized: "erhalte M\xFCnzen im Spiel, sie sind Belohnungen f\xFCr verschiedene
+      Erfolge"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103157796864
+    m_Localized: kaufen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123126878208
+    m_Localized: ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140503879680
+    m_Localized: "10 M\xFCnzen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155989250048
+    m_Localized: "25 M\xFCnzen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 171449454592
+    m_Localized: "40 M\xFCnzen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 195390541824
+    m_Localized: "du kannst 5 M\xFCnzen verwenden, um dieses Leben fortzusetzen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 280501358592
+    m_Localized: nein, danke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 296926253056
+    m_Localized: ok
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

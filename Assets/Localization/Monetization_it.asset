@@ -17,7 +17,51 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 9d1e86a5a36e10e40abdd822c135547c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 20341264384
+    m_Localized: Per continuare a giocare, guarda un video o aspetta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83943690240
+    m_Localized: ottieni monete nel gioco, sono ricompense per diversi traguardi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54361264128
+    m_Localized: guarda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103157796864
+    m_Localized: compra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123126878208
+    m_Localized: ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140503879680
+    m_Localized: 10 monete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155989250048
+    m_Localized: 25 monete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 171449454592
+    m_Localized: 40 monete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 195390541824
+    m_Localized: puoi usare 5 monete per continuare questa vita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 280501358592
+    m_Localized: no, grazie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 296926253056
+    m_Localized: ok
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
