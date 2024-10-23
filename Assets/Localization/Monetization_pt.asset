@@ -17,7 +17,51 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 9d1e86a5a36e10e40abdd822c135547c, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 20341264384
+    m_Localized: Para seguir jogando olha um video ou espera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54361264128
+    m_Localized: ver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83943690240
+    m_Localized: "obten moedas enquanto jogas, s\xE3o recompensas de diferentes conquistas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103157796864
+    m_Localized: comprar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 123126878208
+    m_Localized: ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140503879680
+    m_Localized: 10 moedas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 155989250048
+    m_Localized: 25 moedas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 171449454592
+    m_Localized: 40 moedas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 195390541824
+    m_Localized: podes continuar esta vida usando 5 moedas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 296926253056
+    m_Localized: ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 280501358592
+    m_Localized: "n\xE3o,obrigado"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

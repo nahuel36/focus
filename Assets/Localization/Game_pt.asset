@@ -17,7 +17,35 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 2d35ae9f272d13f4da98e3f4ea1f135a, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 10590457106432
+    m_Localized: olha a pelota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10607628587008
+    m_Localized: "n\xE3o deixe que caia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10624825233408
+    m_Localized: mova seu dedo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10644123226112
+    m_Localized: "fa\xE7a seu melhor tempo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10664293634048
+    m_Localized: pressiona
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10680760471552
+    m_Localized: trofeo conseguido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11272207667200
+    m_Localized: continuando em...
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
