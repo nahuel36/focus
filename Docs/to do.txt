@@ -22,17 +22,17 @@
 25. efecto de viento en la bola 
 26. efecto de transparencia en la bola
 29. arreglar giro pelota
+31. acomodar stats (coins siempre visible)
 33. powerups en swipe bar
 34. efecto lens distortion
 38. mas efectos con volume (post procesing)
 39. suavizar movimiento del pong
 40. color de letra en celular es distinto
+41. que se pueda cambiar resolucion en opciones 
 
 PRIORIDAD
 1. agregar texto "aparecerán cosas para distraerte"
-31. acomodar stats
 32. pasar textos a localization
-37. stats sacar "best" del ingame
 
 ANTES DE PONER PUBLICO
 28. volver a agregar logo lab36
@@ -41,6 +41,7 @@ ANTES DE PONER PUBLICO
 40. que no aparezca nada de más despues del splash
 
 DONE
+37. stats sacar "best" del ingame
 30. arreglar pong
 27. arreglar letra
 24. modo cheat

@@ -8,7 +8,7 @@ public class TimeInMenu : MonoBehaviour {
 
     void Start () {
         text = GetComponent<Text>();
-        text.text = LocalizationManager.GetWord(LocalizationManager.words.menu_best_time) + ":\n " + points.bestPoints.ToString("F3");
+        text.text = LocalizationManager.GetWord(LocalizationManager.words.menu_best_time) + ":\n " + points.bestPoints.ToString("F0");
 
     }
 
