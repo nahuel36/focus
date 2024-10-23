@@ -20,7 +20,6 @@
 21. mejorar efecto de huella digital
 22. que el pongo no se mueva hacia los costados hasta que la bola lo haga
 23. efecto de onda en el remolino
-24. modo cheat
 25. efecto de viento en la bola 
 26. efecto de transparencia en la bola
 29. arreglar giro pelota
@@ -32,6 +31,7 @@ ANTES DE PONER PUBLICO
 DONE
 30. arreglar pong
 27. arreglar letra
+24. modo cheat
 17. la transparencia de la bola y los bordes no funca
 4. logo de lab36 por build settings
 3. quitar remolino
