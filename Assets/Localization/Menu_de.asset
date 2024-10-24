@@ -58,6 +58,10 @@ MonoBehaviour:
     m_Localized: Banner entfernen
     m_Metadata:
       m_Items: []
+  - m_Id: 369810947903488
+    m_Localized: kommt bald
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

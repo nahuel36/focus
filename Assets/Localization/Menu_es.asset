@@ -58,6 +58,10 @@ MonoBehaviour:
     m_Localized: sacar banner
     m_Metadata:
       m_Items: []
+  - m_Id: 369810947903488
+    m_Localized: "pr\xF3ximamente"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

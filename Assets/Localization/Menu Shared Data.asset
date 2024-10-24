@@ -55,6 +55,10 @@ MonoBehaviour:
     m_Key: style_removebanner
     m_Metadata:
       m_Items: []
+  - m_Id: 369810947903488
+    m_Key: style_coming_soon
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
