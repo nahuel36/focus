@@ -6,6 +6,7 @@ using UnityEngine;
 public class EsteticLauncher : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] TimeInResults timeInResults;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,7 @@ public class EsteticLauncher : MonoBehaviour
         EventsExecute.Instance.data.SetEnter("Show Menu",ShowMenu);
         EventsExecute.Instance.data.SetEnter("Show Game UI",ShowGame);
         EventsExecute.Instance.data.SetEnter("Show Results",ShowResults);
+        EventsExecute.Instance.data.SetEnter("Show Time Results", ShowTimeResults);
     }
 
     private void ShowLogo()
@@ -33,6 +35,11 @@ public class EsteticLauncher : MonoBehaviour
     public void ShowResults()
     {
         animator.Play("game-results", 0);
+    }
+
+    public void ShowTimeResults()
+    {
+        timeInResults.Show();
     }
 
     // Update is called once per frame

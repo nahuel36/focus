@@ -5530,6 +5530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: {fileID: 2062616216}
+  text: {fileID: 584456441}
   results_your_time:
     m_TableReference:
       m_TableCollectionName: GUID:751aed7441b220043ba51b2792b1d598
@@ -21820,6 +21821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1843545007}
+  timeInResults: {fileID: 584456440}
 --- !u!1 &1880922228
 GameObject:
   m_ObjectHideFlags: 0
