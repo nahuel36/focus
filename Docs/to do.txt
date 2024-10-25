@@ -41,6 +41,7 @@ PRIORIDAD
 1. agregar texto "cuidado! no te distraigas"
 50. chequear en notepad todos los archivos como \Localization\Menu_es.asset a ver si alguno tiene un caracter raro
 51. separar transparencia de bordes y pelota
+54. results best time y time y monedas no se muestra bien la primera vez
 
 ANTES DE PONER PUBLICO
 28. volver a agregar logo lab36
