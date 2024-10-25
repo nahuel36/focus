@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour {
         debugMode = false;
         showedSwipe = false;
         actualState = appState.MENU;
-        LocalizationManager.Initialize();
 
         startPresedTimes = PlayerPrefs.GetInt("PresedStartTimes");
         Coins = PlayerPrefs.GetInt("Coins");

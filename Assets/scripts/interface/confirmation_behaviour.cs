@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.Localization;
 public class Confirmation_behaviour : MonoBehaviour {
 
-    public GameObject GUI;
-    public Text text;
-    public PayManager payMan;
-    public string action;
-
-	// Use this for initialization
-	public void Show (string what)
+    [SerializeField] GameObject GUI;
+    [SerializeField] Text text;
+    [SerializeField] PayManager payMan;
+    [SerializeField] string action;
+    [SerializeField] LocalizedString confirmation_tocontinue;
+    // Use this for initialization
+    public void Show (string what)
     {
         action = what;
         GUI.SetActive(true);
         if (what == "continue")
-            text.text = LocalizationManager.GetWord(LocalizationManager.words.confirmation_tocontinue);
+            text.text = confirmation_tocontinue.GetLocalizedString();
 
 	}
 

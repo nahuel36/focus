@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.Localization;
 public class TimeInMenu : MonoBehaviour {
-    public PointsCounter points;
+    [SerializeField] PointsCounter points;
     private Text text;
+    [SerializeField] LocalizedString menu_best_time;
 
     void Start () {
         text = GetComponent<Text>();
-        text.text = LocalizationManager.GetWord(LocalizationManager.words.menu_best_time) + ":\n " + points.bestPoints.ToString("F0");
+        text.text = menu_best_time.GetLocalizedString() + ":\n " + points.bestPoints.ToString("F0");
 
     }
 

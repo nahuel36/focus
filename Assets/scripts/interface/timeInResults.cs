@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.Localization;
 public class TimeInResults : MonoBehaviour {
         
-    public PointsCounter points;
+    [SerializeField] PointsCounter points;
     private Text text;
-
+    [SerializeField] LocalizedString results_your_time;
+    [SerializeField] LocalizedString results_best_time;
     void Start()
     {
         GameManager.loose += Show;
@@ -17,9 +18,9 @@ public class TimeInResults : MonoBehaviour {
     
     void Show()
     {
-        text.text = LocalizationManager.GetWord(LocalizationManager.words.results_your_time) + "\n " + 
+        text.text = results_your_time.GetLocalizedString() + "\n " + 
             points.actualPoints.ToString() + "\n" + 
-            LocalizationManager.GetWord(LocalizationManager.words.results_best_time) + "\n " + 
+            results_best_time.GetLocalizedString() + "\n " + 
             points.bestPoints.ToString();
          
     }

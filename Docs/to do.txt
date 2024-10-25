@@ -39,7 +39,6 @@
 
 PRIORIDAD
 1. agregar texto "aparecerán cosas para distraerte"
-32. pasar textos a localization
 
 ANTES DE PONER PUBLICO
 28. volver a agregar logo lab36
@@ -49,6 +48,7 @@ ANTES DE PONER PUBLICO
 
 DONE
 37. stats sacar "best" del ingame
+32. pasar textos a localization
 30. arreglar pong
 27. arreglar letra
 24. modo cheat
