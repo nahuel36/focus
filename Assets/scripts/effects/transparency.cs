@@ -23,6 +23,8 @@ public class Transparency : MonoBehaviour {
         { 
             transSpriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
             colorWithAlpha = transSpriteRenderer.color;
+            if(colorWithAlpha.a == 0)
+                colorWithAlpha.a = 1;
             colorWithoutAlpha = transSpriteRenderer.color;
             colorWithoutAlpha.a = 0;
         }
@@ -30,6 +32,8 @@ public class Transparency : MonoBehaviour {
         {
             transImage = transform.GetChild(0).GetComponent<Image>();
             colorWithAlpha = transImage.color;
+            if (colorWithAlpha.a == 0)
+                colorWithAlpha.a = 1;
             colorWithoutAlpha = transImage.color;
             colorWithoutAlpha.a = 0;
         }
