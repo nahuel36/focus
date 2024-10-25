@@ -3,14 +3,15 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class Coins_counter : MonoBehaviour {
-    public GameManager levelMan;
-    public Text text;
-    public GameObject spriteObj;
-    public AudioSource coinSound;
+    [SerializeField] GameManager levelMan;
+    [SerializeField] Text text;
+    [SerializeField] GameObject spriteObj;
+    [SerializeField] AudioSource coinSound;
 
     // Use this for initialization
     void Start()
     {
+        EventsExecute.Instance.data.SetEnter("show coins", Show);
         GameManager.addedCoin += AddedCoin;
     }
 
@@ -24,8 +25,8 @@ public class Coins_counter : MonoBehaviour {
     // Update is called once per frame
     public void Hide ()
     {
-       // spriteObj.SetActive(false);
-       // text.text = "";
+       spriteObj.SetActive(false);
+       text.text = "";
 
     }
 

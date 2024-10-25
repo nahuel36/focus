@@ -32,7 +32,6 @@ public class MessagesManager : MonoBehaviour {
         EventsExecute.Instance.data.SetEnter("hide all texts", hideAll);
         //gameEvents.ball_newDirection_message += ballChangeDirection;
 
-        Coins.Hide();
         hideAchiv();
 
     }
@@ -63,7 +62,6 @@ public class MessagesManager : MonoBehaviour {
     void startingGame()
     {
         game_TopText2.text = game_focus_on_ball.GetLocalizedString();
-        Coins.Show();
         //timer.Hide();
         //Coins.Hide();
     }
@@ -74,13 +72,11 @@ public class MessagesManager : MonoBehaviour {
         gameBottomTextAnim.SetTrigger("show");
        // game_BottomText.text = LocalizationManager.GetWord(LocalizationManager.words.game_hold_here);
         game_BottomText2.text = game_hold_here.GetLocalizedString(); 
-        Coins.Hide();
     }
 
     void ballStartMoving()
     {
         game_TopText2.text = game_dont_let_it_fall.GetLocalizedString();
-        Coins.Hide();
     }
 
     void hideSwipeMessage()
@@ -91,14 +87,12 @@ public class MessagesManager : MonoBehaviour {
     void ballChangeDirection()
     {
         game_TopText2.text = game_move_finger.GetLocalizedString(); 
-        Coins.Hide();
     }
 
     void makeBestTime()
     {
         game_TopText2.text = game_make_best_time.GetLocalizedString();
         Invoke("hideMakeBestTime", 4);
-        Coins.Hide();
     }
 
     void hideMakeBestTime()

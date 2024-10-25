@@ -23,6 +23,11 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 1
     onlyForTutorial: 0
+  - name: show coins
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   OnStartPressed:
   - name: reset points
     duration: 0
@@ -197,6 +202,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: show coins
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: pause actual fx
     duration: 0
     waitToFinish: 0
@@ -299,6 +309,12 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 1
+    condition: 0
+  - name: show coins
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
     condition: 0
   StartDebugMode:
   - name: reset points

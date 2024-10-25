@@ -23,7 +23,6 @@ public class PayManager : MonoBehaviour {
     // Use this for initialization
 	public void pay (string action) {
         confirmation.Hide();
-        coins_counter.Hide();
         if (action == "continue" && checkPay(5))
         {
             continue_counterGUI.SetActive(true);
