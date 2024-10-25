@@ -12,23 +12,29 @@ public class PointsCounter : MonoBehaviour {
     public int actualPoints;
     public void Start()
     {
-        Reset();
+        Resetear();
 
-        EventsExecute.Instance.data.SetEnter("reset points", Reset);
+        EventsExecute.Instance.data.SetEnter("hide points", Hide);
+        EventsExecute.Instance.data.SetEnter("reset points", Resetear);
+        EventsExecute.Instance.data.SetEnter("show points", Show);
     }
 
-    public void Reset()
+    public void Resetear()
     {
         bestPoints = PlayerPrefs.GetInt("best");
         actualPoints = 0;
+    }
+
+    public void Show()
+    {
         text.text = actualPoints.ToString();
         best_text.text = bestPoints.ToString();
     }
 
     public void Hide()
     {
-        //text.text = "";
-        //CancelInvoke();
+        text.text = "";
+        CancelInvoke();
     }
 
     public void AddPoint(int cuantity)

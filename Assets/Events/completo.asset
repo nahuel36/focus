@@ -34,6 +34,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: hide points
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: reset continue button
     duration: 0
     waitToFinish: 0
@@ -311,6 +316,12 @@ MonoBehaviour:
     onlyForTutorial: 1
     condition: 0
   - name: show coins
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+    condition: 0
+  - name: show points
     duration: 0
     waitToFinish: 0
     customWait: 0

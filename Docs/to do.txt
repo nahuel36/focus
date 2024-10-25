@@ -41,7 +41,6 @@ PRIORIDAD
 1. agregar texto "cuidado! no te distraigas"
 50. chequear en notepad todos los archivos como \Localization\Menu_es.asset a ver si alguno tiene un caracter raro
 51. separar transparencia de bordes y pelota
-53. que puntaje no aparezca al principio del juego
 
 ANTES DE PONER PUBLICO
 28. volver a agregar logo lab36
@@ -51,6 +50,7 @@ ANTES DE PONER PUBLICO
 
 
 DONE
+53. que puntaje no aparezca al principio del juego
 52. que coins se pueda ocultar al principio y aparezca luego
 49. agregar a pagina de itch.io los links de los sonidos
 37. stats sacar "best" del ingame
