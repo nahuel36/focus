@@ -19,7 +19,7 @@ public class MessagesManager : MonoBehaviour {
     [SerializeField] LocalizedString game_hold_here;
     [SerializeField] LocalizedString game_move_finger;
     [SerializeField] LocalizedString game_dont_let_it_fall;
-    [SerializeField] LocalizedString game_make_best_time;
+    [SerializeField] LocalizedString game_beware;
     // Use this for initialization
     void Start()
     {
@@ -27,7 +27,7 @@ public class MessagesManager : MonoBehaviour {
         EventsExecute.Instance.data.SetEnter("dont let it fall message", ballStartMoving);
         EventsExecute.Instance.data.SetEnter("ball start x dir message",ballChangeDirection);
         EventsExecute.Instance.data.SetEnter("hide swipe message", hideSwipeMessage);
-        EventsExecute.Instance.data.SetEnter("make best score message", makeBestTime);
+        EventsExecute.Instance.data.SetEnter("beware message", beware);
         EventsExecute.Instance.data.SetEnter("show swipe text",showHold);
         EventsExecute.Instance.data.SetEnter("hide all texts", hideAll);
         //gameEvents.ball_newDirection_message += ballChangeDirection;
@@ -89,9 +89,10 @@ public class MessagesManager : MonoBehaviour {
         game_TopText2.text = game_move_finger.GetLocalizedString(); 
     }
 
-    void makeBestTime()
+    void beware()
     {
-        game_TopText2.text = game_make_best_time.GetLocalizedString();
+        Debug.Log("beware message showed");
+        game_TopText2.text = game_beware.GetLocalizedString();
         Invoke("hideMakeBestTime", 4);
     }
 

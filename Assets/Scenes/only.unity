@@ -5186,7 +5186,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  game_make_best_time:
+  game_beware:
     m_TableReference:
       m_TableCollectionName: GUID:2d35ae9f272d13f4da98e3f4ea1f135a
     m_TableEntryReference:
@@ -6468,7 +6468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: smoke
-  maxAlpha: 0.15
+  maxAlpha: 0.75
 --- !u!1 &665028129
 GameObject:
   m_ObjectHideFlags: 0
@@ -8745,7 +8745,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 22a2ece0f5bed9541a2be8b2363866f8, type: 3}
-  m_Color: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 0}
+  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

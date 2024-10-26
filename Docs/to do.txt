@@ -30,23 +30,21 @@
 55. powerup invertir controles pong
 
 PRIORIDAD
-1. agregar texto "cuidado! no te distraigas"
 7. efecto de golpe en la bola (shader onda)
 13. musica
 14. efecto de sonido aparicion de los efectos
-25. efecto de viento en la bola 
-26. efecto de transparencia difuminada circularmente en la bola
-29. arreglar giro pelota
+25. efecto de viento en la bola (shader) 
+26. efecto de transparencia difuminada circularmente en la bola (shader)
+29. arreglar giro pelota (shader)
 
 ANTES DE PONER PUBLICO
-56. los efectos no están apareciendo
 28. volver a agregar logo lab36
 35. aplicar compresion
 36. compilar con best perfomance
 40. que no aparezca nada de más despues del splash
 
-
 DONE
+56. los efectos no están apareciendo
 54. results best time y time y monedas no se muestra bien la primera vez
 53. que puntaje no aparezca al principio del juego
 52. que coins se pueda ocultar al principio y aparezca luego
@@ -64,3 +62,4 @@ DONE
 5. disminuir tiempo de aparicion de las distracciones
 4. logo de lab36 por build settings
 3. quitar remolino
+1. agregar texto "cuidado! no te distraigas"
