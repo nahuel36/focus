@@ -22,6 +22,10 @@ public class Pong : MonoBehaviour {
         return this.transform.position.x + XScale / 2;
     }
 
+    public float Middle()
+    {
+        return this.transform.position.x;
+    }
     public float UpBorder()
     {
         return this.transform.position.y + YScale / 2;

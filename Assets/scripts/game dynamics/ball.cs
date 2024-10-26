@@ -134,7 +134,9 @@ public class Ball : MonoBehaviour {
         float dirX = 0.65f; 
         if (UnityEngine.Random.Range(0, 2) == 0)
             dirX = 0.45f;
-                
+        if (UnityEngine.Random.Range(0, 2) == 0)
+            dirX = 0.5f;
+
         if (UnityEngine.Random.Range(0, 2) == 0)
             dirX = -dirX; 
 
@@ -218,10 +220,21 @@ public class Ball : MonoBehaviour {
         playSound("wall_up");
     }
 
-	void changeDirPong()
+	void changeDirPong(float relativePos = 1)
 	{
         direction.y = 1;
         
+        if(direction.x < 0)
+            direction.x = direction.x * -relativePos;
+        if (direction.x > 0)
+            direction.x = direction.x * relativePos;
+
+        if (direction.x > 0 && direction.x < 0.15f)
+            direction.x += 0.25f;
+        if (direction.x < 0 && direction.x > -0.15f)
+            direction.x -= 0.25f;
+
+
         if (UnityEngine.Random.Range(0, 10) > 8)
         {
             if (direction.x != 0)
@@ -274,7 +287,13 @@ public class Ball : MonoBehaviour {
                 {
                     if (transform.position.x > pong.LeftBorder() && transform.position.x < pong.RightBorder())
                     {
-						changeDirPong ();
+                        float relative = 1;
+                        float middle_left = Mathf.InverseLerp(pong.Middle(),pong.LeftBorder(), transform.position.x);
+                        float middle_right = Mathf.InverseLerp(pong.Middle(), pong.RightBorder(), transform.position.x);
+
+                        relative = (-middle_left + middle_right)*1.5f;
+                        
+                        changeDirPong (relative);
                     }
                     else
                         Loose();

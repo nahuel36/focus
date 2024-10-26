@@ -1,5 +1,4 @@
 2. ajustar mejor el alto y ancho de la pantalla
-6. que el golpe sea direccionado segun la posicion en el pong
 8. que el particle system tire powerups
 9. powerup bola lenta
 10. powerup bola rapida
@@ -62,6 +61,7 @@ DONE
 24. modo cheat
 17. la transparencia de la bola y los bordes no funca
 13. musica ingame
+6. que el golpe sea direccionado segun la posicion en el pong
 5. disminuir tiempo de aparicion de las distracciones
 4. logo de lab36 por build settings
 3. quitar remolino
