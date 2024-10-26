@@ -31,7 +31,6 @@
 
 PRIORIDAD
 1. agregar texto "cuidado! no te distraigas"
-5. disminuir tiempo de aparicion de las distracciones
 7. efecto de golpe en la bola (shader onda)
 13. musica
 14. efecto de sonido aparicion de los efectos
@@ -39,10 +38,8 @@ PRIORIDAD
 26. efecto de transparencia difuminada circularmente en la bola
 29. arreglar giro pelota
 
-URGENTE
-56. los efectos no están apareciendo
-
 ANTES DE PONER PUBLICO
+56. los efectos no están apareciendo
 28. volver a agregar logo lab36
 35. aplicar compresion
 36. compilar con best perfomance
@@ -64,5 +61,6 @@ DONE
 27. arreglar letra
 24. modo cheat
 17. la transparencia de la bola y los bordes no funca
+5. disminuir tiempo de aparicion de las distracciones
 4. logo de lab36 por build settings
 3. quitar remolino
