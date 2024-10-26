@@ -12597,6 +12597,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
+      propertyPath: simulationSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: moveWithTransform
       value: 1
       objectReference: {fileID: 0}
@@ -12625,6 +12629,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
+      propertyPath: SizeBySpeedModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: ShapeModule.randomDirection
       value: 0
       objectReference: {fileID: 0}
@@ -12638,11 +12646,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.75
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startSpeed.scalar
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
+      propertyPath: ShapeModule.randomPositionAmount
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: EmissionModule.rateOverTime.scalar
@@ -12650,7 +12662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startRotation.scalar
-      value: 0.26755896
+      value: 0.29583332
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startColor.maxColor.a
@@ -12658,15 +12670,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 1.0000
+      value: 0.8584906
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 1.0000
+      value: 0.8584906
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 1.0000
+      value: 0.8584906
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startColor.minMaxState
@@ -12815,6 +12827,14 @@ PrefabInstance:
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: VelocityModule.y.maxCurve.m_Curve.Array.data[0].value
       value: .106060609
+      objectReference: {fileID: 0}
+    - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
+      propertyPath: SizeBySpeedModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
+      propertyPath: SizeBySpeedModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19994532, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: m_SortMode
@@ -13055,7 +13075,7 @@ ParticleSystem:
   m_GameObject: {fileID: 307221227}
   serializedVersion: 8
   lengthInSec: 9
-  simulationSpeed: 1
+  simulationSpeed: 1.5
   stopAction: 0
   cullingMode: 1
   ringBufferMode: 0
@@ -13227,7 +13247,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -13291,7 +13311,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.75
+      scalar: 1.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -13547,7 +13567,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.26755896
+      scalar: 0.29583332
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -13735,7 +13755,7 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 0
+    randomPositionAmount: 0.8
     radius:
       value: 0.5
       mode: 0
@@ -16186,7 +16206,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
