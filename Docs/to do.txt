@@ -39,6 +39,9 @@ PRIORIDAD
 26. efecto de transparencia difuminada circularmente en la bola
 29. arreglar giro pelota
 
+URGENTE
+56. los efectos no están apareciendo
+
 ANTES DE PONER PUBLICO
 28. volver a agregar logo lab36
 35. aplicar compresion
