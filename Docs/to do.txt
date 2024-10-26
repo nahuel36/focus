@@ -33,7 +33,7 @@
 43. idioma se puede elegir desde menu
 44. cambiar texto "extras" por "mas"
 45. agregar servicio de soporte 
-46. Application.isMobilePlatform (cambiar resolucion)
+46. fullscreen webgl
 47. poner texto en rojo cuando supera el record
 48. back to menu
 
