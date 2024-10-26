@@ -116,17 +116,17 @@ MonoBehaviour:
     onlyForTutorial: 0
   GameCycle:
   - name: show particles
-    duration: 7
+    duration: 5
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
   - name: show spin
-    duration: 7
+    duration: 5
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
   - name: show smoke
-    duration: 7
+    duration: 5
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
@@ -431,34 +431,9 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: show particles
-    duration: 7
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: wait
-    duration: 2
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: show spin
-    duration: 7
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: wait
-    duration: 2
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: show smoke
-    duration: 7
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: wait
-    duration: 2
-    waitToFinish: 1
+  - name: start gamecycle
+    duration: 0
+    waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
   TimeBetweenCycleEvent: 3

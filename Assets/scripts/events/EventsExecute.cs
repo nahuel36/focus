@@ -129,16 +129,26 @@ public class EventsExecute : MonoBehaviour
             if (evento.waitToFinish)
             {
                 await ExecuteAndWait(evento, canPause, isGameCycle, gamecycle);
+                if (isGameCycle && actualGameCycle == gamecycle)
+                {
+                    float counter = 0;
+                    while (counter < data.TimeBetweenCycleEvent)
+                    {
+                        if (isGameCycle && actualGameCycle != gamecycle)
+                            return;
+                        if (!isPaused || !canPause)
+                            counter += Time.deltaTime;
+                        await Task.Yield();
+                    }
+                    
+                }
             }
             else
             {
                 ExecuteAndWait(evento, canPause);
             }
 
-            if (isGameCycle && actualGameCycle == gamecycle)
-            {
-                await Task.Delay(Mathf.RoundToInt(data.TimeBetweenCycleEvent * 1000));
-            }
+            
         }
     }
 
