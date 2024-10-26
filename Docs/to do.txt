@@ -33,7 +33,6 @@
 43. idioma se puede elegir desde menu
 44. cambiar texto "extras" por "mas"
 45. agregar servicio de soporte 
-46. fullscreen webgl
 47. poner texto en rojo cuando supera el record
 48. back to menu
 
@@ -54,6 +53,7 @@ DONE
 51. separar transparencia de bordes y pelota
 50. chequear los archivos como \Localization\Menu_es.asset para carácteres raros
 49. agregar a pagina de itch.io los links de los sonidos
+46. fullscreen webgl
 37. stats sacar "best" del ingame
 32. pasar textos a localization
 30. arreglar pong
