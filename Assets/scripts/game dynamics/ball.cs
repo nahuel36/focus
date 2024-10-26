@@ -291,7 +291,7 @@ public class Ball : MonoBehaviour {
                         float middle_left = Mathf.InverseLerp(pong.Middle(),pong.LeftBorder(), transform.position.x);
                         float middle_right = Mathf.InverseLerp(pong.Middle(), pong.RightBorder(), transform.position.x);
 
-                        relative = (-middle_left + middle_right)*1.5f;
+                        relative = (-middle_left + middle_right)*1.75f;
                         
                         changeDirPong (relative);
                     }
