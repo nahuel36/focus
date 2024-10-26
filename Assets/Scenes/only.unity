@@ -1114,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &106011402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2614,7 +2614,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 226576c4cf77b5740bec0b7ae971d971, type: 2}
+  - {fileID: 2100000, guid: bb36f52286c8b4f4490cb4f703658774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3772,7 +3772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &394142543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6430,7 +6430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &637324326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8740,7 +8740,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 22a2ece0f5bed9541a2be8b2363866f8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5058824}
+  m_Color: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12373,7 +12373,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8de9bc924bf076d4989b894ab87ccf57, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.584}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12642,7 +12642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startRotation.scalar
-      value: 0
+      value: 0.26755896
       objectReference: {fileID: 0}
     - target: {fileID: 19887872, guid: ada3474dc7d9cc64fa79f8818bf16413, type: 2}
       propertyPath: InitialModule.startColor.maxColor.a
@@ -13539,7 +13539,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.26755896
       minScalar: 0
       maxCurve:
         serializedVersion: 2
