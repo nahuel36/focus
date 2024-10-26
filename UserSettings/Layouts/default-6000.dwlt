@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1360
     height: 685
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -949,7 +949,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: da43ffff1e45ffff3848ffff22a9ffff66aaffff88adffffceb0ffff80caffffc4cbffffe2ceffffdafaffffbabe000092bf0000febf000002c0000084c00000e8c100002ec40000ce370100a6380100123901001639010098390100e0390100ec3a0100fc3a0100423d0100
+      m_ExpandedIDs: 46edffff8aeeffffa4f1ffff6cfaffff9ac40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -9052,7 +9052,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Events
+    - Assets/sounds/musica intro
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -9062,16 +9062,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Events
+  - Assets/sounds/musica intro
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\nahueld\_unity\focus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 76.22066}
-    m_SelectedIDs: 9cc70000
-    m_LastClickedID: 51100
-    m_ExpandedIDs: 0000000040c7000042c7000044c70000
+    scrollPos: {x: 0, y: 183.02066}
+    m_SelectedIDs: 5cbd0000
+    m_LastClickedID: 48476
+    m_ExpandedIDs: 000000001cc700001ec7000020c70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -9100,7 +9100,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000040c7000042c7000044c70000
+    m_ExpandedIDs: 000000001cc700001ec7000020c70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -9157,7 +9157,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 293
+  m_DirectoriesAreaWidth: 295
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52

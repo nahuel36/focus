@@ -29,6 +29,11 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   OnStartPressed:
+  - name: music ingame play
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: reset points
     duration: 0
     waitToFinish: 0
@@ -106,7 +111,7 @@ MonoBehaviour:
     onlyForTutorial: 0
   GameCycle:
   - name: wait
-    duration: 15
+    duration: 14
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
@@ -253,6 +258,11 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: hide swipe
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: music ingame stop
     duration: 0
     waitToFinish: 0
     customWait: 0
