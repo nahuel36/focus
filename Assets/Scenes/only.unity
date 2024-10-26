@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImage: 0
-  type: ball
+  type: border_left
 --- !u!1 &58819283
 GameObject:
   m_ObjectHideFlags: 0
@@ -8883,7 +8883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImage: 0
-  type: ball
+  type: border_up
 --- !u!1 &856183008
 GameObject:
   m_ObjectHideFlags: 0
@@ -22698,7 +22698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImage: 0
-  type: ball
+  type: border_right
 --- !u!1 &2007378157
 GameObject:
   m_ObjectHideFlags: 0

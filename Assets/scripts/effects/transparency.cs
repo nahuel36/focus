@@ -38,7 +38,7 @@ public class Transparency : MonoBehaviour {
             colorWithoutAlpha.a = 0;
         }
         transform.GetChild(0).gameObject.SetActive(false);
-        
+
         if (type == "particles")
         {
             EventsExecute.Instance.data.SetEnter("show particles", Show);
@@ -48,7 +48,7 @@ public class Transparency : MonoBehaviour {
         }
         else if (type == "spin")
         {
-          
+
             EventsExecute.Instance.data.SetEnter("show spin", Show);
             EventsExecute.Instance.data.SetLeave("show spin", Hide);
             EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
@@ -63,8 +63,8 @@ public class Transparency : MonoBehaviour {
         }
         else if (type == "ball")
         {
-            Debug.Log("activating show " + gameObject.name);
-            EventsExecute.Instance.data.SetEnter("show ball",Show);
+            //Debug.Log("activating show " + gameObject.name);
+            EventsExecute.Instance.data.SetEnter("show ball", Show);
             EventsExecute.Instance.data.SetEnter("hide ball", Hide);
         }
         else if (type == "pong")
@@ -72,12 +72,21 @@ public class Transparency : MonoBehaviour {
             EventsExecute.Instance.data.SetEnter("show pong", Show);
             EventsExecute.Instance.data.SetEnter("hide pong", Hide);
         }
-        else if( type == "swipe")
+        else if (type == "swipe")
         {
-            EventsExecute.Instance.data.SetEnter("show swipe",Show);
+            EventsExecute.Instance.data.SetEnter("show swipe", Show);
             EventsExecute.Instance.data.SetEnter("hide swipe", Hide);
         }
-
+        else if (type == "border_up")
+        {
+            EventsExecute.Instance.data.SetEnter("show border up", Show);
+            EventsExecute.Instance.data.SetEnter("hide borders", Hide);
+        }
+        else if (type == "border_left" || type == "border_right")
+        {
+            EventsExecute.Instance.data.SetEnter("show border side", Show);
+            EventsExecute.Instance.data.SetEnter("hide borders", Hide);
+        }
     }
 
 

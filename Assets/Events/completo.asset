@@ -176,6 +176,16 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: show border up
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show border side
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   - name: ball continue move
     duration: 0
     waitToFinish: 0
@@ -289,6 +299,18 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
     condition: 1
+  - name: show border up
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+    condition: 1
+  - name: show border side
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+    condition: 1
   - name: ---ball x dir started---
     duration: 0
     waitToFinish: 0
@@ -389,6 +411,16 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: show pong
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show border up
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show border side
     duration: 0
     waitToFinish: 0
     customWait: 0
