@@ -10504,60 +10504,60 @@ MonoBehaviour:
       time: 0
       value: 0
       inSlope: 0
-      outSlope: 0.006598557
+      outSlope: 0.15787317
       tangentMode: 1
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.6573078
+      outWeight: 0.17453681
     - serializedVersion: 3
-      time: 2.3905706
-      value: 0.2587772
-      inSlope: 0.007965606
-      outSlope: 0.043404326
+      time: 2.2083082
+      value: 0.4260613
+      inSlope: 0.05339646
+      outSlope: 0.034474712
       tangentMode: 65
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.32349044
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 6.568617
-      value: 0.4401225
-      inSlope: 0.043404326
-      outSlope: 0.025352726
+      time: 5.393755
+      value: 0.53587866
+      inSlope: 0.034474712
+      outSlope: 0.015333761
       tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 14.441986
-      value: 0.63973385
-      inSlope: 0.025352726
-      outSlope: 0.01918067
+      time: 14.221634
+      value: 0.67124325
+      inSlope: 0.015333761
+      outSlope: 0.011132366
       tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 25.976639
-      value: 0.8609762
-      inSlope: 0.01918067
-      outSlope: 0.00818255
+      time: 25.505447
+      value: 0.7968588
+      inSlope: 0.011132366
+      outSlope: 0.006254755
       tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 42.409195
-      value: 0.99543643
-      inSlope: 0.00818255
-      outSlope: 0.0021279892
+      time: 41.539963
+      value: 0.89715075
+      inSlope: 0.006254755
+      outSlope: 0.0028342102
       tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 59.68785
-      value: 1.0322052
-      inSlope: 0.0021279892
+      time: 56.15657
+      value: 0.9385773
+      inSlope: 0.0028342102
       outSlope: 0
       tangentMode: 5
       weightedMode: 0
