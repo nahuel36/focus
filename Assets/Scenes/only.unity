@@ -6597,7 +6597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: smoke
-  maxAlpha: 0.75
+  maxAlpha: 0.5
 --- !u!1 &665028129
 GameObject:
   m_ObjectHideFlags: 0

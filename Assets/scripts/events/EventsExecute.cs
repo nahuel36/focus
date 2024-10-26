@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using System.Linq;
 public class EventsExecute : MonoBehaviour
 {
     public FocusEventsScriptable data;
@@ -64,12 +65,15 @@ public class EventsExecute : MonoBehaviour
         isPaused = false;
         actualGameCycle++;
         int internalGameCycle = actualGameCycle;
+        
         while(internalGameCycle == actualGameCycle)
         {
-            await ExecuteEvents(data.GameCycle, true, true, internalGameCycle);
+            await ExecuteEvents(ArrayUtils.ShuffleFocusEvents(data.GameCycle), true, true, internalGameCycle);
             await Task.Yield();
         }
     }
+
+
 
     public async void ExecuteConditional(FocusEventConditional.Condition condition)
     {
@@ -129,6 +133,11 @@ public class EventsExecute : MonoBehaviour
             else
             {
                 ExecuteAndWait(evento, canPause);
+            }
+
+            if (isGameCycle && actualGameCycle == gamecycle)
+            {
+                await Task.Delay(Mathf.RoundToInt(data.TimeBetweenCycleEvent * 1000));
             }
         }
     }

@@ -12,6 +12,7 @@ public class FocusEventsScriptable : ScriptableObject
     public FocusEvent[] ResultsToMenu;
     public FocusEventConditional[] Conditions;
     public FocusEvent[] StartDebugMode;
+    public float TimeBetweenCycleEvent = 3f;
     void SetEnterOnArray(FocusEvent[] eventarray, string eventname, FocusEvent.EventDelegate delegateFunc)
     {
         for (int i = 0; i < eventarray.Length; i++)

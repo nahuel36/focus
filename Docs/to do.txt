@@ -28,6 +28,7 @@
 55. powerup invertir controles pong
 
 PRIORIDAD
+59. probar efecto de bajar el techo
 58. que los efectos aparezcan random en vez de en orden
 14. efecto de sonido aparicion de los efectos
 57. efecto de sonido introduccion bola con remolino
