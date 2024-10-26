@@ -28,7 +28,6 @@
 55. powerup invertir controles pong
 
 PRIORIDAD
-13. musica ingame
 14. efecto de sonido aparicion de los efectos
 56. efecto de sonido introduccion bola con remolino
 4. remolino background en el inicio del juego
@@ -60,6 +59,7 @@ DONE
 27. arreglar letra
 24. modo cheat
 17. la transparencia de la bola y los bordes no funca
+13. musica ingame
 5. disminuir tiempo de aparicion de las distracciones
 4. logo de lab36 por build settings
 3. quitar remolino
