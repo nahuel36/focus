@@ -16,6 +16,8 @@ public class Transparency : MonoBehaviour {
     private Color colorWithAlpha;
     private Color colorWithoutAlpha;
 
+    [SerializeField][Range(0, 1)] float maxAlpha = 1;
+
     void Start () {
 
         transform.GetChild(0).gameObject.SetActive(true);
@@ -24,7 +26,7 @@ public class Transparency : MonoBehaviour {
             transSpriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
             colorWithAlpha = transSpriteRenderer.color;
             if(colorWithAlpha.a == 0)
-                colorWithAlpha.a = 1;
+                colorWithAlpha.a = maxAlpha;
             colorWithoutAlpha = transSpriteRenderer.color;
             colorWithoutAlpha.a = 0;
         }
@@ -33,7 +35,7 @@ public class Transparency : MonoBehaviour {
             transImage = transform.GetChild(0).GetComponent<Image>();
             colorWithAlpha = transImage.color;
             if (colorWithAlpha.a == 0)
-                colorWithAlpha.a = 1;
+                colorWithAlpha.a = maxAlpha;
             colorWithoutAlpha = transImage.color;
             colorWithoutAlpha.a = 0;
         }

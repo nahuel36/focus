@@ -571,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: border_left
+  maxAlpha: 1
 --- !u!1 &58819283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: spin
+  maxAlpha: 1
 --- !u!1 &109134197
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,6 +3810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: particles
+  maxAlpha: 0.13
 --- !u!1 &396778608
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,6 +6468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: smoke
+  maxAlpha: 0.15
 --- !u!1 &665028129
 GameObject:
   m_ObjectHideFlags: 0
@@ -6921,6 +6925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: pong
+  maxAlpha: 1
 --- !u!1 &700447313
 GameObject:
   m_ObjectHideFlags: 0
@@ -8885,6 +8890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: border_up
+  maxAlpha: 1
 --- !u!1 &856183008
 GameObject:
   m_ObjectHideFlags: 0
@@ -9988,6 +9994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 1
   type: swipe
+  maxAlpha: 1
 --- !u!1 &971573239
 GameObject:
   m_ObjectHideFlags: 0
@@ -10324,6 +10331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: ball
+  maxAlpha: 1
 --- !u!50 &990619229
 Rigidbody2D:
   serializedVersion: 5
@@ -19520,6 +19528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: ball
+  maxAlpha: 1
 --- !u!1 &1621241842
 GameObject:
   m_ObjectHideFlags: 0
@@ -22744,6 +22753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isImage: 0
   type: border_right
+  maxAlpha: 1
 --- !u!1 &2007378157
 GameObject:
   m_ObjectHideFlags: 0
