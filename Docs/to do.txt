@@ -1,16 +1,12 @@
 2. ajustar mejor el alto y ancho de la pantalla
 3. experimentar con valores del remolino
 4. remolino background en el inicio del juego
-5. disminuir tiempo de aparicion de las distracciones
 6. que el golpe sea direccionado segun la posicion en el pong
-7. efecto de golpe en la bola (shader onda)
 8. que el particle system tire powerups
 9. powerup bola lenta
 10. powerup bola rapida
 11. bolas duplicadas?
 12. cambiar physics del pong y la bola por algo mas amistoso
-13. musica
-14. efecto de sonido aparicion de los efectos
 15. que sume puntos arriba
 16. efecto de iluminacion en pasa dedo
 18. poner mas efectos
@@ -19,25 +15,29 @@
 21. mejorar efecto de huella digital
 22. que el pongo no se mueva hacia los costados hasta que la bola lo haga
 23. efecto de onda en el remolino
-25. efecto de viento en la bola 
-26. efecto de transparencia en la bola
-29. arreglar giro pelota
 31. acomodar stats (coins siempre visible)
 33. powerups en swipe bar
 34. efecto lens distortion
 38. mas efectos con volume (post procesing)
 39. suavizar movimiento del pong
 40. color de letra en celular es distinto
-41. que se pueda cambiar resolucion en opciones 
 42. mas idiomas
 43. idioma se puede elegir desde menu
 44. cambiar texto "extras" por "mas"
 45. agregar servicio de soporte 
 47. poner texto en rojo cuando supera el record
 48. back to menu
+55. powerup invertir controles pong
 
 PRIORIDAD
 1. agregar texto "cuidado! no te distraigas"
+5. disminuir tiempo de aparicion de las distracciones
+7. efecto de golpe en la bola (shader onda)
+13. musica
+14. efecto de sonido aparicion de los efectos
+25. efecto de viento en la bola 
+26. efecto de transparencia difuminada circularmente en la bola
+29. arreglar giro pelota
 
 ANTES DE PONER PUBLICO
 28. volver a agregar logo lab36
@@ -54,6 +54,7 @@ DONE
 50. chequear los archivos como \Localization\Menu_es.asset para carácteres raros
 49. agregar a pagina de itch.io los links de los sonidos
 46. fullscreen webgl
+41. que se pueda cambiar resolucion en opciones 
 37. stats sacar "best" del ingame
 32. pasar textos a localization
 30. arreglar pong
