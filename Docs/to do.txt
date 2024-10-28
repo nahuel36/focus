@@ -4,7 +4,6 @@
 10. powerup bola rapida
 11. bolas duplicadas?
 12. cambiar physics del pong y la bola por algo mas amistoso
-15. que sume puntos arriba
 16. efecto de iluminacion en pasa dedo
 18. poner mas efectos
 19. marcador de velocidad
@@ -25,8 +24,14 @@
 47. poner texto en rojo cuando supera el record
 48. back to menu
 55. powerup invertir controles pong
+61. los efectos se adelantan a veces que se restartea el juego
+62. reemplazar player prefs con guardar en archivos locales
+62. luego de remplazar player prefs volver a poner boton continue
+63. mejorar letras de titulo (focus y end)
+
 
 PRIORIDAD
+60. separar todo en prefabs
 59. probar efecto de bajar el techo
 14. efecto de sonido aparicion de los efectos
 57. efecto de sonido introduccion bola con remolino
@@ -60,6 +65,7 @@ DONE
 27. arreglar letra
 24. modo cheat
 17. la transparencia de la bola y los bordes no funca
+15. que sume puntos arriba
 13. musica ingame
 6. que el golpe sea direccionado segun la posicion en el pong
 5. disminuir tiempo de aparicion de las distracciones
