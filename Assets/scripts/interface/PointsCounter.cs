@@ -21,7 +21,7 @@ public class PointsCounter : MonoBehaviour {
 
     public void Resetear()
     {
-        bestPoints = PlayerPrefs.GetInt("best");
+        bestPoints = GameData.Instance.GetBest();
         actualPoints = 0;
     }
 
@@ -41,8 +41,8 @@ public class PointsCounter : MonoBehaviour {
     {
         actualPoints += cuantity;
         if (actualPoints > bestPoints)
-        { 
-            PlayerPrefs.SetInt("best", actualPoints);
+        {
+            GameData.Instance.ReplaceBest(actualPoints);
             bestPoints = actualPoints;
         }
         text.text = actualPoints.ToString();

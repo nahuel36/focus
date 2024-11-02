@@ -46,8 +46,8 @@ public class GameManager : MonoBehaviour {
         showedSwipe = false;
         actualState = appState.MENU;
 
-        startPresedTimes = PlayerPrefs.GetInt("PresedStartTimes");
-        Coins = PlayerPrefs.GetInt("Coins");
+        startPresedTimes = GameData.Instance.GetPressedStartTimes();
+        Coins = GameData.Instance.GetCoins();
     }
 
     private void EnableDebugButtons()
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour {
             startingTime = 0;
 
             startPresedTimes++;
-            PlayerPrefs.SetInt("PresedStartTimes", startPresedTimes);
+            GameData.Instance.SetPressedStartTimes(startPresedTimes);
         }
     }
 
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour {
     public void AddCoin(int quantity)
     {
         Coins += quantity;
-        PlayerPrefs.SetInt("Coins", Coins);
+        GameData.Instance.AddCoins(quantity);
 
         if (actualState == appState.PLAYING)
             NextCoin += 30;

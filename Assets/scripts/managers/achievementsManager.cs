@@ -27,8 +27,8 @@ public class AchievementsManager : MonoBehaviour
         achievements = new bool[Enum.GetNames(typeof(achievement)).Length];
 
         for (int i = 0; i < Enum.GetNames(typeof(achievement)).Length; i++)
-        { 
-            achievements[i] = PlayerPrefs.GetInt(Enum.GetName(typeof(achievement),i)) == 1;
+        {
+            achievements[i] = GameData.Instance.GetAchievement((achievement)i);
         }
 
         EventsExecute.Instance.data.SetLeave("show particles", setGalaxyAchievement);
@@ -41,7 +41,7 @@ public class AchievementsManager : MonoBehaviour
         if (achievements[(int)achiv] == false)
         { 
             achievements[(int)achiv] = true;
-            PlayerPrefs.SetInt(Enum.GetName(typeof(achievement), achiv), 1);
+            GameData.Instance.SetAchievement(achiv);
             message.achivUnlocked();
         }
     }

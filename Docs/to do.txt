@@ -28,10 +28,10 @@
 62. reemplazar player prefs con guardar en archivos locales
 62. luego de remplazar player prefs volver a poner boton continue
 63. mejorar letras de titulo (focus y end)
-
+64. agregar creditos
+65. progreso de web template en texto
 
 PRIORIDAD
-60. separar todo en prefabs
 59. probar efecto de bajar el techo
 14. efecto de sonido aparicion de los efectos
 57. efecto de sonido introduccion bola con remolino
@@ -49,6 +49,7 @@ ANTES DE PONER PUBLICO
 40. que no aparezca nada de más despues del splash
 
 DONE
+60. separar todo en prefabs
 58. que los efectos aparezcan random en vez de en orden
 56. los efectos no están apareciendo
 54. results best time y time y monedas no se muestra bien la primera vez
