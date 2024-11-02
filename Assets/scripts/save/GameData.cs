@@ -106,7 +106,8 @@ public class GameData : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetString("data", jsonEnc);
+            //PlayerPrefs.SetString("data", jsonEnc);
+            UserDataManager.SetString("data", jsonEnc);
         }
     }
 
@@ -124,9 +125,12 @@ public class GameData : MonoBehaviour
             stream.Close();
             data = JsonConvert.DeserializeObject<Data>(json);
         }
-        else if (usePlayerPrefs && PlayerPrefs.HasKey("data"))
+        //else if (usePlayerPrefs && PlayerPrefs.HasKey("data"))
+        else if(usePlayerPrefs && UserDataManager.HasKey("data"))
         {
-            string jsonEnc = PlayerPrefs.GetString("data");
+            string jsonEnc;
+            //jsonEnc = PlayerPrefs.GetString("data");
+            jsonEnc = UserDataManager.GetString("data");
             SimplerAES decryptor = new SimplerAES();
             string json = decryptor.Decrypt(jsonEnc);
             data = JsonConvert.DeserializeObject<Data>(json);

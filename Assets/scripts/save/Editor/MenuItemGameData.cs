@@ -16,6 +16,7 @@ public class MenuItemGameData : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         GameData.RemoveAll();
+        UserDataManager.DeleteKey("data");
     }
 
     static void AddCoins(int amount)
