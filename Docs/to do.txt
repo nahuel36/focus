@@ -30,8 +30,6 @@
 66. progreso de web template en texto
 
 PRIORIDAD
-69. no esta juntando los coins luego del limite
-
 59. probar efecto de bajar el techo
 14. efecto de sonido aparicion de los efectos
 57. efecto de sonido introduccion bola con remolino
@@ -49,6 +47,7 @@ AL BUILDEAR
 40. que no aparezca nada de más despues del splash
 
 DONE
+69. no esta juntando los coins luego del limite
 68. no esta descontando las monedas al pagar
 64. luego de remplazar player prefs mejorar recompensas
 63. luego de remplazar player prefs volver a poner boton continue

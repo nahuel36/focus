@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour {
             actualTime += Time.deltaTime;   
             
             if ((actualCoinReward < CoinsRewardsTimes.Length && actualTime >= CoinsRewardsTimes[actualCoinReward])
-                || (actualCoinReward >= CoinsRewardsTimes.Length && actualTime % 5 == 0))
+                || (actualCoinReward >= CoinsRewardsTimes.Length && actualTime >= CoinsRewardsTimes[CoinsRewardsTimes.Length-1] + (5 * (actualCoinReward - CoinsRewardsTimes.Length + 1))))
             {
                 actualCoinReward++;
 
