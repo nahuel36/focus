@@ -11653,6 +11653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Confirmation
       objectReference: {fileID: 0}
+    - target: {fileID: 3767575699702734462, guid: 3d82e7434228f5f4286613878767f480, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4772931614825551237, guid: 3d82e7434228f5f4286613878767f480, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12181,6 +12185,10 @@ PrefabInstance:
     - target: {fileID: 1673454341105864638, guid: 292671a84e9431640ab6d78dba840e38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495857339781335220, guid: 292671a84e9431640ab6d78dba840e38, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4496898843917737606, guid: 292671a84e9431640ab6d78dba840e38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

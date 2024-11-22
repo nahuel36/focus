@@ -12,7 +12,7 @@ public class Coins_counter : MonoBehaviour {
     void Start()
     {
         EventsExecute.Instance.data.SetEnter("show coins", Show);
-        GameManager.addedCoin += AddedCoin;
+        GameManager.addedCoinEvent += AddedCoin;
     }
 
     public void AddedCoin()

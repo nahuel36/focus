@@ -24,7 +24,7 @@ public class MenuItemGameData : MonoBehaviour
         if (Application.isPlaying)
             FindFirstObjectByType<GameManager>().AddCoin(amount);
         else
-            FindFirstObjectByType<GameData>().AddCoins(amount);
+            FindFirstObjectByType<GameData>().SetCoins(amount);
     }
 
     [MenuItem("Lab36/Get 5 coins")]

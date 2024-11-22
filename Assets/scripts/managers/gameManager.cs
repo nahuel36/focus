@@ -15,9 +15,9 @@ public enum appState
 public class GameManager : MonoBehaviour {
 
     public delegate void appEvent();
-    public static event appEvent ballMoveStarted;
-    public static event appEvent loose;
-    public static event appEvent addedCoin;
+    public static event appEvent ballMoveStartedEvent;
+    public static event appEvent looseEvent;
+    public static event appEvent addedCoinEvent;
 
     public appState actualState;
 
@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour {
     public bool showedSwipe = false;
 
     public int Coins;
-    public int NextCoin = 0;
+    int[] CoinsRewardsTimes = { 10,20,25,30};
+    int[] AchievementsTimes = { 30, 60, 120, 300 };
+    private int actualCoinReward = 0;
+    private int actualAchiv = 0;
 
     public AchievementsManager AchievementsMan;
   
@@ -82,13 +85,10 @@ public class GameManager : MonoBehaviour {
     public void AddCoin(int quantity)
     {
         Coins += quantity;
-        GameData.Instance.AddCoins(quantity);
-
-        if (actualState == appState.PLAYING)
-            NextCoin += 30;
-        
-        if (addedCoin != null)
-            addedCoin();
+        GameData.Instance.SetCoins(quantity);
+       
+        if (addedCoinEvent != null)
+            addedCoinEvent();
     }
 
 
@@ -98,30 +98,49 @@ public class GameManager : MonoBehaviour {
         {
             actualTime += Time.deltaTime;   
             
-            if ( actualTime >= NextCoin)
+            if ((actualCoinReward < CoinsRewardsTimes.Length && actualTime >= CoinsRewardsTimes[actualCoinReward])
+                || (actualCoinReward >= CoinsRewardsTimes.Length && actualTime % 5 == 0))
             {
-                if (NextCoin == 30)
+                actualCoinReward++;
+
+                if (actualCoinReward == 1)//10
                 { 
-                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds1);
+                    AddCoin(1);
+                }
+                else if (actualCoinReward == 2)//20
+                {
                     AddCoin(2);
                 }
-                else if (NextCoin == 60)
-                {
-                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds2);
+                else if (actualCoinReward == 3)//25
+                { 
+                    AddCoin(2);
+                }
+                else if(actualCoinReward == 4)//30
+                { 
                     AddCoin(3);
-                }
-                else if (NextCoin == 120)
-                { 
-                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds3);
-                    AddCoin(4);
-                }
-                else if(NextCoin == 300)
-                { 
-                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds4);
-                    AddCoin(5);
                 }
                 else
                     AddCoin(4);
+            }
+            if (actualAchiv < AchievementsTimes.Length && actualTime >= AchievementsTimes[actualAchiv])
+            {
+                actualAchiv++;
+                if (actualAchiv == 1)
+                {
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds1);
+                }
+                else if (actualAchiv == 2)
+                {
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds2);
+                }
+                else if (actualAchiv == 3)
+                {
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds3);
+                }
+                else if (actualAchiv == 4)
+                {
+                    AchievementsMan.setAchievement(AchievementsManager.achievement.seconds4);
+                }
             }
         }
         else if (actualState == appState.STARTING && showedSwipe && Input.GetMouseButtonDown(0)) 
@@ -135,17 +154,18 @@ public class GameManager : MonoBehaviour {
     {
         actualState = appState.PLAYING;
         actualTime = 0;
-        NextCoin = 30;
-        if (ballMoveStarted != null)
-            ballMoveStarted();
+        actualCoinReward = 0;
+        actualAchiv = 0;
+        if (ballMoveStartedEvent != null)
+            ballMoveStartedEvent();
     }
 
     public void Loose()
     {
         actualState = appState.RESULTS;
 
-        if (loose != null)  
-            loose();
+        if (looseEvent != null)  
+            looseEvent();
 
         EventsExecute.Instance.EndGame();
     }

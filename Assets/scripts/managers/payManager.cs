@@ -55,14 +55,10 @@ public class PayManager : MonoBehaviour {
         }
         else
         {
-            gameMan.Coins -= quantity; 
+            gameMan.Coins -= quantity;
+            GameData.Instance.SetCoins(-quantity);
             return true;
         }
     }
-    
-
-	// Update is called once per frame
-	void Update () {
-	
-	}
+   
 }

@@ -41,7 +41,7 @@ public class GameData : MonoBehaviour
             LoadDataFromDisk();
     }
 
-    public void AddCoins(int cuantity) {
+    public void SetCoins(int cuantity) {
         CheckDataExists();
         data.coins += cuantity;
         SaveDataToDisk();

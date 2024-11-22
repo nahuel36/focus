@@ -26,12 +26,12 @@
 55. powerup invertir controles pong
 61. los efectos se adelantan a veces que se restartea el juego
 63. mejorar letras de titulo (focus y end)
-64. agregar creditos
-65. progreso de web template en texto
+65. agregar creditos
+66. progreso de web template en texto
 
 PRIORIDAD
-62. luego de remplazar player prefs volver a poner boton continue
-63. luego de remplazar player prefs mejorar recompensas
+69. no esta juntando los coins luego del limite
+
 59. probar efecto de bajar el techo
 14. efecto de sonido aparicion de los efectos
 57. efecto de sonido introduccion bola con remolino
@@ -41,14 +41,17 @@ PRIORIDAD
 25. efecto de viento en la bola (shader) 
 26. efecto de transparencia difuminada circularmente en la bola (shader)
 29. arreglar giro pelota (shader)
+67. que diga "puntos" en vez de "tiempo"
 
-ANTES DE PONER PUBLICO
-28. volver a agregar logo lab36
+AL BUILDEAR
 35. aplicar compresion
 36. compilar con best perfomance
 40. que no aparezca nada de más despues del splash
 
 DONE
+68. no esta descontando las monedas al pagar
+64. luego de remplazar player prefs mejorar recompensas
+63. luego de remplazar player prefs volver a poner boton continue
 62. reemplazar player prefs con guardar en archivos locales
 60. separar todo en prefabs
 58. que los efectos aparezcan random en vez de en orden
@@ -64,6 +67,7 @@ DONE
 37. stats sacar "best" del ingame
 32. pasar textos a localization
 30. arreglar pong
+28. volver a agregar logo lab36
 27. arreglar letra
 24. modo cheat
 17. la transparencia de la bola y los bordes no funca
