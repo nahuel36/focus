@@ -16,6 +16,18 @@
 			margin: 0;
 		}
 
+        .view {
+            display: none;
+        }
+		
+		#percent-text {
+			font-family: cursive;
+		    display: none;
+			color: white;
+			transform: translate(0, 40vh);
+			text-align:center;
+		}
+
 		div#gameContainer {
 			background: transparent !important;
 			position: absolute;
@@ -43,6 +55,7 @@
 <body>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art="{{{ OPTIMIZE_FOR_PIXEL_ART }}}"></canvas>
+		<div id="percent-text" class="view">LOADING: </div>
 		<script src="Build/{{{ LOADER_FILENAME }}}"></script>
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
@@ -69,8 +82,15 @@
 			}
 			function progressHandler(progress) {
 				var percent = progress * 100 + '%';
+				
+				var text = document.getElementById('percent-text');
+				text.style.display = 'block';
+				text.innerHTML = 'LOADING... ' + Math.round(progress * 100) + '%'; 
+			
 				canvas.style.background = 'linear-gradient(to right, white, white ' + percent + ', transparent ' + percent + ', transparent) no-repeat center';
 				canvas.style.backgroundSize = '100% 1rem';
+				if(progress >= 1)
+					text.style.display = 'none';
 			}
 			function onResize() {
 				var container = canvas.parentElement;

@@ -27,7 +27,6 @@
 61. los efectos se adelantan a veces que se restartea el juego
 63. mejorar letras de titulo (focus y end)
 65. agregar creditos
-66. progreso de web template en texto
 
 PRIORIDAD
 59. probar efecto de bajar el techo
@@ -40,6 +39,7 @@ PRIORIDAD
 26. efecto de transparencia difuminada circularmente en la bola (shader)
 29. arreglar giro pelota (shader)
 67. que diga "puntos" en vez de "tiempo"
+69. ver que onda los shapes https://assetstore.unity.com/packages/tools/gui/aline-162772
 
 AL BUILDEAR
 35. aplicar compresion
@@ -49,6 +49,7 @@ AL BUILDEAR
 DONE
 69. no esta juntando los coins luego del limite
 68. no esta descontando las monedas al pagar
+66. progreso de web template en texto
 64. luego de remplazar player prefs mejorar recompensas
 63. luego de remplazar player prefs volver a poner boton continue
 62. reemplazar player prefs con guardar en archivos locales
