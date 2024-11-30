@@ -11417,6 +11417,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sounds
       objectReference: {fileID: 0}
+    - target: {fileID: 5303778490392784850, guid: b9ae24e184f0c404fafd0a7ad084b9a8, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303778490392784850, guid: b9ae24e184f0c404fafd0a7ad084b9a8, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5360001630601443382, guid: b9ae24e184f0c404fafd0a7ad084b9a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
