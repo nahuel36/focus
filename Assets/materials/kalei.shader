@@ -29,6 +29,9 @@ Shader "Lab36/Kalei"
             #define rot(a) mat2(cos(a), -sin(a), sin(a), cos(a))
             #define sat(x) clamp(x, 0., 1.)
 
+            #define iResolution _ScreenParams
+            #define gl_FragCoord ((_iParam.scrPos.xy/_iParam.scrPos.w) * _ScreenParams.xy)
+
 
             float3 cos_palette(float3 a, float3 b, float3 c, float3 d, float x) 
             {
@@ -87,9 +90,8 @@ Shader "Lab36/Kalei"
 
             struct v2f
             {
-                float2 uv : TEXCOORD0;
-                UNITY_FOG_COORDS(1)
-                float4 vertex : SV_POSITION;
+                float4 pos : SV_POSITION;
+                float4 scrPos : TEXCOORD0;
             };
 
             sampler2D _MainTex;
@@ -98,17 +100,20 @@ Shader "Lab36/Kalei"
             v2f vert (appdata v)
             {
                 v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o,o.vertex);
+                o.pos = UnityObjectToClipPos (v.vertex);
+                o.scrPos = ComputeScreenPos(o.pos);
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag (v2f _iParam) : SV_Target
             {
-                
-                float2 uv = i.uv;
-                _seed = t + tex2D(_MainTex, uv).x;
+                float2 uv;
+                if(_iParam.scrPos.y > 0.5)
+                    uv = (2. * gl_FragCoord.xy - iResolution.xy) / iResolution.y;
+                else
+                    uv = (-2. * gl_FragCoord.xy + iResolution.xy) / iResolution.y;
+
+                _seed = t + tex2D(_MainTex, uv).y;
     
                 // Apply kaleidoscopic transformation
                 uv = kaleidoscope(uv, 6.0);
@@ -127,9 +132,8 @@ Shader "Lab36/Kalei"
 
                 // Mix colors with a pattern-based factor
                 color = lerp(color, rainbow(wave + pattern), 0.5 * sin(t * 2.0 + wave));
-    
+
                 return float4(color, 1.0);
-                                
                 
                 /*
                 // sample the texture
