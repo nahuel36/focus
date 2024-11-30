@@ -27,6 +27,7 @@
 61. los efectos se adelantan a veces que se restartea el juego
 63. mejorar letras de titulo (focus y end)
 65. agregar creditos
+70. tienda de efectos
 
 PRIORIDAD
 59. probar efecto de bajar el techo
