@@ -11192,6 +11192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2622726516460639534, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3363115507422754417, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
       propertyPath: m_Name
       value: Efects

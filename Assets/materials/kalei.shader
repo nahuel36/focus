@@ -133,6 +133,14 @@ Shader "Lab36/Kalei"
                 // Mix colors with a pattern-based factor
                 color = lerp(color, rainbow(wave + pattern), 0.5 * sin(t * 2.0 + wave));
 
+                float black_and_white = (color.r + color.g + color.b)/3;
+
+                black_and_white = pow(black_and_white,3);
+
+                black_and_white = black_and_white - 0.125;
+
+                color = float3(black_and_white,black_and_white,black_and_white);
+
                 return float4(color, 1.0);
                 
                 /*
