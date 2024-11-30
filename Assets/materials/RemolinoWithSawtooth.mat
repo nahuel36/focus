@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Remolino4
-  m_Shader: {fileID: -6465566751694194690, guid: c29452ef78e45af4fab3f7c79b7a648e, type: 3}
+  m_Name: RemolinoWithSawtooth
+  m_Shader: {fileID: -6465566751694194690, guid: 88eaea4d053b60d4696f2fcd9dae06e1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
