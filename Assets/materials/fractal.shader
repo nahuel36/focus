@@ -3,6 +3,7 @@ Shader "Lab36/Fractal"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _Alpha ("Alpha",float) = 0.0
     }
     SubShader
     {
@@ -38,6 +39,7 @@ Shader "Lab36/Fractal"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float _Alpha;
 
             v2f vert (appdata v)
             {
@@ -93,7 +95,7 @@ Shader "Lab36/Fractal"
                     finalColor += col * d;
                 }    
 
-                return float4(finalColor, 1.0);
+                return float4(finalColor*(_Alpha), 1.0);
                 
                 /*
                 // sample the texture

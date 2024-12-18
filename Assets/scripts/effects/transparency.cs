@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TreeEditor;
 
 public class Transparency : MonoBehaviour {
 
     [SerializeField] bool isImage = false;
+    [SerializeField] bool isShader = false;
+    [SerializeField] bool useCurve = false;
+    [SerializeField]AnimationCurve curve;
+
 
     SpriteRenderer transSpriteRenderer;
     Image transImage;
@@ -15,17 +20,27 @@ public class Transparency : MonoBehaviour {
     private float repeatRate = 0.025f;
     private Color colorWithAlpha;
     private Color colorWithoutAlpha;
-
+    private MeshRenderer shaderRenderer;
+    private float shaderCounter = 0;
+    private MaterialPropertyBlock propBlock;
     [SerializeField][Range(0, 1)] float maxAlpha = 1;
+    private bool showing;
+    private bool hiding;
 
     void Start () {
 
         transform.GetChild(0).gameObject.SetActive(true);
-        if(!isImage)
-        { 
+        if (isShader)
+        {
+            shaderRenderer = transform.GetChild(0).GetComponent<MeshRenderer>();
+            propBlock = new MaterialPropertyBlock();
+            shaderRenderer.SetPropertyBlock(propBlock);
+        }
+        else if (!isImage)
+        {
             transSpriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
             colorWithAlpha = transSpriteRenderer.color;
-            if(colorWithAlpha.a == 0)
+            if (colorWithAlpha.a == 0)
                 colorWithAlpha.a = maxAlpha;
             colorWithoutAlpha = transSpriteRenderer.color;
             colorWithoutAlpha.a = 0;
@@ -89,6 +104,12 @@ public class Transparency : MonoBehaviour {
             EventsExecute.Instance.data.SetEnter("show border side", Show);
             EventsExecute.Instance.data.SetEnter("hide borders", Hide);
         }
+        else if (type == "fractal")
+        {
+            EventsExecute.Instance.data.SetEnter("show fractal", Show);
+            EventsExecute.Instance.data.SetEnter("show fractal", Hide);
+            EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
+        }
     }
 
 
@@ -100,47 +121,91 @@ public class Transparency : MonoBehaviour {
     void Show()
     {
         CancelInvoke();
-        InvokeRepeating("showing", 0,repeatRate);
-        transform.GetChild(0).gameObject.SetActive(true);
-        if (!isImage)
-            transSpriteRenderer.color = colorWithoutAlpha;
+        if (isShader && useCurve)
+        {
+            Debug.Log("show" + Time.time);
+            showing = true;
+        }
         else
+            InvokeRepeating("Showing", 0,repeatRate);
+        transform.GetChild(0).gameObject.SetActive(true);
+        if (!isImage && !isShader)
+            transSpriteRenderer.color = colorWithoutAlpha;
+        else if (!isShader)
             transImage.color = colorWithoutAlpha;
     }
 
     void Hide()
     {
         CancelInvoke();
-        InvokeRepeating("hiding", 0, repeatRate);
-        transform.GetChild(0).gameObject.SetActive(true);
-        if (!isImage)
-            transSpriteRenderer.color = colorWithAlpha;
+        if (isShader && useCurve)
+        {
+            hiding = true;
+            Debug.Log("hide" + Time.time);
+        }
         else
+            InvokeRepeating("Hiding", 0, repeatRate);
+        transform.GetChild(0).gameObject.SetActive(true);
+        if (!isImage && !isShader)
+            transSpriteRenderer.color = colorWithAlpha;
+        else if (!isShader)
             transImage.color = colorWithAlpha;
     }
 
-    void showing()
+    void Showing()
     {
-        if ((!isImage && transSpriteRenderer.color == colorWithAlpha) || (isImage && transImage.color == colorWithAlpha ))
+        if (isShader || (!isImage && transSpriteRenderer.color == colorWithAlpha) || (isImage && transImage.color == colorWithAlpha ))
         {
             CancelInvoke();
         }
-        if(!isImage)
+        if (!isImage)
             transSpriteRenderer.color = Color.Lerp(transSpriteRenderer.color, colorWithAlpha, speed);
-        else 
+        else
             transImage.color = Color.Lerp(transImage.color, colorWithAlpha, speed);
     }
 
-    void hiding()
+    void Hiding()
     {
-        if ((!isImage && transSpriteRenderer.color == colorWithoutAlpha) || (isImage && transImage.color == colorWithoutAlpha))
+        if (isShader || (!isImage && transSpriteRenderer.color == colorWithoutAlpha) || (isImage && transImage.color == colorWithoutAlpha))
         {
           transform.GetChild(0).gameObject.SetActive(false);
           CancelInvoke();
         }
-        if(!isImage)
+        if (!isImage)
             transSpriteRenderer.color = Color.Lerp(transSpriteRenderer.color, colorWithoutAlpha, speed);
         else
             transImage.color = Color.Lerp(transImage.color, colorWithoutAlpha, speed);
+    }
+
+    private void Update()
+    {
+        if (showing)
+        {
+            shaderCounter = Mathf.Lerp(shaderCounter, 1, speed*Time.deltaTime*55);
+            float alphavalue = curve.Evaluate(shaderCounter)*shaderCounter*shaderCounter;
+            propBlock.SetFloat("_Alpha", alphavalue);
+
+            if (alphavalue >= 0.9f)
+            {
+                propBlock.SetFloat("_Alpha", 1);
+                showing = false;
+                //hiding = true;
+            }
+            shaderRenderer.SetPropertyBlock(propBlock);
+
+        }
+        if (hiding)
+        {
+            shaderCounter = Mathf.Lerp(shaderCounter, 0, speed * Time.deltaTime * 55);
+            float alphavalue = curve.Evaluate(shaderCounter) * shaderCounter * shaderCounter;
+            propBlock.SetFloat("_Alpha", alphavalue);
+
+            if (alphavalue <= 0.001f)
+            {
+                propBlock.SetFloat("_Alpha", 0);
+                hiding = false;
+            }
+            shaderRenderer.SetPropertyBlock(propBlock);
+        }
     }
 }

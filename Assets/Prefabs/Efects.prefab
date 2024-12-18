@@ -50,6 +50,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImage: 0
+  isShader: 0
+  useCurve: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   type: spin
   maxAlpha: 1
 --- !u!1 &1079739644028249978
@@ -5173,7 +5181,7 @@ RectTransform:
   - {fileID: 2184002689409645412}
   - {fileID: 1891073500663929601}
   - {fileID: 2809733331636912741}
-  - {fileID: 5024118460453787252}
+  - {fileID: 7194830979259948241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5181,6 +5189,89 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0000007748604}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4525725409979587475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7194830979259948241}
+  - component: {fileID: 5394598446343899557}
+  m_Layer: 0
+  m_Name: fractal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7194830979259948241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4525725409979587475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6494481, y: -0, z: -0, w: -0.76040596}
+  m_LocalPosition: {x: 0.000013293964, y: -0.30077687, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5024118460453787252}
+  m_Father: {fileID: 6972982410044870940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5394598446343899557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4525725409979587475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634c8666ba98b664ab7aa62514a6b585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isImage: 0
+  isShader: 1
+  useCurve: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0003901152
+      value: 0.00007293653
+      inSlope: 0.22094412
+      outSlope: 0.22094412
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.07234551
+    - serializedVersion: 3
+      time: 0.82697505
+      value: 0.09892445
+      inSlope: 0.5888054
+      outSlope: 0.5888054
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.19117428
+    - serializedVersion: 3
+      time: 1.0056287
+      value: 1.0047934
+      inSlope: 6.6477647
+      outSlope: 6.6477647
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.018669853
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  type: fractal
+  maxAlpha: 1
 --- !u!1 &4638217249610839865
 GameObject:
   m_ObjectHideFlags: 0
@@ -5231,6 +5322,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImage: 0
+  isShader: 0
+  useCurve: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   type: smoke
   maxAlpha: 0.5
 --- !u!1 &7004680608577807756
@@ -5658,6 +5757,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isImage: 0
+  isShader: 0
+  useCurve: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   type: particles
   maxAlpha: 0.13
 --- !u!1 &8932678549795160400
@@ -5687,12 +5794,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8932678549795160400}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6494481, y: -0, z: -0, w: -0.76040596}
-  m_LocalPosition: {x: 0.000013293964, y: -0.30077687, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6972982410044870940}
+  m_Father: {fileID: 7194830979259948241}
   m_LocalEulerAnglesHint: {x: 279, y: 0, z: 0}
 --- !u!33 &3611673600882653523
 MeshFilter:
