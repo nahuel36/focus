@@ -48,5 +48,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8fe143c42f5934aa7b171b2c465f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateCombination: 000000000000000000000000010000000000000001000000
+  activateCombination: 0000000000000000000000000100000000000000
   debugButton: {fileID: 0}
