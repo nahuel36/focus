@@ -10,15 +10,25 @@ public enum cheatsActivators
 [System.Serializable]
 public class Cheats : MonoBehaviour
 {
-       
+
     [SerializeField] cheatsActivators[] activateCombination;
     [SerializeField] GameObject debugButton;
     int combinationIndex = 0;
-
+    [SerializeField] bool forceDebug = false; 
     private void Start()
     {
         combinationIndex = 0;
+
+        if (forceDebug)
+            EnableDebug();
+
+#if UNITY_EDITOR
+        EnableDebug();
+#endif
     }
+
+    private void EnableDebug()
+    { debugButton.SetActive(true); }
 
     public void CallStyle() {
         CallCombination(cheatsActivators.style);
@@ -38,7 +48,7 @@ public class Cheats : MonoBehaviour
             combinationIndex = 0;
 
         if (combinationIndex >= activateCombination.Length)
-            debugButton.SetActive(true);
+            EnableDebug();
     }
     
 
