@@ -6,6 +6,8 @@ using System.Linq;
 public class EventsExecute : MonoBehaviour
 {
     public FocusEventsScriptable data;
+    public FocusEventsScriptable normal_data;
+    public FocusEventsScriptable editor_data;
     bool isPaused = false;
     static EventsExecute instance;
     int actualGameCycle = 0;
@@ -17,6 +19,11 @@ public class EventsExecute : MonoBehaviour
 
     void Awake()
     {
+#if UNITY_EDITOR
+        data = editor_data;
+#else
+        data = normal_data;
+#endif
         instance = this;
         actualGameCycle = 0;
         //data.FillDictionaries();
