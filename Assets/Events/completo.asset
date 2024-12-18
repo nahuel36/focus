@@ -431,9 +431,4 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: start gamecycle
-    duration: 0
-    waitToFinish: 0
-    customWait: 0
-    onlyForTutorial: 0
   TimeBetweenCycleEvent: 3
