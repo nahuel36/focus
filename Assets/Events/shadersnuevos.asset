@@ -116,7 +116,7 @@ MonoBehaviour:
     onlyForTutorial: 0
   GameCycle:
   - name: show fractal
-    duration: 6
+    duration: 5
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0

@@ -105,7 +105,7 @@ public class Transparency : MonoBehaviour {
         else if (type == "fractal")
         {
             EventsExecute.Instance.data.SetEnter("show fractal", Show);
-            EventsExecute.Instance.data.SetEnter("show fractal", Hide);
+            EventsExecute.Instance.data.SetLeave("show fractal", Hide);
             EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
         }
     }
