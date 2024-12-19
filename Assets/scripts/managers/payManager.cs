@@ -50,7 +50,6 @@ public class PayManager : MonoBehaviour {
         if (gameMan.Coins < quantity)
         {
             not_enough_money();
-            Debug.Log("not money");
             return false;
         }
         else

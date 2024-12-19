@@ -118,10 +118,10 @@ public class Transparency : MonoBehaviour {
 
     void Show()
     {
+        if (this == null) return;
         CancelInvoke();
         if (isShader && useCurve)
         {
-            Debug.Log("show" + Time.time);
             showing = true;
         }
         else
@@ -135,11 +135,11 @@ public class Transparency : MonoBehaviour {
 
     void Hide()
     {
+        if (this == null) return;
         CancelInvoke();
         if (isShader && useCurve)
         {
             hiding = true;
-            Debug.Log("hide" + Time.time);
         }
         else
             InvokeRepeating("Hiding", 0, repeatRate);
@@ -187,7 +187,6 @@ public class Transparency : MonoBehaviour {
             {
                 propBlock.SetFloat("_Alpha", 1);
                 showing = false;
-                //hiding = true;
             }
             shaderRenderer.SetPropertyBlock(propBlock);
 
@@ -205,5 +204,10 @@ public class Transparency : MonoBehaviour {
             }
             shaderRenderer.SetPropertyBlock(propBlock);
         }
+    }
+
+    public void OnDestroy()
+    {
+        CancelInvoke();
     }
 }

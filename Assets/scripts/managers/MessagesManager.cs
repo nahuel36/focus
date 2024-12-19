@@ -91,7 +91,6 @@ public class MessagesManager : MonoBehaviour {
 
     void beware()
     {
-        Debug.Log("beware message showed");
         game_TopText2.text = game_beware.GetLocalizedString();
         Invoke("hideMakeBestTime", 4);
     }
