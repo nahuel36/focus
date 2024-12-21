@@ -108,6 +108,12 @@ public class Transparency : MonoBehaviour {
             EventsExecute.Instance.data.SetLeave("show fractal", Hide);
             EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
         }
+        else if (type == "kalei")
+        {
+            EventsExecute.Instance.data.SetEnter("show kalei", Show);
+            EventsExecute.Instance.data.SetLeave("show kalei", Hide);
+            EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
+        }
     }
 
 

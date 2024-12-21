@@ -115,8 +115,8 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   GameCycle:
-  - name: show fractal
-    duration: 5
+  - name: show kalei
+    duration: 7
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0

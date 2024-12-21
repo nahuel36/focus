@@ -135,6 +135,11 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
+  - name: show kalei
+    duration: 7
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
   OnGameContinue:
   - name: continue button hide
     duration: 0

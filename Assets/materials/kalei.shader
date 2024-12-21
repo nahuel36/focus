@@ -3,6 +3,8 @@ Shader "Lab36/Kalei"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _Alpha ("Alpha",float) = 0.0
+
     }
     SubShader
     {
@@ -31,7 +33,7 @@ Shader "Lab36/Kalei"
 
             #define iResolution _ScreenParams
             #define gl_FragCoord ((_iParam.scrPos.xy/_iParam.scrPos.w) * _ScreenParams.xy)
-
+            float _Alpha;
 
             float3 cos_palette(float3 a, float3 b, float3 c, float3 d, float x) 
             {
@@ -135,13 +137,14 @@ Shader "Lab36/Kalei"
 
                 float black_and_white = (color.r + color.g + color.b)/3;
 
-                black_and_white = pow(black_and_white,3);
 
-                black_and_white = black_and_white - 0.125;
+                black_and_white = black_and_white + 0.3;//brillo
+
+                black_and_white = pow(black_and_white,9);//contraste
 
                 color = float3(black_and_white,black_and_white,black_and_white);
 
-                return float4(color, 1.0);
+                return float4(color * _Alpha, 1.0);
                 
                 /*
                 // sample the texture
