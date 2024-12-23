@@ -94,7 +94,12 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
-  - name: wait 4 secs
+  - name: wait 2 secs
+    duration: 2
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show twirl
     duration: 4
     waitToFinish: 1
     customWait: 0
@@ -358,6 +363,12 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 1
+    condition: 0
+  - name: hide twirl
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
     condition: 0
   - name: start gamecycle
     duration: 0

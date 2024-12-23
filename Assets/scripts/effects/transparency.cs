@@ -24,7 +24,7 @@ public class Transparency : MonoBehaviour {
     [SerializeField][Range(0, 1)] float maxAlpha = 1;
     private bool showing;
     private bool hiding;
-
+    private bool isTwirl;
     void Start () {
 
         transform.GetChild(0).gameObject.SetActive(true);
@@ -114,6 +114,14 @@ public class Transparency : MonoBehaviour {
             EventsExecute.Instance.data.SetLeave("show kalei", Hide);
             EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
         }
+        else if (type == "twirl")
+        {
+            isTwirl = true;
+            EventsExecute.Instance.data.SetEnter("show twirl", Show);
+            EventsExecute.Instance.data.SetLeave("show twirl", Hide);
+            EventsExecute.Instance.data.SetLeave("hide twirl", HideFast);
+            EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
+        }
     }
 
 
@@ -131,7 +139,7 @@ public class Transparency : MonoBehaviour {
             showing = true;
         }
         else
-            InvokeRepeating("Showing", 0,repeatRate);
+            InvokeRepeating("Showing", 0, repeatRate);
         transform.GetChild(0).gameObject.SetActive(true);
         if (!isImage && !isShader)
             transSpriteRenderer.color = colorWithoutAlpha;
@@ -199,7 +207,15 @@ public class Transparency : MonoBehaviour {
         }
         if (hiding)
         {
-            shaderCounter = Mathf.Lerp(shaderCounter, 0, speed * Time.deltaTime * 55);
+            if (isTwirl)
+            {
+                shaderCounter = Mathf.Lerp(shaderCounter, 0, speed * Time.deltaTime * 1.5f);
+            }
+            else 
+            {
+                shaderCounter = Mathf.Lerp(shaderCounter, 0, speed * Time.deltaTime * 55);
+            }
+
             float alphavalue = curve.Evaluate(shaderCounter) * shaderCounter * shaderCounter;
             propBlock.SetFloat("_Alpha", alphavalue);
 

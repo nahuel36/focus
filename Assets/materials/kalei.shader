@@ -109,11 +109,9 @@ Shader "Lab36/Kalei"
 
             fixed4 frag (v2f _iParam) : SV_Target
             {
-                float2 uv;
-                if(_iParam.scrPos.y > 0.5)
-                    uv = (2. * gl_FragCoord.xy - iResolution.xy) / iResolution.y;
-                else
-                    uv = (-2. * gl_FragCoord.xy + iResolution.xy) / iResolution.y;
+                float multiplier = (((step(0.5,_iParam.scrPos.y)) * 2.0) - 1.0);
+                
+                float2 uv = (multiplier * 2 * gl_FragCoord.xy - iResolution.xy * multiplier) / iResolution.y;
 
                 _seed = t + tex2D(_MainTex, uv).y;
     

@@ -1,9 +1,10 @@
-Shader "Lab36/Fractal"
+Shader "Lab36/Twirl"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Alpha ("Alpha",float) = 0.0
+        _OffsetY ("Offset y",float) = 0.0
     }
     SubShader
     {
@@ -20,10 +21,26 @@ Shader "Lab36/Fractal"
 
             #include "UnityCG.cginc"
 
+            #define t   _Time
+
+            #define pos(x) ((x) * .5 + .5)
+            #define rot(a) mat2(cos(a), -sin(a), sin(a), cos(a))
+            #define sat(x) clamp(x, 0., 1.)
+
             #define iResolution _ScreenParams
             #define gl_FragCoord ((_iParam.scrPos.xy/_iParam.scrPos.w) * _ScreenParams.xy)
-            #define iTime _Time*20
+            float _Alpha;
+            float _OffsetY;
 
+            #define uNumSticks 10.0
+            #define uRotationSpeed 0.5
+            #define uTwistAmount 10.0
+
+
+            float Unity_SawtoothWave_float(float In)
+            {
+                return 2.0 * (In - floor(0.5 + In));
+            }
 
             struct appdata
             {
@@ -39,7 +56,6 @@ Shader "Lab36/Fractal"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
-            float _Alpha;
 
             v2f vert (appdata v)
             {
@@ -49,51 +65,35 @@ Shader "Lab36/Fractal"
                 return o;
             }
 
-            float3 palette( float t ) 
-            {
-                float3 a = float3(0.0, 0.0, 0.5);
-                float3 b = float3(0.5, 0.5, 0.5);
-                float3 c = float3(1.0, 1.0, 1.0);
-                float3 d = float3(5.163,5.216,0.257);
-                float3 f = float3(0.5+cos(iTime).x,-0.5+cos(iTime).x,1.0+cos(iTime).x);
-                return a*c*d*tan(f) + b*cos( 6.28318*(c*t+d) );
-            }
-
-
             fixed4 frag (v2f _iParam) : SV_Target
             {
+                _iParam.scrPos.y += _OffsetY;
+
                 float multiplier = (((step(0.5,_iParam.scrPos.y)) * 2.0) - 1.0);
                 
                 float2 uv = (multiplier * 2 * gl_FragCoord.xy - iResolution.xy * multiplier) / iResolution.y;
-    
-                float2 uv0 = uv;
 
-                float3 finalColor = float3(0,0,0);
+                
 
-                uv/=(length((uv)));
+                float radius = length(uv);
+                float angle = atan2(uv.y, uv.x);
 
-                for (float i = 0.0; i < 15.0; i++) 
-                {
-                    uv/=dot((uv.x,10.), (uv.y,0.5));
-      
-                    uv = frac(atan(uv) * 5.5) - 0.5;
-                    
-                    uv*=(length((uv)));
-                    
-                    float d = length(uv) * exp(-length(uv0));
+                // Apply twisting effect
+                angle += radius * uTwistAmount + t*3 * uRotationSpeed;
 
-                    float3 col = palette(length(uv0) + i*.4 + iTime*.4);
+                // Calculate stick index
+                float stickIndex = fmod(angle * uNumSticks / (2.0 * 3.14159265), 1.0);
 
-                    d = sin(d*8. + iTime)/8.;
-                    
-                    d = abs(d);
+                // Create stripes
+                //float stripe = step(1.-radius-0.15*sin(radius*25.), stickIndex);
+                float stripe = 1-smoothstep(1.-radius-0.13*Unity_SawtoothWave_float(radius*25.),1.-radius-0.13000001*Unity_SawtoothWave_float(radius*25.), stickIndex);
 
-                    d = pow(0.01 / d, 1.2);
+                // Create the tunnel effect by fading the stripes with distance
+                float tunnel = exp(-radius * 5);
 
-                    finalColor += col * d;
-                }    
+                float3 color = float3(stripe * tunnel,stripe * tunnel,stripe * tunnel);
 
-                return float4(finalColor*(_Alpha), 1.0);
+                return float4(color * _Alpha, 1.0);
                 
                 /*
                 // sample the texture
