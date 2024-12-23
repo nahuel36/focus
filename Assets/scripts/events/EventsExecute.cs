@@ -11,6 +11,7 @@ public class EventsExecute : MonoBehaviour
     bool isPaused = false;
     static EventsExecute instance;
     int actualGameCycle = 0;
+    bool forceDontShuffle;
     public static EventsExecute Instance
     {
         get {return instance; }
@@ -30,6 +31,18 @@ public class EventsExecute : MonoBehaviour
         data.SetEnter("start gamecycle", BeginCycle);
         data.SetEnter("resume gamecycle", Resume);
         data.SetEnter("pause gamecycle", Pause);
+        data.SetEnter("shuffle game cycle manual", gameCycleShuffleManual);
+        data.SetEnter("no shuffle game cycle", gameCycleShuffleForceDont);
+        
+    }
+    public void gameCycleShuffleManual()
+    { 
+        forceDontShuffle = false;
+    }
+
+    public void gameCycleShuffleForceDont()
+    {
+        forceDontShuffle = true;
     }
 
     public void EndGame()
@@ -76,8 +89,8 @@ public class EventsExecute : MonoBehaviour
         while(internalGameCycle == actualGameCycle)
         {
             FocusEvent[] gameCycleEvents = data.GameCycle;
-            if (data.ShuffleGameCycle) gameCycleEvents = ArrayUtils.ShuffleFocusEvents(data.GameCycle);
-            await ExecuteEvents(data.GameCycle, true, true, internalGameCycle);
+            if (data.ShuffleGameCycle && !forceDontShuffle) gameCycleEvents = ArrayUtils.ShuffleFocusEvents(data.GameCycle);
+            await ExecuteEvents(gameCycleEvents, true, true, internalGameCycle);
             await Task.Yield();
         }
     }

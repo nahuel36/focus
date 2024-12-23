@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d038edb0a88efe24faca58c03b593943, type: 3}
-  m_Name: completo sin shuffle
+  m_Name: shaders nuevos
   m_EditorClassIdentifier: 
   OnApplicationStart:
   - name: wait
@@ -119,28 +119,13 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: shuffle game cycle manual
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   GameCycle:
-  - name: show particles
-    duration: 5
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
   - name: show fractal
-    duration: 5
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: show kalei
-    duration: 7
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: show spin
-    duration: 5
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: show smoke
     duration: 5
     waitToFinish: 1
     customWait: 0
@@ -452,6 +437,11 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: no shuffle game cycle
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   PrepareEffect:
   - name: hide actual fx
     duration: 0.5
@@ -459,4 +449,4 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   TimeBetweenCycleEvent: 3
-  ShuffleGameCycle: 0
+  ShuffleGameCycle: 1

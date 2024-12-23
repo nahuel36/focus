@@ -119,8 +119,18 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  - name: shuffle game cycle manual
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
   GameCycle:
   - name: show particles
+    duration: 5
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
+  - name: show fractal
     duration: 5
     waitToFinish: 1
     customWait: 0
@@ -136,11 +146,6 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: show smoke
-    duration: 5
-    waitToFinish: 1
-    customWait: 0
-    onlyForTutorial: 0
-  - name: show fractal
     duration: 5
     waitToFinish: 1
     customWait: 0
@@ -448,6 +453,11 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   - name: enable debug buttons
+    duration: 0
+    waitToFinish: 0
+    customWait: 0
+    onlyForTutorial: 0
+  - name: no shuffle game cycle
     duration: 0
     waitToFinish: 0
     customWait: 0
