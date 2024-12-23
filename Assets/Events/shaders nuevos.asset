@@ -125,7 +125,7 @@ MonoBehaviour:
     customWait: 0
     onlyForTutorial: 0
   GameCycle:
-  - name: show fractal
+  - name: show mirrors
     duration: 5
     waitToFinish: 1
     customWait: 0
@@ -448,5 +448,5 @@ MonoBehaviour:
     waitToFinish: 1
     customWait: 0
     onlyForTutorial: 0
-  TimeBetweenCycleEvent: 3
+  TimeBetweenCycleEvent: 5
   ShuffleGameCycle: 1

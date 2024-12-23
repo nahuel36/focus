@@ -125,6 +125,19 @@ public class Transparency : MonoBehaviour {
             EventsExecute.Instance.data.SetLeave("hide twirl", HideFast);
             EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
         }
+        else if (type == "twirl")
+        {
+            isTwirl = true;
+            EventsExecute.Instance.data.SetEnter("show twirl", Show);
+            EventsExecute.Instance.data.SetLeave("show twirl", Hide);
+            EventsExecute.Instance.data.SetLeave("hide twirl", HideFast);
+            EventsExecute.Instance.data.SetEnter("hide actual fx", HideFast);
+        }
+        else if (type == "mirror")
+        {
+            EventsExecute.Instance.data.SetEnter("show mirrors", Show);
+            EventsExecute.Instance.data.SetLeave("show mirrors", Hide);
+        }
     }
 
 
