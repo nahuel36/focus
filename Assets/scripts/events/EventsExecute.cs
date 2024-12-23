@@ -135,6 +135,7 @@ public class EventsExecute : MonoBehaviour
 
             if (evento.waitToFinish)
             {
+                if(isGameCycle && actualGameCycle == gamecycle) await ExecuteEvents(data.PrepareEffect,canPause,false,gamecycle);
                 await ExecuteAndWait(evento, canPause, isGameCycle, gamecycle);
                 if (isGameCycle && actualGameCycle == gamecycle)
                 {

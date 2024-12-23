@@ -421,4 +421,10 @@ MonoBehaviour:
     waitToFinish: 0
     customWait: 0
     onlyForTutorial: 0
+  PrepareEffect:
+  - name: hide actual fx
+    duration: 0.5
+    waitToFinish: 1
+    customWait: 0
+    onlyForTutorial: 0
   TimeBetweenCycleEvent: 10
