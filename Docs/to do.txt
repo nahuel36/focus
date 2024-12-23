@@ -31,10 +31,6 @@
 
 PRIORIDAD
 59. probar efecto de bajar el techo
-14. efecto de sonido aparicion de los efectos
-57. efecto de sonido introduccion bola con remolino
-4. remolino background en el inicio del juego
-3. experimentar con valores del remolino
 7. efecto de golpe en la bola (shader onda)
 25. efecto de viento en la bola (shader) 
 26. efecto de transparencia difuminada circularmente en la bola (shader)
@@ -49,6 +45,7 @@ AL BUILDEAR
 40. que no aparezca nada de más despues del splash
 
 DONE
+
 69. no esta juntando los coins luego del limite
 68. no esta descontando las monedas al pagar
 66. progreso de web template en texto
@@ -57,6 +54,7 @@ DONE
 62. reemplazar player prefs con guardar en archivos locales
 60. separar todo en prefabs
 58. que los efectos aparezcan random en vez de en orden
+57. efecto de sonido introduccion bola con remolino
 56. los efectos no están apareciendo
 54. results best time y time y monedas no se muestra bien la primera vez
 53. que puntaje no aparezca al principio del juego
@@ -74,9 +72,12 @@ DONE
 24. modo cheat
 17. la transparencia de la bola y los bordes no funca
 15. que sume puntos arriba
+14. efecto de sonido aparicion de los efectos
 13. musica ingame
 6. que el golpe sea direccionado segun la posicion en el pong
-5. disminuir tiempo de aparicion de las distracciones
+5. disminuir tiempo de aparicion de las distraccion
+4bis. remolino background en el inicio del juego
 4. logo de lab36 por build settings
+3bis. experimentar con valores del remolino
 3. quitar remolino
 1. agregar texto "cuidado! no te distraigas"
