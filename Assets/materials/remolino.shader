@@ -79,18 +79,21 @@ Shader "Lab36/Twirl"
                 float radius = length(uv);
                 float angle = atan2(uv.y, uv.x);
 
+                float sint = sin(t*0.5)*0.1+0.9;    
+                float sint2 = sin(t*10)*0.5+0.5;  
+
                 // Apply twisting effect
-                angle += radius * uTwistAmount + t*3 * uRotationSpeed;
+                angle += radius * uTwistAmount + t*10 * uRotationSpeed;
 
                 // Calculate stick index
-                float stickIndex = fmod(angle * uNumSticks / (2.0 * 3.14159265), 1.0);
+                float stickIndex = fmod(angle * uNumSticks * sint/ (2.0 * 3.14159265), 1.0);
 
                 // Create stripes
                 //float stripe = step(1.-radius-0.15*sin(radius*25.), stickIndex);
-                float stripe = 0.7-smoothstep(.7-radius-0.13*Unity_SawtoothWave_float(radius*19.),.7-radius-0.13000003*Unity_SawtoothWave_float(radius*19.), stickIndex);
+                float stripe = 0.7-smoothstep(.7-radius-0.13*Unity_SawtoothWave_float(radius*sint2*19.),.7-radius-0.13000003*Unity_SawtoothWave_float(radius*19.), stickIndex);
 
                 // Create the tunnel effect by fading the stripes with distance
-                float tunnel = exp(-radius * 10 * (1- _Alpha*0.8));
+                float tunnel = exp(-radius * 20 * (1- _Alpha*0.8));
 
                 float3 color = float3(stripe * tunnel,stripe * tunnel,stripe * tunnel);
 
