@@ -75,7 +75,9 @@ public class EventsExecute : MonoBehaviour
         
         while(internalGameCycle == actualGameCycle)
         {
-            await ExecuteEvents(ArrayUtils.ShuffleFocusEvents(data.GameCycle), true, true, internalGameCycle);
+            FocusEvent[] gameCycleEvents = data.GameCycle;
+            if (data.ShuffleGameCycle) gameCycleEvents = ArrayUtils.ShuffleFocusEvents(data.GameCycle);
+            await ExecuteEvents(data.GameCycle, true, true, internalGameCycle);
             await Task.Yield();
         }
     }

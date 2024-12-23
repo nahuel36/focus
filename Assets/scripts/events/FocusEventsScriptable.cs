@@ -14,6 +14,7 @@ public class FocusEventsScriptable : ScriptableObject
     public FocusEvent[] StartDebugMode;
     public FocusEvent[] PrepareEffect;
     public float TimeBetweenCycleEvent = 3f;
+    public bool ShuffleGameCycle = true;
     void SetEnterOnArray(FocusEvent[] eventarray, string eventname, FocusEvent.EventDelegate delegateFunc)
     {
         for (int i = 0; i < eventarray.Length; i++)

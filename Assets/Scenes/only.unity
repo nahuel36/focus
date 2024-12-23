@@ -6465,7 +6465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 0}
   normal_data: {fileID: 11400000, guid: 0729e3665a4dfae49ac5694db8fff948, type: 2}
-  editor_data: {fileID: 11400000, guid: 0729e3665a4dfae49ac5694db8fff948, type: 2}
+  editor_data: {fileID: 11400000, guid: 451ba57cc1454704eb7431fd1a3da70f, type: 2}
 --- !u!1 &1225326682
 GameObject:
   m_ObjectHideFlags: 0
@@ -11233,6 +11233,10 @@ PrefabInstance:
       propertyPath: 'appearSound.Array.data[4]'
       value: 
       objectReference: {fileID: 1029004839732395021}
+    - target: {fileID: 1079739644028249978, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1876706785430328171, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
       propertyPath: appearSound.Array.size
       value: 5
@@ -11257,6 +11261,22 @@ PrefabInstance:
       propertyPath: 'appearSound.Array.data[4]'
       value: 
       objectReference: {fileID: 1029004839732395021}
+    - target: {fileID: 2123453015488599345, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298429525875880395, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2622726516460639534, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808624200775461193, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3363115507422754417, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
       propertyPath: m_Name
       value: Efects
@@ -11295,6 +11315,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5024118460453787252, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157555313979451307, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5394598446343899557, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
@@ -11423,6 +11447,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6972982410044870940, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004680608577807756, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7033852953361967398, guid: 95269bbb751b68f48b8a2f690b43a7d1, type: 3}

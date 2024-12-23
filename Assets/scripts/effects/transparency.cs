@@ -230,6 +230,7 @@ public class Transparency : MonoBehaviour {
             {
                 propBlock.SetFloat("_Alpha", 0);
                 hiding = false;
+                transform.GetChild(0).gameObject.SetActive(false);
             }
             shaderRenderer.SetPropertyBlock(propBlock);
         }
