@@ -73,7 +73,8 @@ Shader "Lab36/Twirl"
                 
                 float2 uv = (multiplier * 2 * gl_FragCoord.xy - iResolution.xy * multiplier) / iResolution.y;
 
-                
+                uv.x *= 1.75;
+                uv.y *= 1.75;
 
                 float radius = length(uv);
                 float angle = atan2(uv.y, uv.x);
@@ -86,14 +87,14 @@ Shader "Lab36/Twirl"
 
                 // Create stripes
                 //float stripe = step(1.-radius-0.15*sin(radius*25.), stickIndex);
-                float stripe = 1-smoothstep(1.-radius-0.13*Unity_SawtoothWave_float(radius*25.),1.-radius-0.13000001*Unity_SawtoothWave_float(radius*25.), stickIndex);
+                float stripe = 0.7-smoothstep(.7-radius-0.13*Unity_SawtoothWave_float(radius*19.),.7-radius-0.13000003*Unity_SawtoothWave_float(radius*19.), stickIndex);
 
                 // Create the tunnel effect by fading the stripes with distance
-                float tunnel = exp(-radius * 5);
+                float tunnel = exp(-radius * 10 * (1- _Alpha*0.8));
 
                 float3 color = float3(stripe * tunnel,stripe * tunnel,stripe * tunnel);
 
-                return float4(color * _Alpha, 1.0);
+                return float4(color * _Alpha * 0.5, 1.0);
                 
                 /*
                 // sample the texture
