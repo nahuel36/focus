@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 540
+    y: 484.8
     width: 1027.8
     height: 230
   m_SerializedDataModeController:
@@ -347,7 +347,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: 42ca0000
     m_LastClickedID: 51778
-    m_ExpandedIDs: 00000000d4c90000d6c9000054ca000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000003ac800003cc800003ec80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -376,7 +376,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d4c90000d6c90000
+    m_ExpandedIDs: 000000003ac800003cc800003ec80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 327
     height: 434.8
   m_SerializedDataModeController:
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.077312894, y: 0.022428107, z: -0.0017395995, w: -0.9967536}
     speed: 2
-    m_Value: {x: -0.07731286, y: 0.022428095, z: -0.0017395987, w: -0.9967531}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
     m_Target: 4.2611036
     speed: 2
@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_Ortho:
     m_Target: 0
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1215,8 +1215,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 328
-    y: 79.200005
+    x: 329
+    y: 24
     width: 698.80005
     height: 434.8
   m_SerializedDataModeController:
@@ -1290,7 +1290,7 @@ MonoBehaviour:
       height: 1736.4365
     m_MinimalGUI: 1
   m_defaultScale: 0.22747397
-  m_LastWindowPixelSize: {x: 873.50006, y: 543.5}
+  m_LastWindowPixelSize: {x: 698.80005, y: 434.8}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1393,8 +1393,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1028.8
-    y: 79.200005
+    x: 1029.8
+    y: 24
     width: 506.19995
     height: 690.8
   m_SerializedDataModeController:

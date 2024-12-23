@@ -6,8 +6,8 @@ public class Transparency : MonoBehaviour {
     [SerializeField] bool isImage = false;
     [SerializeField] bool isShader = false;
     [SerializeField] bool useCurve = false;
-    [SerializeField]AnimationCurve curve;
-
+    [SerializeField] AnimationCurve curve;
+    
 
     SpriteRenderer transSpriteRenderer;
     Image transImage;
@@ -25,6 +25,9 @@ public class Transparency : MonoBehaviour {
     private bool showing;
     private bool hiding;
     private bool isTwirl;
+
+    [SerializeField] AudioSource[] appearSound;
+
     void Start () {
 
         transform.GetChild(0).gameObject.SetActive(true);
@@ -134,6 +137,10 @@ public class Transparency : MonoBehaviour {
     {
         if (this == null) return;
         CancelInvoke();
+
+        if (appearSound != null && appearSound.Length > 0)
+            appearSound[Random.Range(0, appearSound.Length)].Play();
+
         if (isShader && useCurve)
         {
             showing = true;
