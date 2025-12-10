@@ -13,8 +13,5 @@ public class MusicInMenu : MonoBehaviour {
         music.Stop();
     }
 
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
